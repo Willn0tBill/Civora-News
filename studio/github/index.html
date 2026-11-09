@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#101d2e">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://api.github.com https://civoranews.org; img-src 'self' data:; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; base-uri 'self'; object-src 'none'">
+<title>Civora Studio — Newsroom</title>
+<link rel="icon" type="image/svg+xml" href="../../assets/civora-mark.svg">
+<link rel="stylesheet" href="../studio.css">
+<script type="module" src="../studio.mjs"></script>
+</head>
+<body>
+<a class="skip" href="#app-main">Skip to newsroom</a>
+<div class="studio-layout">
+<aside class="sidebar" aria-label="Studio navigation">
+  <a href="../../" class="studio-logo"><span class="logo-square">C<span>·</span></span><span><strong>CIVORA</strong><small>NEWSROOM STUDIO</small></span></a>
+  <div class="sidebar-label">WORKSPACE</div>
+  <nav class="studio-navigation" aria-label="Newsroom sections">
+    <button type="button" data-nav="overview" class="selected"><span aria-hidden="true">▦</span> Overview</button>
+    <button type="button" data-nav="stories"><span aria-hidden="true">▤</span> Articles</button>
+    <button type="button" data-nav="drafts"><span aria-hidden="true">✎</span> Local drafts</button>
+    <button type="button" data-nav="help"><span aria-hidden="true">◈</span> Publishing guide</button>
+  </nav>
+  <div class="sidebar-bottom">
+    <div class="environment"><span class="status-dot"></span><span>GitHub-backed publishing</span></div>
+    <a href="../" class="publication-link">View Civora News <span aria-hidden="true">↗</span></a>
+  </div>
+</aside>
+<div class="workspace">
+  <header class="topbar">
+    <div><span class="topbar-eyebrow">CIVORA / EDITORIAL OPERATIONS</span><h1 id="page-heading">Newsroom overview</h1></div>
+    <div class="topbar-actions"><button class="theme-btn" id="theme-switch" aria-label="Change color theme" type="button">◐</button><span id="identity" class="identity">Not connected</span><button id="disconnect" type="button" class="button light" hidden>Disconnect</button></div>
+  </header>
+  <main id="app-main" class="work-main">
+    <section id="connect-screen" class="connect-screen">
+      <div class="connect-icon" aria-hidden="true">C<span>·</span></div><div class="small-kicker">EDITORIAL ACCESS</div>
+      <h2>Welcome to your newsroom.</h2>
+      <p>Connect a GitHub account with write access to the Civora News repository. No separate paid server is required.</p>
+      <form id="connect-form" class="connect-form">
+       <label for="token">Fine-grained GitHub access token</label>
+       <div class="token-row"><input id="token" name="token" type="password" autocomplete="off" spellcheck="false" required placeholder="Paste a repository-only token"><button type="button" id="show-token" class="button light">Show</button></div>
+       <button class="button primary" id="connect-btn" type="submit">Connect to GitHub <span aria-hidden="true">↗</span></button>
+      </form>
+      <p class="security-note">Token scope: only <strong>Willn0tBill/Civora-News</strong>, permission <strong>Contents: Read and write</strong>. The token stays in this tab's memory and is never saved to your browser storage or the repository. Never share it in chat.</p>
+      <a class="external-help" href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener noreferrer">Create a fine-grained token on GitHub ↗</a>
+    </section>
+    <div id="authenticated" hidden>
+      <section id="overview-panel" class="panel" data-panel="overview">
+        <div class="welcome"><div><div class="small-kicker">YOUR EDITORIAL CONTROL ROOM</div><h2>Make stories worth reading.</h2><p>Draft, preview and publish with a controlled GitHub commit. Readers see finished HTML pages—not an unfinished editing interface.</p></div><button class="button primary" type="button" id="new-story">+ New article</button></div>
+        <div class="stats" id="stats"><div class="metric"><span>Published</span><strong id="stat-published">—</strong></div><div class="metric"><span>Explainers</span><strong id="stat-explainers">—</strong></div><div class="metric"><span>Local drafts</span><strong id="stat-drafts">—</strong></div><div class="metric"><span>Last synced</span><strong class="metric-date" id="stat-sync">—</strong></div></div>
+        <div class="list-heading"><div><div class="small-kicker">THE WORK QUEUE</div><h3>Recent articles</h3></div><button type="button" class="text-action" id="refresh">Refresh from GitHub ↻</button></div>
+        <div id="recent-stories" class="story-list"></div>
+      </section>
+      <section id="stories-panel" class="panel" data-panel="stories" hidden>
+        <div class="list-heading"><div><div class="small-kicker">CONTENT LIBRARY</div><h2>All articles</h2></div><button class="button primary" type="button" id="new-from-list">+ New article</button></div>
+        <div class="filters"><label class="sr-only" for="story-search">Find articles</label><input id="story-search" type="search" placeholder="Search title, category or author" autocomplete="off"><label class="sr-only" for="status-filter">Filter by status</label><select id="status-filter"><option value="all">All statuses</option><option value="published">Published</option><option value="draft">Local drafts</option></select></div>
+        <div id="all-stories" class="story-list"></div>
+      </section>
+      <section id="drafts-panel" class="panel" data-panel="drafts" hidden>
+        <div class="list-heading"><div><div class="small-kicker">THIS BROWSER ONLY</div><h2>Saved drafts</h2></div><div class="draft-toolbar"><button class="button primary" id="new-from-drafts" type="button">+ Write a draft</button><label class="button light import-label" for="draft-import">Import JSON draft</label><input id="draft-import" type="file" accept="application/json,.json" hidden></div></div>
+        <div class="notice">Local drafts are stored on this device, not shared with your team or the public repository. Export a backup before clearing browser data. Never store confidential source identities here.</div><div id="drafts-list" class="story-list"></div>
+      </section>
+      <section id="help-panel" class="panel" data-panel="help" hidden>
+        <div class="small-kicker">THE PUBLISHING WORKFLOW</div><h2>From draft to publication</h2>
+        <div class="help-steps"><article><span>01</span><div><h3>Write and review</h3><p>Create an article, select its section, and add evidence. Save an unfinished version to this browser.</p></div></article><article><span>02</span><div><h3>Approve the reporting</h3><p>Check dates, quotes, source links, copyright and accuracy. The dashboard validates fields, but cannot determine whether a news claim is true.</p></div></article><article><span>03</span><div><h3>Publish in one commit</h3><p>Civora Studio generates real pages for your website and commits the source and HTML together using your GitHub permissions.</p></div></article><article><span>04</span><div><h3>Follow deployment</h3><p>GitHub Pages publishes the new commit. The dashboard provides a link to the commit and the final article URL. Allow for deployment propagation.</p></div></article></div>
+        <div class="notice"><strong>Security:</strong> This is a GitHub-authorized publishing tool, not a shared-password CMS. Only collaborators with repository write access and their own narrowly scoped token can publish. Never put passwords or tokens in GitHub files or article text.</div>
+      </section>
+      <section id="editor-panel" class="panel editor-panel" data-panel="editor" hidden>
+        <div class="editor-heading"><button class="text-action" type="button" id="back-editor">← Back to articles</button><span id="editor-status" class="status-chip">UNSAVED</span></div>
+        <div class="editor-grid">
+         <div class="editor-form-col"><form id="article-form" novalidate>
+          <div class="small-kicker">ARTICLE DETAILS</div><h2 id="editor-heading">Create an article</h2>
+          <label for="story-title">Headline <span>*</span></label><input id="story-title" name="title" required maxlength="190" placeholder="A clear, factual headline">
+          <label for="story-slug">Article URL slug <span>*</span></label><input id="story-slug" name="slug" required pattern="[a-z0-9]+(-[a-z0-9]+)*" placeholder="example-story-title"><small>Becomes /article/your-slug/. Changing an existing URL will create a new link.</small>
+          <label for="story-summary">Summary <span>*</span></label><textarea id="story-summary" rows="3" placeholder="Why the reader should care"></textarea>
+          <div class="field-pair"><div><label for="story-category">Section</label><select id="story-category"><option>U.S.</option><option>World</option><option>Technology</option><option>Business</option><option>Science</option><option>Culture</option></select></div><div><label for="story-author">Byline</label><input id="story-author" value="Civora Editorial"></div></div>
+          <div class="field-pair">
+            <div><label for="story-type">Article format</label><select id="story-type"><option value="news">News report</option><option value="explainer">Explainer</option><option value="opinion">Opinion</option><option value="review">Review</option><option value="fact-check">Fact check</option></select><small>Choose the editorial desk before publishing.</small></div>
+            <div><label for="story-cover">Cover text</label><input id="story-cover" maxlength="60" placeholder="Short cover phrase"></div>
+          </div>
+          <label for="story-date">Publication date</label><input id="story-date" type="date">
+          <label for="story-body">Article text <span>*</span></label><textarea id="story-body" rows="15" placeholder="Write your story here.&#10;&#10;Separate paragraphs with a blank line."></textarea><small>Use blank lines between paragraphs; HTML and scripts are not accepted.</small>
+          <label for="story-sources">Source references <span>*</span></label><textarea id="story-sources" rows="5" placeholder="Official source: https://example.org/document&#10;Secondary source: https://example.org/report"></textarea><small>One per line: Source name: https://...</small>
+          <label class="approval"><input id="fact-check" type="checkbox"><span>I reviewed the claims, sources, dates and permissions for publication.</span></label>
+          <div class="editor-buttons"><button type="button" class="button light" id="save-draft">Save local draft</button><button type="button" class="button light" id="export-story">Export JSON</button><button type="button" class="button primary" id="publish-story">Publish article ↗</button><button type="button" class="button warning" id="unpublish-story" hidden>Unpublish</button><button type="button" class="button danger" id="delete-story" hidden>Delete</button></div><div id="publish-status" class="publish-status" hidden role="status" aria-live="polite"><strong id="publication-state">Preparing publication</strong><p id="publication-note"></p><div class="publication-links"><a id="publication-commit" target="_blank" rel="noopener noreferrer">View commit ↗</a><a id="publication-link" target="_blank" rel="noopener noreferrer">Open article ↗</a><button id="check-publication" type="button" class="button light">Check live website</button></div></div>
+         </form></div>
+         <aside class="preview-col"><div class="preview-head"><strong>LIVE ARTICLE PREVIEW</strong><span>Not yet public</span></div><div id="article-preview" class="article-preview"><div class="preview-category">SECTION</div><h2>Your headline will appear here.</h2><p class="preview-dek">The article summary appears in this space.</p><div class="preview-meta">CIVORA NEWS · DRAFT</div><div id="preview-paragraphs"></div></div></aside>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body></html>
