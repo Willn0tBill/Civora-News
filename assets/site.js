@@ -79,4 +79,52 @@ if(flipCards.length){
  }
  addEventListener("resize",()=>{if(!touchMode())for(const c of flipCards)closeCard(c)},{passive:true});
 }
+
+/* Mobile sections: the original swipeable nav remains usable without JavaScript. */
+const sectionsNav=document.querySelector(".nav-outer");
+const sectionsList=sectionsNav?.querySelector(".nav-scroll");
+if(sectionsNav&&sectionsList){
+ sectionsList.id="civora-mobile-sections";
+ const toolbar=document.createElement("div");
+ toolbar.className="container mobile-nav-controls";
+ const menu=document.createElement("button");
+ menu.type="button";menu.className="mobile-nav-toggle";
+ menu.setAttribute("aria-controls","civora-mobile-sections");
+ menu.setAttribute("aria-expanded","false");
+ menu.innerHTML='<svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span>All sections</span>';
+ const hint=document.createElement("span");hint.className="mobile-nav-hint";
+ hint.textContent="Swipe categories or view all";
+ toolbar.append(menu,hint);
+ sectionsNav.insertBefore(toolbar,sectionsList);
+ const closeMenu=(restore=false)=>{
+  sectionsNav.classList.remove("nav-expanded");
+  menu.setAttribute("aria-expanded","false");
+  menu.querySelector("span").textContent="All sections";
+  if(restore)menu.focus({preventScroll:true});
+ };
+ menu.addEventListener("click",()=>{
+  const expanded=sectionsNav.classList.toggle("nav-expanded");
+  menu.setAttribute("aria-expanded",String(expanded));
+  menu.querySelector("span").textContent=expanded?"Close sections":"All sections";
+  hint.textContent=expanded?"Choose a section":"Swipe categories or view all";
+ });
+ sectionsNav.addEventListener("keydown",event=>{
+  if(event.key==="Escape"&&sectionsNav.classList.contains("nav-expanded")){
+   event.preventDefault();closeMenu(true);hint.textContent="Swipe categories or view all";
+  }
+ });
+ addEventListener("resize",()=>{
+  if(innerWidth>760&&sectionsNav.classList.contains("nav-expanded"))closeMenu();
+ },{passive:true});
+}
+/* Tapping elsewhere dismisses a mobile card preview without breaking links. */
+if(typeof flipCards!=="undefined"&&flipCards.length){
+ document.addEventListener("click",event=>{
+  if(event.target.closest("[data-flip-card]"))return;
+  for(const card of flipCards){
+   card.classList.remove("is-flipped");
+   card.querySelector("[data-flip-trigger]")?.setAttribute("aria-expanded","false");
+  }
+ });
+}
 })();
