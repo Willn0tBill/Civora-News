@@ -5,7 +5,8 @@ const PUBLIC_ROOT="https://civoranews.org/";
 const DRAFT_KEY="civora-studio-local-drafts-v1";
 const categories={"U.S.":"us","World":"world","Technology":"tech","Business":"business","Science":"science","Culture":"culture"};
 let accessToken=null, identity=null, remoteDoc={schemaVersion:1,articles:[]}, remoteSha=null;
-let drafts=[], editingId=null, busy=false, currentPanel="overview", lastSync=null;
+let drafts=[], editingId=null, editingDraft=false, editorDirty=false, busy=false, currentPanel="overview", lastSync=null;
+let publicationCheck=null;
 const $=id=>document.getElementById(id);
 const secureTransport=location.protocol==="https:"||location.hostname==="localhost"||location.hostname==="127.0.0.1";
 if(!secureTransport){
@@ -87,6 +88,7 @@ $("disconnect").addEventListener("click",()=>{
 });
 
 function showPanel(name){
+ if(name!=="editor"&&currentPanel==="editor"&&editorDirty&&!confirm("You have unsaved changes. Leave this editor without saving?"))return;
  currentPanel=name;for(const panel of document.querySelectorAll("[data-panel]"))panel.hidden=panel.dataset.panel!==name;
  const headings={overview:"Newsroom overview",stories:"Article library",drafts:"Local drafts",help:"Publishing guide",editor:"Article editor"};
  $("page-heading").textContent=headings[name]||"Newsroom";
@@ -112,48 +114,61 @@ function storyRow(story,isDraft=false){
  if(!isDraft){const view=document.createElement("a");view.href=PUBLIC_ROOT+"article/"+encodeURIComponent(story.id)+"/";view.target="_blank";view.rel="noopener noreferrer";view.className="text-action";view.textContent="View";actions.appendChild(view);}
  row.append(info,actions);return row;
 }
-function renderList(target,items,msg,isDraft=false){target.replaceChildren();if(!items.length){const t=document.createElement("div");t.className="empty-list";t.textContent=msg;target.append(t)}else for(const a of items)target.append(storyRow(a,isDraft))}
+function renderList(target,items,msg,isDraft=false){target.replaceChildren();if(!items.length){const t=document.createElement("div");t.className="empty-list";t.textContent=msg;target.append(t)}else for(const a of items)target.append(storyRow(a,isDraft||a.__local===true))}
 function renderStories(){
  const q=$("story-search").value.toLowerCase().trim(),status=$("status-filter").value;
  const remote=remoteDoc.articles.map(a=>({...a,__local:false}));
- const local=drafts.filter(a=>!remote.some(r=>r.id===a.id)).map(a=>({...a,status:"draft",__local:true}));
+ const local=drafts.map(a=>({...a,status:"draft",__local:true}));
  const items=remote.concat(local).filter(a=>(status==="all"||a.status===status)&&[a.title,a.summary,a.cat,a.author].join(" ").toLowerCase().includes(q));
  renderList($("all-stories"),items,"No articles match your search.");
- // Draft records are handled locally even if an old article shares the same ID.
- for(const [i,a] of items.entries()){if(a.__local){const el=$("all-stories").children[i];el.querySelector("button")?.replaceWith((()=>{const b=document.createElement("button");b.className="button light";b.textContent="Edit ↗";b.onclick=()=>startEditor(a,true);return b})())}}
 }
 function renderDrafts(){renderList($("drafts-list"),drafts,"No local drafts yet. Create one to begin.",true)}
 function renderEverything(){
  const posts=remoteDoc.articles;
  $("stat-published").textContent=posts.filter(a=>a.status==="published").length;
- $("stat-samples").textContent=posts.filter(a=>a.status==="sample").length;
+ $("stat-explainers").textContent=posts.filter(a=>a.kind==="explainer").length;
  $("stat-drafts").textContent=drafts.length;
  $("stat-sync").textContent=lastSync?.toLocaleTimeString([],{hour:"numeric",minute:"2-digit"})||"—";
  renderList($("recent-stories"),posts.slice().reverse().slice(0,6),"Nothing published yet.");
  renderStories();renderDrafts();
 }
 function clearEditor(){
- editingId=null;$("article-form").reset();$("story-author").value="Civora Editorial";$("story-date").value=localDate();
- $("story-slug").readOnly=false;delete $("story-slug").dataset.edited;$("story-title").value="";$("editor-heading").textContent="Create an article";
+ editingId=null;editingDraft=false;editorDirty=false;
+ $("article-form").reset();
+ $("story-author").value="Civora Research Desk";$("story-date").value=localDate();
+ $("story-slug").readOnly=false;delete $("story-slug").dataset.edited;
+ $("story-title").value="";$("editor-heading").textContent="Create an article";
  $("unpublish-story").hidden=true;$("delete-story").hidden=true;$("editor-status").textContent="NEW DRAFT";
+ $("publish-status").hidden=true;publicationCheck=null;
 }
 function startEditor(a=null,isDraft=false){
- clearEditor();
+ clearEditor();editingDraft=Boolean(isDraft);
  if(a){
   editingId=a.id;
   $("story-title").value=a.title||"";$("story-slug").value=a.id||"";$("story-summary").value=a.summary||"";
-  $("story-category").value=a.cat||"U.S.";$("story-type").value=a.kind||(a.id==="critical-reviews"?"review":["understanding-policy","global-context","ai-literacy","inflation-basics","research-check","source-check","business-records"].includes(a.id)?"explainer":"news");$("story-author").value=a.author||"Civora Editorial";
+  $("story-category").value=a.cat||"U.S.";
+  $("story-type").value=a.kind||(a.id==="critical-reviews"?"review":"news");
+  $("story-author").value=a.author||"Civora Research Desk";
   $("story-cover").value=a.art||"";$("story-date").value=a.publishedAt||localDate();
   $("story-body").value=(a.body||[]).join("\n\n");$("story-sources").value=(a.sources||[]).join("\n");
-  $("editor-heading").textContent=isDraft?"Edit draft":"Edit article";
+  $("editor-heading").textContent=isDraft?"Edit local draft":"Edit published article";
   const alreadyLive=remoteDoc.articles.some(p=>p.id===a.id);
   $("story-slug").readOnly=alreadyLive;
-  $("unpublish-story").hidden=!alreadyLive;$("delete-story").hidden=false;
-  $("editor-status").textContent=alreadyLive?"LIVE IN PUBLICATION":"LOCAL DRAFT";
+  $("unpublish-story").hidden=!alreadyLive||isDraft;
+  $("delete-story").hidden=false;
+  $("editor-status").textContent=isDraft?"SAVED ON THIS DEVICE":alreadyLive?"PUBLISHED":"LOCAL DRAFT";
  }
- $("fact-check").checked=false;
  renderPreview();showPanel("editor");$("story-title").focus();
 }
+$("article-form").addEventListener("submit",event=>event.preventDefault());
+$("article-form").addEventListener("input",()=>{
+ if(currentPanel!=="editor")return;
+ editorDirty=true;
+ $("editor-status").textContent=editingDraft?"UNSAVED DRAFT CHANGES":"UNSAVED CHANGES";
+});
+window.addEventListener("beforeunload",event=>{
+ if(editorDirty){event.preventDefault();event.returnValue="";}
+});
 $("story-title").addEventListener("input",()=>{if(!editingId && !$("story-slug").dataset.edited)$("story-slug").value=normalizeSlug($("story-title").value);renderPreview()});
 $("story-slug").addEventListener("input",()=>{$("story-slug").dataset.edited="true";renderPreview()});
 for(const id of ["story-summary","story-category","story-type","story-author","story-cover","story-date","story-body","story-sources"])$(id).addEventListener("input",renderPreview);
@@ -185,9 +200,40 @@ function saveLocal(record,notice=true){
  const ok=saveDrafts();renderEverything();if(notice)notify(ok?"Draft saved on this device. It is not public.":"Could not save draft.",!ok);return ok;
 }
 $("save-draft").addEventListener("click",()=>{
- try{const d=articleFromForm(false);saveLocal(d);editingId=d.id;$("editor-status").textContent="LOCAL DRAFT"}
- catch(e){notify(e.message,true)}
+ try{
+  const draft=articleFromForm(false);
+  if(saveLocal(draft)){
+   editingId=draft.id;editingDraft=true;editorDirty=false;
+   $("editor-status").textContent="SAVED ON THIS DEVICE";
+   $("unpublish-story").hidden=true;$("delete-story").hidden=false;
+  }
+ }catch(e){notify(e.message,true)}
 });
+$("export-story").addEventListener("click",()=>{
+ try{
+  const record=articleFromForm(false),name=record.id||"civora-draft";
+  const blob=new Blob([JSON.stringify({format:"civora-draft-v1",article:record},null,2)],{type:"application/json"});
+  const href=URL.createObjectURL(blob),a=document.createElement("a");
+  a.href=href;a.download=name+".civora-draft.json";document.body.append(a);a.click();a.remove();
+  setTimeout(()=>URL.revokeObjectURL(href),1000);
+  notify("Draft exported as a local JSON backup.");
+ }catch(e){notify(e.message,true)}
+});
+$("draft-import").addEventListener("change",async event=>{
+ const file=event.target.files?.[0];event.target.value="";
+ if(!file)return;
+ if(file.size>1024*1024){notify("Draft file must be smaller than 1 MB.",true);return}
+ try{
+  const data=JSON.parse(await file.text());
+  if(data.format!=="civora-draft-v1"||!data.article)throw Error("Not a Civora Studio draft export.");
+  const d=data.article;
+  if(!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(d.id||"")||typeof d.title!=="string"||typeof d.summary!=="string"||typeof d.author!=="string"||!categories[d.cat]||!Array.isArray(d.body)||!d.body.length||d.body.some(x=>typeof x!=="string")||!Array.isArray(d.sources)||d.sources.some(x=>typeof x!=="string"))throw Error("The draft file contains invalid fields.");
+  if(d.title.length>190||d.body.length>250||d.body.some(x=>x.length>20000)||d.sources.length>100)throw Error("The draft file exceeds Civora's article limits.");
+  const imported={id:d.id,cat:d.cat,visual:categories[d.cat],kind:["news","explainer","opinion","review","fact-check"].includes(d.kind)?d.kind:"news",title:d.title,summary:d.summary,art:String(d.art||d.title).slice(0,60),author:d.author,body:d.body,sources:d.sources,status:"draft",publishedAt:null,updatedAt:null};
+  if(saveLocal(imported)){showPanel("drafts");notify("Draft imported on this device. Review it before publishing.");}
+ }catch(e){notify(e.message||"Could not import draft.",true)}
+});
+
 
 function encodeTree(doc,old){
  const output=generateSite(doc.articles);
