@@ -30,8 +30,8 @@ function run(slots){
    if(selector!=="[data-civora-ad]")return [];
    return this.children.flatMap(child=>[...(child.matches(selector)?[child]:[]),...child.querySelectorAll(selector)]);
   }
-  append(...nodes){this.children.push(...nodes)}
-  getBoundingClientRect(){return {width:320}}
+  append(...nodes){for(const node of nodes){node.parentElement=this;this.children.push(node)}}
+  getBoundingClientRect(){return {width:this.type==="aside"?0:320}}
   setAttribute(name,val){this[name]=val}
  }
  const root=new Node("document");
