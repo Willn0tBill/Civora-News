@@ -126,7 +126,7 @@ function renderEverything(){
 }
 function clearEditor(){
  editingId=null;$("article-form").reset();$("story-author").value="Civora Editorial";$("story-date").value=localDate();
- $("story-slug").readOnly=false;$("story-title").value="";$("editor-heading").textContent="Create an article";
+ $("story-slug").readOnly=false;delete $("story-slug").dataset.edited;$("story-title").value="";$("editor-heading").textContent="Create an article";
  $("unpublish-story").hidden=true;$("delete-story").hidden=true;$("editor-status").textContent="NEW DRAFT";
 }
 function startEditor(a=null,isDraft=false){
@@ -199,6 +199,9 @@ async function commitArticles(nextArticles,summary){
  busyState(true);
  try{
   const current=await remoteContent();
+  const publishedHome=await api("/repos/"+REPO+"/contents/index.html?ref=main");
+  const expectedHome=generateSite(current.doc.articles)["index.html"];
+  if(decodeGithub(publishedHome.content)!==expectedHome)throw Error("The public layout has changed since this Studio version was deployed. Refresh Studio after the latest site deployment before publishing.");
   if(current.sha!==remoteSha)throw Error("Someone changed the newsroom on GitHub. Refresh your articles before publishing so you do not overwrite their work.");
   const ref=await api("/repos/"+REPO+"/git/ref/heads/main");
   const head=ref.object.sha;
