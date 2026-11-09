@@ -22,3 +22,8 @@ jobs:
         run: node tests/mobile.test.mjs
       - name: Verify Studio builds exact published HTML
         run: node tests/studio.test.mjs
+      - name: Verify staged secure Studio and Worker
+        run: |
+          node --check studio/secure/studio.mjs
+          node --check backend/cloudflare/worker.mjs
+          node tests/secure-studio.test.mjs
