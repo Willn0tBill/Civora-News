@@ -9,7 +9,7 @@ let keyCache={until:0,keys:{}};
 async function verify(token,project){
  const parts=token.split(".");if(parts.length!==3)throw Error("Bad token");
  const h=JSON.parse(dec.decode(bytes(parts[0]))),p=JSON.parse(dec.decode(bytes(parts[1]))),now=Math.floor(Date.now()/1000);
- if(h.alg!=="RS256"||!h.kid||p.aud!==project||p.iss!=="https://securetoken.google.com/"+project||!p.sub||typeof p.exp!=="number"||p.exp<=now||p.iat>now+30||p.auth_time>now+30||p.email_verified!==true)throw Error("Invalid identity");
+ if(h.alg!=="RS256"||!h.kid||p.aud!==project||p.iss!=="https://securetoken.google.com/"+project||!p.sub||typeof p.exp!=="number"||p.exp<=now||typeof p.iat!=="number"||p.iat>now+30||typeof p.auth_time!=="number"||p.auth_time>now+30||p.email_verified!==true)throw Error("Invalid identity");
  if(Date.now()>keyCache.until){const r=await fetch(KEYS);if(!r.ok)throw Error("Unable to verify identity");const max=Number(r.headers.get("cache-control")?.match(/max-age=(\d+)/)?.[1]||300);const parsed=await r.json();keyCache={until:Date.now()+Math.min(3600,max)*1000,keys:parsed.keys||[]};}
  const jwk=keyCache.keys.find(k=>k.kid===h.kid);if(!jwk)throw Error("Untrusted signing key");
  const pub=await crypto.subtle.importKey("jwk",jwk,{name:"RSASSA-PKCS1-v1_5",hash:"SHA-256"},false,["verify"]);
@@ -41,6 +41,10 @@ function validate(articles){
 }
 async function publish(env,articles,expectedSha){
  const current=await library(env);if(current.sha!==expectedSha)throw Error("Another editor changed the library. Refresh first.");
+ // Refuse to overwrite a design update if this Worker is running stale generator code.
+ const homepage=await gh(env,"/contents/index.html?ref=main");
+ const currentHome=dec.decode(Uint8Array.from(atob(homepage.content.replace(/\s+/g,"")),c=>c.charCodeAt(0)));
+ if(currentHome!==generateSite(current.doc.articles)["index.html"])throw Error("The website has changed. Redeploy the latest Civora publisher before posting.");
  validate(articles);
  const doc={...current.doc,articles};
  const files=generateSite(articles);
