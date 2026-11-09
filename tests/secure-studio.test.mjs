@@ -39,3 +39,6 @@ assert.equal(custom.headers.get("access-control-allow-origin"),"https://civorane
 const invalid=await worker.fetch(new Request("https://example.workers.dev",{method:"POST",headers:{Origin:"https://civoranews.org.evil.example"}}),{});
 assert.equal(invalid.status,403,"Lookalike domains must be rejected.");
 console.log("PASS: email/password staging, no public repo token, backend guards, and fail-closed Worker requests.");
+
+assert(app.includes('const secureTransport=location.protocol==="https:"'),"Admin login must enforce HTTPS");
+assert(read("studio/studio.mjs").includes('const secureTransport=location.protocol==="https:"'),"Legacy token login must enforce HTTPS");

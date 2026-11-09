@@ -9,6 +9,14 @@ const categories={"U.S.":"us","World":"world","Technology":"tech","Business":"bu
 let authClient=null, identity=null, remoteDoc={schemaVersion:1,articles:[]}, remoteSha=null;
 let drafts=[], editingId=null, busy=false, currentPanel="overview", lastSync=null;
 const $=id=>document.getElementById(id);
+const secureTransport=location.protocol==="https:"||location.hostname==="localhost"||location.hostname==="127.0.0.1";
+if(!secureTransport){
+ const warning=document.createElement("p");warning.className="notice";
+ warning.textContent="Administration is disabled on HTTP. Wait for the valid HTTPS certificate before entering passwords or publishing credentials.";
+ document.querySelector("#connect-form")?.prepend(warning);
+ const signIn=document.querySelector("#connect-btn");if(signIn)signIn.disabled=true;
+}
+
 
 function notify(message,error=false){
  const bar=$("toast");bar.textContent=message;bar.classList.toggle("error",error);bar.classList.add("visible");
@@ -57,7 +65,7 @@ async function activate(user){
  showPanel("overview");
 }
 async function connect(event){
- event.preventDefault();if(busy)return;
+ event.preventDefault();if(busy||!secureTransport)return;
  if(!authClient){notify("Email login has not been connected to Firebase yet.",true);return}
  const email=$("email").value.trim(),password=$("password").value;
  if(!email||!password){notify("Enter your email and password.",true);return}
@@ -85,7 +93,7 @@ $("reset-password").addEventListener("click",async()=>{
  if(!email){notify("Enter your email address first.",true);return}
  try{await sendPasswordResetEmail(authClient,email);notify("If this address has an account, a password reset email will arrive.")}catch{notify("Unable to request a password reset. Try again later.",true)}
 });
-if(firebaseConfig.apiKey&&firebaseConfig.projectId&&publisherUrl.startsWith("https://")){
+if(secureTransport&&firebaseConfig.apiKey&&firebaseConfig.projectId&&publisherUrl.startsWith("https://")){
  try{
   authClient=getAuth(initializeApp(firebaseConfig));
   setPersistence(authClient,browserLocalPersistence).catch(()=>{});

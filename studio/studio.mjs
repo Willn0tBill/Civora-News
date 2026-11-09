@@ -7,6 +7,14 @@ const categories={"U.S.":"us","World":"world","Technology":"tech","Business":"bu
 let accessToken=null, identity=null, remoteDoc={schemaVersion:1,articles:[]}, remoteSha=null;
 let drafts=[], editingId=null, busy=false, currentPanel="overview", lastSync=null;
 const $=id=>document.getElementById(id);
+const secureTransport=location.protocol==="https:"||location.hostname==="localhost"||location.hostname==="127.0.0.1";
+if(!secureTransport){
+ const warning=document.createElement("p");warning.className="notice";
+ warning.textContent="Administration is disabled on HTTP. Wait for the valid HTTPS certificate before entering passwords or publishing credentials.";
+ document.querySelector("#connect-form")?.prepend(warning);
+ const signIn=document.querySelector("#connect-btn");if(signIn)signIn.disabled=true;
+}
+
 
 function notify(message,error=false){
  const bar=$("toast");bar.textContent=message;bar.classList.toggle("error",error);bar.classList.add("visible");
@@ -57,7 +65,7 @@ async function reloadContent(){
  remoteDoc=updated.doc;remoteSha=updated.sha;lastSync=new Date();renderEverything();
 }
 async function connect(event){
- event.preventDefault();if(busy)return;
+ event.preventDefault();if(busy||!secureTransport)return;
  const token=$("token").value.trim();if(!token){notify("Enter a fine-grained GitHub token.",true);return}
  accessToken=token;busyState(true);
  try{
