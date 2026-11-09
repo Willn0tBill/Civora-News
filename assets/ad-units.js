@@ -16,7 +16,8 @@ function hydrate(root=document){
   if(node.dataset.civoraAdState)continue;
   const type=node.dataset.civoraAd,slot=slots[type];
   if(!spec[type]||!validSlot(slot)){node.dataset.civoraAdState="unconfigured";continue}
-  if(node.getBoundingClientRect().width<250){node.dataset.civoraAdState="too-narrow";continue}
+  const availableWidth=node.parentElement?.getBoundingClientRect().width||node.parentElement?.clientWidth||node.getBoundingClientRect().width;
+  if(availableWidth<250){node.dataset.civoraAdState="too-narrow";continue}
   node.dataset.civoraAdState="loading";
   const label=document.createElement("span");
   label.className="civora-ad-label";label.textContent="ADVERTISEMENT";
