@@ -14,7 +14,9 @@ assert(app.includes("signInWithEmailAndPassword")&&app.includes("browserLocalPer
 assert(app.includes("onAuthStateChanged")&&app.includes("sendPasswordResetEmail"),"Session recovery or password reset missing.");
 assert(app.includes('backend("publish"')&&app.includes('backend("load"'),"Publishing must use Worker backend.");
 assert(!app.includes("api.github.com"),"Admin browser must not talk to GitHub directly.");
-assert(config.includes('apiKey: ""')&&config.includes('publisherUrl = ""'),"The initial config must fail closed until setup.");
+assert(config.includes('apiKey: ""'),"Firebase sign-in must remain disabled until its dedicated project is configured.");
+assert(config.includes('https://civora-publisher.winotbill.workers.dev'),"Studio should point to the deployed Worker.");
+assert(config.includes('projectId: ""'),"A Firebase project must not be invented or borrowed.");
 assert(!config.includes("GITHUB_TOKEN")&&!config.includes("service_role"),"Public config contains sensitive credential names.");
 assert(server.includes('crypto.subtle.verify')&&server.includes('importKey("jwk"'),"JWT signature check missing.");
 assert(server.includes('FIREBASE_PROJECT_ID')&&server.includes("STAFF_UIDS"),"Server-side identity/role checks missing.");
