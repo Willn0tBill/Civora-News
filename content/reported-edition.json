@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "articles": [
+    {
+      "id": "2026-global-digital-divide",
+      "cat": "World",
+      "visual": "world",
+      "art": "The Offline Divide",
+      "title": "Two billion people remain offline as global internet access reaches 76%",
+      "summary": "The ITU says 6.3 billion people use the internet in 2026, but the newest figures reveal vast gaps in affordability and access.",
+      "kind": "news",
+      "body": [
+        "Internet access has passed a symbolic threshold, yet a connection remains out of reach for roughly two billion people. The International Telecommunication Union, the United Nations agency for digital technologies, estimated on November 3, 2026, that 6.3 billion people worldwide use the internet. That represents 76 percent of the global population, according to its Facts and Figures 2026 report.",
+        "The total was up from a revised 6.1 billion users in 2025. It signals continued expansion, but does not mean connectivity is universal or equally useful. Those who remain disconnected can face barriers to educational materials, job applications, public services and communication that increasingly assume digital access.",
+        "The global average conceals a striking income gap. The ITU estimates that 93 percent of people in high-income countries use the internet, compared with 32 percent in low-income countries. These figures describe actual usage rather than a simple count of mobile towers or cables, a distinction that matters when evaluating infrastructure claims.",
+        "Price remains part of the problem. According to the ITU, three in ten economies meet neither its fixed-broadband nor mobile-broadband affordability target. Even when a service is technically available, ongoing subscription charges, equipment costs and limited digital skills can prevent people from using it.",
+        "Quality is another dividing line. An unreliable shared connection may allow occasional messages but cannot support the same tasks as stable broadband. Being within cellular coverage is different from possessing a suitable device, affordable data and the skills to use online tools securely.",
+        "Readers should also compare statistics carefully. The ITU revised its estimate for 2025 upward from six billion to 6.1 billion internet users. Statistical revisions can reflect updated information and methods, so figures lifted from different editions should not automatically be treated as directly comparable.",
+        "The report therefore raises questions beyond coverage maps: Who can afford to connect, who has reliable service, and who benefits from new digital tools? The headline milestone is substantial, but the remaining exclusion is equally important.",
+        "Reporting note: This Civora News article is an original synthesis of the ITU's 2026 published statistics. No original interviews or field reporting were conducted."
+      ],
+      "sources": [
+        "ITU Facts and Figures 2026: https://www.itu.int/itu-d/reports/statistics/facts-figures-2026/",
+        "ITU November 2026 press release: https://www.itu.int/en/mediacentre/Pages/PR-2026-11-03-Facts-and-Figures.aspx",
+        "ITU digital statistics overview: https://www.itu.int/en/ITU-D/Statistics/pages/facts/default.aspx"
+      ],
+      "status": "published",
+      "author": "Civora Research Desk",
+      "publishedAt": "2026-11-09",
+      "updatedAt": null
+    },
+    {
+      "id": "ftc-imposter-scams-2025",
+      "cat": "Business",
+      "visual": "business",
+      "art": "The Cost of Deception",
+      "title": "Imposter scams drew $3.5 billion in reported losses in 2025, FTC says",
+      "summary": "Federal figures show how fake bank alerts and other impersonation schemes contributed to billions in reported fraud losses.",
+      "kind": "news",
+      "body": [
+        "An urgent message that appears to come from a bank or government office may be the opening move in a costly deception. The Federal Trade Commission reported in June 2026 that people said they lost $3.5 billion to imposter scams during 2025, with scammers borrowing the identities of recognizable organizations and trusted contacts.",
+        "Imposter schemes accounted for nearly one in three fraud reports received by the FTC that year. The agency said people encountered them through calls, texts, email, social media, search results and other channels. The formats change, but the common tactic is to claim authority that has not actually been established.",
+        "Some of the costliest reported schemes begin with a fake security warning. Someone posing as a financial institution claims an account is at risk and tells a person to move money to keep it safe. The supposed emergency makes an unusual request sound like necessary protection.",
+        "The FTC said people reported losing nearly one billion dollars to business impersonators, with bank impersonators responsible for the highest reported business-impersonation losses. Government impersonators accounted for about $920 million. Both figures were higher than their counterparts in 2024.",
+        "Across all fraud categories, reported losses reached about $16 billion in 2025, approximately 25 percent above 2024, according to the release. The word reported is critical: these totals describe information consumers submitted to the agency, not a complete accounting of every fraudulent incident or dollar lost.",
+        "The distinction between a message and verification can help people recognize suspicious demands. An unexpected request for credentials, payment or a transfer should be checked through an independently located contact channel. A link, phone number or caller ID supplied by the alarming message is not, by itself, confirmation of authenticity.",
+        "The findings show why deception can be powerful even without a technical breach. Scammers may cause significant harm by persuading people to act on fabricated authority. Public fraud data can describe the scale of reported losses; individual situations still require careful verification.",
+        "Reporting note: This article is Civora's source-based analysis of the FTC's published consumer-report figures, not an interview-based investigation."
+      ],
+      "sources": [
+        "FTC 2026 report on imposter scams: https://www.ftc.gov/news-events/news/press-releases/2026/06/ftc-data-show-people-reported-losing-3-point-5-billion-imposter-scams-2025",
+        "FTC Consumer Advice scam information: https://consumer.ftc.gov/scams"
+      ],
+      "status": "published",
+      "author": "Civora Research Desk",
+      "publishedAt": "2026-11-09",
+      "updatedAt": null
+    },
+    {
+      "id": "nasa-2025-global-temperature",
+      "cat": "Science",
+      "visual": "science",
+      "art": "The Warming Record",
+      "title": "NASA's 2025 temperature analysis shows warming continued below 2024's record",
+      "summary": "NASA places 2025 at 1.19°C above its mid-20th-century baseline, showing why one cooler year does not erase a decades-long trend.",
+      "kind": "news",
+      "body": [
+        "A year can be cooler than its predecessor and still rank among the hottest ever measured. In its January 14, 2026 analysis, NASA reported that global surface temperature in 2025 was 1.19 degrees Celsius above its 1951–1980 reference average. The year was cooler than 2024, the record holder, but remained close to 2023.",
+        "NASA described 2023 and 2025 as effectively tied within the study's uncertainty. The agency identifies 2024 as the hottest year in its temperature record, which begins in 1880. That result is easy to misunderstand if an annual decline is interpreted as evidence that the longer warming trend has ended.",
+        "The reported number is a temperature anomaly: a difference from an explicitly chosen reference average. NASA uses 1951–1980 as its baseline. A 1.19-degree anomaly does not describe Earth's absolute average temperature, nor is it necessarily interchangeable with a figure measured from a different historical reference period.",
+        "The analysis draws on measurements from more than 25,000 land weather stations, ships and ocean buoys, and Antarctic research stations. Scientists account for uneven station coverage and other factors that can bias a simple comparison, including local urban heat effects.",
+        "Independent groups can rank close years slightly differently because they process observations and missing coverage differently. NASA noted that NOAA, Berkeley Earth, the Hadley Centre and Europe's Copernicus service also placed 2025 as the third warmest year in their analyses. Their methods differ, but all show the broader warming pattern.",
+        "Short-term variations can arise from ocean conditions and natural climate variability. A record-setting year does not require the next year to be even hotter. To understand the long-term signal, researchers examine multiple years and decades instead of selecting one change between neighboring dates.",
+        "Three questions strengthen a climate headline: Which dataset is being used? What baseline defines the anomaly? And does the claim describe one year or a sustained trend? Those distinctions can prevent technically correct numbers from becoming misleading arguments.",
+        "Reporting note: This is an original Civora explanation of NASA's publicly released analysis, not a new climate measurement."
+      ],
+      "sources": [
+        "NASA January 2026 temperature release: https://www.nasa.gov/news-release/nasa-releases-global-temperature-data/",
+        "NASA global temperature indicator: https://science.nasa.gov/earth/explore/earth-indicators/global-temperature/"
+      ],
+      "status": "published",
+      "author": "Civora Research Desk",
+      "publishedAt": "2026-11-09",
+      "updatedAt": null
+    }
+  ]
+}
