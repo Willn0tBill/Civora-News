@@ -34,7 +34,7 @@ fetch(url,{headers:{apikey:key,Accept:"application/json"},cache:"no-store",signa
  const subtitle=document.createElement("p");subtitle.textContent="Fresh reporting from Civora's publishing desk.";
  header.append(eyebrow,subtitle);
  const cards=document.createElement("div");cards.className="live-feed-grid";
- for(const story of news){
+ for(const [index,story] of news.entries()){
   const card=document.createElement("a");card.className="live-feed-card";
   card.href="/story/?slug="+encodeURIComponent(story.slug);
   const category=document.createElement("small");category.textContent=story.category+" / "+(story.kind||"news").replaceAll("-"," ");
@@ -42,9 +42,11 @@ fetch(url,{headers:{apikey:key,Accept:"application/json"},cache:"no-store",signa
   const description=document.createElement("span");description.textContent=story.summary;
   const bottom=document.createElement("em");bottom.textContent="Read this story ↗";
   card.append(category,title,description,bottom);cards.append(card);
+  if(index===2&&news.length>=4){const ad=document.createElement("aside");ad.className="civora-ad-unit civora-ad-feed civora-ad-feed-grid";ad.dataset.civoraAd="inFeed";cards.append(ad);}
  }
  container.append(header,cards);
  if(isHome)target.before(container);else target.after(container);
+ window.CivoraAds?.hydrate(container);
 })
 .catch(()=>{/* Keep the independently generated archive readable on network errors. */});
 })();

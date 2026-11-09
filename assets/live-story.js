@@ -15,7 +15,12 @@ fetch(url,{headers:{apikey:key,Accept:"application/json"},cache:"no-store",signa
  const summary=document.createElement("p");summary.className="live-story-dek";summary.textContent=story.summary;
  const byline=document.createElement("p");byline.className="live-story-meta";byline.textContent="BY "+story.author+" · "+new Date(story.published_at).toLocaleDateString([],{month:"long",day:"numeric",year:"numeric"});
  const body=document.createElement("div");body.className="live-story-body";
- for(const t of story.body){const p=document.createElement("p");p.textContent=t;body.append(p)}
+ for(const [index,t] of story.body.entries()){
+  const p=document.createElement("p");p.textContent=t;body.append(p);
+  if(index===1&&story.body.length>=5){
+   const ad=document.createElement("aside");ad.className="civora-ad-unit civora-ad-inarticle";ad.dataset.civoraAd="inArticle";body.append(ad);
+  }
+ }
  const sourceSection=document.createElement("section");sourceSection.className="live-story-sources";
  const sourceTitle=document.createElement("h2");sourceTitle.textContent="Sources & further reading";sourceSection.append(sourceTitle);
  const list=document.createElement("ul");for(const ref of story.sources||[]){
@@ -29,6 +34,8 @@ fetch(url,{headers:{apikey:key,Accept:"application/json"},cache:"no-store",signa
   const photo=document.createElement("img");photo.className="live-story-cover";photo.src=story.cover_url;photo.alt="Cover photograph for "+story.title;photo.loading="lazy";root.append(photo);
  }
  root.append(body,sourceSection);
+ const relatedAds=document.createElement("aside");relatedAds.className="civora-ad-unit civora-ad-multiplex";relatedAds.dataset.civoraAd="multiplex";root.append(relatedAds);
+ window.CivoraAds?.hydrate(root);
 })
 .catch(e=>error(e.message||"Couldn't load this story. Try again."));
 })();
