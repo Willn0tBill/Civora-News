@@ -58,9 +58,10 @@ async function publish(env,articles,expectedSha){
  return {commit:commit.sha};
 }
 export default {async fetch(req,env){
- const origin=req.headers.get("origin"),allowed=env.ALLOWED_ORIGIN||"https://willn0tbill.github.io";
- if(origin!==allowed)return bad(403,"Untrusted origin");
- const cors={ "Access-Control-Allow-Origin":allowed,"Access-Control-Allow-Methods":"POST,OPTIONS","Access-Control-Allow-Headers":"Authorization,Content-Type","Vary":"Origin","Cache-Control":"no-store"};
+ const origin=req.headers.get("origin");
+ const allowed=(env.ALLOWED_ORIGINS||"https://civoranews.org,https://willn0tbill.github.io").split(",").map(x=>x.trim());
+ if(!origin||!allowed.includes(origin))return bad(403,"Untrusted origin");
+ const cors={ "Access-Control-Allow-Origin":origin,"Access-Control-Allow-Methods":"POST,OPTIONS","Access-Control-Allow-Headers":"Authorization,Content-Type","Vary":"Origin","Cache-Control":"no-store"};
  const respond=r=>{const h=new Headers(r.headers);for(const [k,v] of Object.entries(cors))h.set(k,v);return new Response(r.body,{status:r.status,headers:h});};
  if(req.method==="OPTIONS")return respond(new Response(null,{status:204}));
  if(req.method!=="POST")return respond(bad(405,"POST only"));

@@ -6,7 +6,7 @@ main = "worker.mjs"
 compatibility_date = "2026-11-09"
 
 [vars]
-ALLOWED_ORIGIN = "https://willn0tbill.github.io"
+ALLOWED_ORIGINS = "https://civoranews.org,https://willn0tbill.github.io"
 FIREBASE_PROJECT_ID = "REPLACE_WITH_DEDICATED_FIREBASE_PROJECT_ID"
 
 # Required Worker secrets (configure in Cloudflare dashboard or Wrangler):

@@ -33,4 +33,9 @@ const notConfigured=await worker.fetch(new Request("https://example.workers.dev"
 assert.equal(notConfigured.status,503,"Unconfigured Worker must fail closed.");
 const anon=await worker.fetch(new Request("https://example.workers.dev",{method:"POST",headers:{Origin:origin}}),{GITHUB_TOKEN:"placeholder",STAFF_UIDS:"uid",FIREBASE_PROJECT_ID:"project"}); 
 assert.equal(anon.status,401,"Anonymous publishing request must be rejected.");
+const custom=await worker.fetch(new Request("https://example.workers.dev",{method:"OPTIONS",headers:{Origin:"https://civoranews.org"}}),{});
+assert.equal(custom.status,204,"Custom domain should be permitted.");
+assert.equal(custom.headers.get("access-control-allow-origin"),"https://civoranews.org","Allowed origin must echo the precise request host.");
+const invalid=await worker.fetch(new Request("https://example.workers.dev",{method:"POST",headers:{Origin:"https://civoranews.org.evil.example"}}),{});
+assert.equal(invalid.status,403,"Lookalike domains must be rejected.");
 console.log("PASS: email/password staging, no public repo token, backend guards, and fail-closed Worker requests.");
