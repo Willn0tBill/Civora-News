@@ -98,3 +98,7 @@
  .front-path[data-front-reveal=pending]{opacity:0;transform:translateY(16px)}
  .front-path[data-front-reveal=shown]{opacity:1;transform:translateY(0);transition:opacity .45s ease,transform .45s ease,box-shadow .28s,border-color .28s}
 }
+
+/* Without JavaScript, trail numbers remain useful and progress meters stay hidden. */
+.front-path-progress{display:none}
+.has-js .front-path-progress{display:block}
