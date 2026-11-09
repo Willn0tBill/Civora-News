@@ -1,0 +1,18 @@
+/* Manual ad units are invisible unless an AdSense slot ID is configured. */
+.civora-ad-unit{display:none;min-width:0;max-width:100%;box-sizing:border-box}
+.civora-ad-unit.civora-ad-ready{display:block;clear:both;overflow:hidden}
+.civora-ad-unit.civora-ad-unfilled{display:none!important}
+.civora-ad-label{display:block;margin-bottom:10px;color:var(--muted,#667686);font:700 9px/1.4 Arial,sans-serif;letter-spacing:.17em;text-align:center}
+.civora-ad-unit .adsbygoogle{max-width:100%;min-width:250px}
+.civora-ad-display{margin:35px 0 45px;min-height:0;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.civora-ad-display.civora-ad-ready .adsbygoogle{min-height:100px}
+.civora-ad-feed{width:100%;margin:22px 0;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.civora-ad-feed.civora-ad-ready .adsbygoogle{min-height:135px}
+.civora-ad-feed-grid{margin:0;padding:18px;border:1px solid var(--line);border-radius:15px;background:var(--surface);align-self:stretch}
+.civora-ad-feed-grid.civora-ad-ready{display:flex;flex-direction:column;justify-content:center}
+.civora-ad-inarticle{margin:30px 0 38px;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);min-width:0}
+.civora-ad-inarticle.civora-ad-ready .adsbygoogle{min-height:150px}
+.civora-ad-multiplex{margin:42px 0 54px;padding:20px 0;border-top:1px solid var(--line)}
+.civora-ad-multiplex.civora-ad-ready .adsbygoogle{min-height:200px}
+.live-story-body .civora-ad-inarticle{font-family:Arial,sans-serif}
+@media(max-width:650px){.civora-ad-display{margin:24px 0 34px}.civora-ad-feed{margin:16px 0}.civora-ad-inarticle{margin:23px 0 28px}.civora-ad-multiplex{margin:32px 0 42px}}
