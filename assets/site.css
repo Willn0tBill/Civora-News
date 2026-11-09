@@ -258,3 +258,69 @@ input,textarea,select,button{max-width:100%}
 @media(prefers-reduced-motion:reduce){
  .flip-back,.flip-front,.flip-inner{transition:none!important}
 }
+
+/* Cover text collision fix: give artwork a reserved area above the touch CTA.
+   The decorative wordmark and the footer no longer share the bottom baseline. */
+.flip-front .editorial-art{
+  padding-bottom:110px;
+  min-height:0;
+}
+.flip-front .art-no{margin-bottom:10px}
+.flip-front .art-word{
+  line-height:1.1;
+  overflow-wrap:break-word;
+  max-width:90%;
+}
+.flip-cover-foot{
+  position:absolute;
+  inset:auto 0 0;
+  min-height:83px;
+  display:flex;
+  align-items:flex-end;
+  gap:16px;
+  padding:20px 23px 21px;
+  background:linear-gradient(180deg,rgba(14,30,42,0),rgba(14,30,42,.29) 35%,rgba(14,30,42,.64));
+}
+.flip-cover-label{flex:1 1 auto;min-width:0;line-height:1.35}
+.flip-hint{flex:0 0 auto}
+@media(max-width:760px){
+  .flip-front .editorial-art{
+    padding:24px 21px 104px;
+  }
+  .flip-front .art-word{
+    font-size:clamp(31px,8vw,47px);
+    line-height:1.07;
+    max-width:93%;
+  }
+  .flip-card--lead .flip-front .art-word{
+    font-size:clamp(35px,8.7vw,51px);
+  }
+  .flip-cover-foot{
+    min-height:70px;
+    padding:14px 19px 18px;
+    justify-content:flex-end;
+    align-items:flex-end;
+    gap:0;
+  }
+  /* Category and issue number already identify the cover; remove the redundant
+     bottom-left caption on phones to prevent two competing footer labels. */
+  .flip-cover-label{display:none}
+  .flip-hint{
+    display:inline-flex;
+    align-items:center;
+    justify-content:flex-end;
+    gap:7px;
+    white-space:nowrap;
+    font-size:10px;
+    line-height:1.2;
+    text-align:right;
+  }
+}
+@media(max-width:480px){
+  .flip-front .editorial-art{
+    padding:22px 18px 102px;
+  }
+  .flip-front .art-word{font-size:clamp(31px,8.7vw,44px);max-width:94%}
+  .flip-card--lead .flip-front .art-word{font-size:clamp(33px,9vw,47px)}
+  .flip-cover-foot{padding:14px 17px 18px;min-height:68px}
+}
