@@ -1,0 +1,42 @@
+import fs from "node:fs";
+import assert from "node:assert/strict";
+import {generateSite} from "../studio/generator.mjs";
+
+const read=path=>fs.readFileSync(path,"utf8");
+const doc=JSON.parse(read("content/articles.json"));
+const home=read("index.html"),css=read("assets/frontpage.css"),js=read("assets/frontpage.js");
+const generator=generateSite(doc.articles);
+assert.equal(generator["index.html"],home,"Homepage must exactly match generated source");
+assert(home.includes('class="front-grid"'),"Missing headline-first front page");
+assert(home.includes('class="front-feature"'),"Missing visible headline feature");
+assert(home.includes('class="front-briefs"'),"Missing secondary headlines");
+assert(home.includes('class="front-feature-cta"'),"Missing clear lead story link");
+assert(home.includes('class="flip-grid"'),"Existing flip-card collection must be preserved");
+assert(home.includes('class="reading-room-teaser"'),"Existing Reading Room must be preserved");
+assert(home.includes('href="./assets/frontpage.css"')&&home.includes('src="./assets/frontpage.js"'),"Homepage feature files are not loaded");
+assert(home.includes('aria-label="Guided reading paths"'),"Missing accessible reading route section");
+assert((home.match(/data-reading-path=/g)||[]).length===3,"Expected three editorial reading paths");
+assert((home.match(/data-path-story=/g)||[]).length===9,"Each editorial reading path should contain three articles");
+for(const id of ["context","evidence","thinking"]){
+ const start=home.indexOf('data-reading-path="'+id+'"');
+ assert(start>=0,"Missing reading path: "+id);
+ const body=home.slice(start,start+5000);
+ assert(body.includes('data-path-progress-label'),"Missing reading progress label for "+id);
+ assert(body.includes("<progress "), "Missing reading progress meter for "+id);
+}
+assert(js.includes("window.CivoraReading")&&js.includes("getRecent"),"Reading path progress must use local reader history");
+assert(js.includes("civora:reading-change"),"Progress must update as the reader opens stories");
+assert(!/\bfetch\s*\(/.test(js),"Reading path must not upload history");
+assert(css.includes("@media(max-width:650px)"),"No narrow phone front-page adjustments");
+assert(css.includes("@media(prefers-reduced-motion:reduce)"),"Front page must respect reduced-motion preference");
+assert(home.includes("EDITORIAL SAMPLE"),"Editorial demonstrations must remain labeled");
+const fresh={...doc.articles[0],id:"test-live-report",title:"A newly verified public report",status:"published",kind:"news",publishedAt:"2026-11-09"};
+const generated=generateSite([...doc.articles,fresh]);
+assert(generated["index.html"].includes(fresh.title),"Future published reporting should populate front page");
+const h=generated["index.html"];
+assert(h.indexOf(fresh.title)<h.indexOf(doc.articles[0].title),"Published reporting must precede sample coverage");
+assert(h.includes("SELECTED FROM THE LATEST REPORTING"),"A published lead should update the front-page edition status");
+assert(generated["article/"+fresh.id+"/index.html"],"New article page missing");
+assert(generated["discover/index.html"].includes(fresh.title),"Reading Room should remain synchronized");
+assert(!read("privacy/index.html").includes("upload your reading history to Civora." ) || read("privacy/index.html").includes("do not upload your reading history"),"Privacy statements must remain consistent");
+console.log("PASS frontpage: visible lead, headlines, guided reading progress, mobile motion, privacy and future articles.");
