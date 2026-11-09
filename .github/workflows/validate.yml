@@ -18,6 +18,11 @@ jobs:
         run: node scripts/build.mjs --check
       - name: Validate AdSense integration and privacy disclosure
         run: node tests/adsense.test.mjs
+      - name: Validate all four configurable AdSense formats
+        run: |
+          node --check assets/ads-config.js
+          node --check assets/ad-units.js
+          node tests/ad-units.test.mjs
       - name: Validate pages and internal links
         run: node tests/site.test.mjs
       - name: Validate responsive layouts and touch interactions
