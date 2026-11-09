@@ -16,3 +16,5 @@ jobs:
           node-version: '22'
       - name: Verify generated website matches article content
         run: node scripts/build.mjs --check
+      - name: Validate pages and internal links
+        run: node tests/site.test.mjs

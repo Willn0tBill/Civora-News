@@ -1,0 +1,20 @@
+import fs from "node:fs";
+import path from "node:path";
+import assert from "node:assert/strict";
+const root=process.cwd();
+function walk(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>{const p=path.join(dir,e.name);return e.isDirectory()&&e.name!==".git"?walk(p):p.endsWith(".html")?[p]:[]})}
+const pages=walk(root).map(p=>path.relative(root,p).replaceAll("\\","/"));
+assert(pages.length>=25,"Missing expected separate pages");
+let verified=0;
+for(const page of pages){
+const h=fs.readFileSync(page,"utf8");
+if(page!=="404.html"&&!page.startsWith("editor/")){assert(h.includes('<main id="main-content"'),"Missing content: "+page);assert(h.includes('<h1>'),"Missing headline: "+page)}
+if(page.startsWith("article/")){assert(h.includes("Sources & further reading"),"Missing sources: "+page);assert(h.includes("Editorial sample.")||h.includes("PUBLISHED"),"Article lacks disclosure: "+page)}
+for(const [,href] of h.matchAll(/\b(?:href|src)="([^"]+)"/g)){
+if(!href||href.startsWith("#")||href.startsWith("/Civora-News/")||/^(https?:|data:|mailto:|tel:)/i.test(href))continue;
+const local=href.split(/[?#]/)[0];if(!local)continue;
+const target=path.resolve(path.dirname(path.join(root,page)),local+(local.endsWith("/")?"index.html":""));
+assert(fs.existsSync(target),"Missing internal asset or page: "+page+" → "+href);verified++;
+}}
+assert(fs.existsSync("content/articles.json"),"Missing article library");
+console.log("PASS "+pages.length+" HTML pages, "+verified+" internal links/assets.");

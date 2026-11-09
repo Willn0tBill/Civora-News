@@ -35,3 +35,11 @@ All initial articles are marked as demonstration samples. No current-event cover
 - `assets/site.js`: progressive search enhancement only
 - `.github/workflows/validate.yml`: content/site consistency check
 - `editor/index.html`: existing client-side draft/export tool
+
+## Improvements to the article and publishing experience
+
+**Important:** The old auto-publishing workflow is retired because it could overwrite the newer static pages. Use `content/articles.json` → `node scripts/build.mjs` → commit the source and generated HTML together. GitHub Actions validates output but does not create news content or bypass editorial review.
+
+Article pages now offer optional reading-progress tracking, estimated read time, a quick jump to references, and copy-link support. Search responds to live input while keeping the full archive accessible without JavaScript. A custom 404 page gives lost readers a route home.
+
+The additional site-integrity test checks actual generated pages and links. Initial articles remain clearly labeled demonstration content, not reported breaking news.
