@@ -5,7 +5,7 @@
  * Keep publisher ID in the existing site-wide AdSense loader; do not add it here.
  */
 window.CIVORA_AD_SLOTS = Object.freeze({
-  display: "",
+  display: "3659691671",
   inFeed: "",
   inFeedLayoutKey: "",
   inArticle: "",
