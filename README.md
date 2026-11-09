@@ -65,3 +65,13 @@ No private keys or GitHub publishing credentials belong in the browser. The logi
 ## Operations and uptime
 
 For production health checks, TLS readiness, recoveries, and the launch checklist, see [docs/OPERATIONS.md](docs/OPERATIONS.md). An independent GitHub Actions workflow checks the actual HTTPS website twice daily, including the homepage, article pages, assets, sitemap, search and custom-domain 404. The admin dashboard remains at its direct URL but is no longer linked from the public footer.
+
+## Reading Room and reader experience
+
+Civora has a standalone **[Reading Room](discover/)** at `/discover/` linked in the public navigation. Its story roulette, topic filters, personal reading shelf, recently opened articles and five-question news-literacy challenge work in the browser without a paid backend or invented audience statistics.
+
+Article pages include related reading recommendations, a local **Save for later** control, text-size adjustment and a distraction-free reading mode. The homepage offers a Reading Room invitation and a **Surprise me** route. All article links remain normal HTML anchors, so core navigation works even if JavaScript is disabled. The news-literacy challenge is optional and uses original educational questions about evidence rather than claims about current events.
+
+Saved and recently opened article IDs are stored in the reader's own `localStorage` under `civora-reading-list-v1` and `civora-reading-history-v1`. No reader login, server-side behavioral profile, ad trackers, or third-party analytics are introduced. Site-data clearing removes the local data, and visitors who change devices won't see the same list there. `privacy/index.html` describes this behavior.
+
+Run `node tests/reading-room.test.mjs` and `node --check assets/reading.js && node --check assets/discover.js` for regression coverage. Always regenerate the public HTML and the synchronized `studio/generator.mjs` after changing the article templates; CI verifies parity.
