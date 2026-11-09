@@ -1,5 +1,5 @@
 import {initializeApp} from "https://www.gstatic.com/firebasejs/13.2.0/firebase-app.js";
-import {getAuth,signInWithEmailAndPassword,onAuthStateChanged,signOut,sendPasswordResetEmail,setPersistence,browserLocalPersistence} from "https://www.gstatic.com/firebasejs/13.2.0/firebase-auth.js";
+import {getAuth,signInWithEmailAndPassword,onAuthStateChanged,signOut,sendEmailVerification,sendPasswordResetEmail,setPersistence,browserLocalPersistence} from "https://www.gstatic.com/firebasejs/13.2.0/firebase-auth.js";
 import {firebaseConfig,publisherUrl} from "./config.mjs";
 
 
@@ -66,6 +66,7 @@ async function connect(event){
   await signInWithEmailAndPassword(authClient,email,password);
   $("password").value="";
   const user=authClient.currentUser;if(!user)throw Error("Login did not return an account.");
+  if(!user.emailVerified){await sendEmailVerification(user);await signOut(authClient);throw Error("Check your inbox to verify your email before entering Studio.");}
   await activate(user);notify("Signed in as "+user.email+".");
  }catch(e){notify(e.message||"Sign-in failed.",true)}
  finally{busyState(false)}
@@ -89,7 +90,7 @@ if(firebaseConfig.apiKey&&firebaseConfig.projectId&&publisherUrl.startsWith("htt
   authClient=getAuth(initializeApp(firebaseConfig));
   setPersistence(authClient,browserLocalPersistence).catch(()=>{});
   onAuthStateChanged(authClient,async user=>{
-   if(user&&!identity){try{await activate(user)}catch(e){notify(e.message||"Unable to load newsroom.",true)}}
+   if(user&&!identity){if(!user.emailVerified){notify("Verify your email address before entering Studio.",true);return;}try{await activate(user)}catch(e){notify(e.message||"Unable to load newsroom.",true)}}
    else if(!user){identity=null;$("authenticated").hidden=true;$("connect-screen").hidden=false;$("disconnect").hidden=true;}
   });
  }catch(e){notify("Firebase configuration is invalid.",true);$("setup-status").hidden=false}
