@@ -42,7 +42,7 @@ fetch(url,{headers:{apikey:key,Accept:"application/json"},cache:"no-store",signa
   const description=document.createElement("span");description.textContent=story.summary;
   const bottom=document.createElement("em");bottom.textContent="Read this story ↗";
   card.append(category,title,description,bottom);cards.append(card);
-  if(index===2&&news.length>=4){const ad=document.createElement("aside");ad.className="civora-ad-unit civora-ad-feed civora-ad-feed-grid";ad.dataset.civoraAd="inFeed";cards.append(ad);}
+  if(index===2&&news.length>=4){const ad=document.createElement("aside");ad.className="civora-ad-unit civora-ad-feed civora-ad-feed-grid";ad.dataset.civoraAd="newsFeed";cards.append(ad);}
  }
  container.append(header,cards);
  if(isHome)target.before(container);else target.after(container);

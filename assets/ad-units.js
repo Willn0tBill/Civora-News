@@ -2,7 +2,9 @@
 const client="ca-pub-1423460909106679";
 const spec={
  display:{format:"auto",responsive:"true"},
- inFeed:{format:"fluid"},
+ displayLower:{format:"auto",responsive:"true"},
+ newsFeed:{format:"fluid"},
+ readingRoom:{format:"fluid"},
  inArticle:{format:"fluid",layout:"in-article"},
  multiplex:{format:"autorelaxed"}
 };
@@ -27,9 +29,8 @@ function hydrate(root=document){
   ins.dataset.adFormat=spec[type].format;
   if(spec[type].responsive)ins.dataset.fullWidthResponsive="true";
   if(spec[type].layout)ins.dataset.adLayout=spec[type].layout;
-  if(type==="inFeed"&&typeof slots.inFeedLayoutKey==="string"&&slots.inFeedLayoutKey.trim()){
-   ins.dataset.adLayoutKey=slots.inFeedLayoutKey.trim();
-  }
+  const layoutKey=type==="newsFeed"?slots.newsFeedLayoutKey:type==="readingRoom"?slots.readingRoomLayoutKey:null;
+  if(typeof layoutKey==="string"&&layoutKey.trim())ins.dataset.adLayoutKey=layoutKey.trim();
   node.setAttribute("aria-label","Advertisement");
   node.append(label,ins);
   node.classList.add("civora-ad-ready");

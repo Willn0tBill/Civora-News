@@ -16,3 +16,7 @@
 .civora-ad-multiplex.civora-ad-ready .adsbygoogle{min-height:200px}
 .live-story-body .civora-ad-inarticle{font-family:Arial,sans-serif}
 @media(max-width:650px){.civora-ad-display{margin:24px 0 34px}.civora-ad-feed{margin:16px 0}.civora-ad-inarticle{margin:23px 0 28px}.civora-ad-multiplex{margin:32px 0 42px}}
+
+/* Secondary responsive display position below the cover-card gallery. */
+.civora-ad-display-lower{margin:24px 0 52px}
+@media(max-width:650px){.civora-ad-display-lower{margin:18px 0 37px}}
