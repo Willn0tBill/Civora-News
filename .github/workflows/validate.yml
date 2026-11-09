@@ -33,9 +33,12 @@ jobs:
         run: node tests/editorial.test.mjs
       - name: Verify Studio builds exact published HTML
         run: node tests/studio.test.mjs
-      - name: Verify staged secure Studio and Worker
+      - name: Validate PPW-style Supabase newsroom
         run: |
-          node --check studio/secure/studio.mjs
+          node --check studio/newsroom.js
+          node --check assets/live-news.js
+          node --check assets/live-story.js
+          node --check scripts/sync-supabase.mjs
           node --check backend/cloudflare/worker.mjs
           node tests/secure-studio.test.mjs
           node tests/studio-workflow.test.mjs

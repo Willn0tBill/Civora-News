@@ -4,7 +4,7 @@ const css=fs.readFileSync("assets/site.css","utf8");
 const js=fs.readFileSync("assets/site.js","utf8");
 const editor=fs.readFileSync("editor/index.html","utf8");
 const studio=fs.readFileSync("studio/index.html","utf8");
-const studioCss=fs.readFileSync("studio/studio.css","utf8");
+const studioCss=fs.readFileSync("studio/newsroom.css","utf8");
 const home=fs.readFileSync("index.html","utf8");
 const routes=["index.html","latest/index.html","section/us/index.html","section/world/index.html","section/technology/index.html","section/business/index.html","section/science/index.html","section/culture/index.html","article/2026-global-digital-divide/index.html","search/index.html","about/index.html","newsletter/index.html","reviews/index.html","fact-checks/index.html"];
 for(const path of routes){
@@ -29,9 +29,10 @@ assert(js.includes("touchMode()"),"Missing touch-specific preview behavior");
 assert(home.includes('class="flip-grid"'),"Home cover collection missing");
 assert(editor.includes('name="viewport"'),"Editor missing viewport");
 assert(studio.includes('name="viewport"'),"Studio missing mobile viewport");
-assert(studioCss.includes("@media(max-width:600px)"),"Studio missing small-screen layout");
-assert(studioCss.includes(".editor-buttons"),"Studio article actions need mobile layout");
+assert(studioCss.includes("@media(max-width:650px)"),"Studio missing small-screen layout");
+assert(studioCss.includes(".editor-actions"),"Studio article actions need mobile layout");
 assert(editor.includes("../studio/"),"Old editor should redirect to mobile-friendly Studio");
+assert(studio.includes('id="loginEmail"')&&studio.includes('id="articleForm"'),"Supabase newsroom login or editor missing");
 console.log("PASS mobile: "+routes.length+" responsive routes, navigation, card previews, editor, touch sizing, reduced motion.");
 
 /* Regression: mobile card covers must reserve distinct space for the label/CTA. */
