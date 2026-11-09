@@ -82,6 +82,90 @@
       "author": "Civora Research Desk",
       "publishedAt": "2026-11-09",
       "updatedAt": null
+    },
+    {
+      "id": "nist-generative-ai-risk-profile",
+      "cat": "Technology",
+      "visual": "tech",
+      "art": "Beyond the Prompt",
+      "title": "What NIST's generative AI guidance says about building trustworthy systems",
+      "summary": "The U.S. standards agency treats AI safety as a process of identifying, measuring and managing risks—not merely passing one accuracy test.",
+      "kind": "explainer",
+      "body": [
+        "A fluent answer is not automatically a trustworthy one. Organizations using generative artificial intelligence must consider how a system behaves when it produces unsupported information, uses sensitive data or operates where a mistake could have serious consequences. The National Institute of Standards and Technology offers voluntary guidance for evaluating such risks.",
+        "NIST published its AI Risk Management Framework in January 2023 and a generative AI companion profile in July 2024. The latter, identified as NIST AI 600-1, addresses issues arising when a system generates text, images, code or other content. The document is a tool for managing risks, not an automatic legal certification or binding requirement for every developer.",
+        "Trustworthiness is broader than whether a chatbot gets a test question right. Reliability, safety, security, privacy, transparency and fairness all matter, as does the purpose for which a system is used. A tool that performs acceptably as an optional brainstorming aid might be unsuitable for a setting where people cannot easily challenge its outputs.",
+        "That is why evaluation must continue after a product launches. Teams need to identify potential harm, examine who could be affected, test realistic use cases, document limitations and monitor what happens as circumstances change. A single demonstration can show a feature working; it cannot establish how the system will perform in every situation.",
+        "Generative systems create a particular problem for source verification. An output can look authoritative while offering a mistaken statement or a nonexistent citation. Users should be able to separate generated claims from independently checked evidence. A newsroom, for example, cannot turn a polished draft into a verified news report merely by publishing it.",
+        "Human oversight matters, but its design matters too. A reviewer needs the information, time and authority to spot a problem and stop or correct it. Organizations also need useful routes to report failures and update systems when new risks emerge, rather than treating their safeguards as permanent.",
+        "The lesson is not that generative AI is inherently useless or automatically safe. NIST's approach encourages evidence-based decisions about benefits and harms, together with meaningful accountability over time. The choice of deployment context can be as important as the model itself.",
+        "Reporting note: This article summarizes NIST's published risk-management framework and does not evaluate or certify a particular AI product."
+      ],
+      "sources": [
+        "NIST Generative AI Risk Management Profile: https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+        "NIST AI Risk Management Framework: https://www.nist.gov/itl/ai-risk-management-framework"
+      ],
+      "status": "published",
+      "author": "Civora Research Desk",
+      "publishedAt": "2026-11-09",
+      "updatedAt": null
+    },
+    {
+      "id": "how-federal-reserve-rates-work",
+      "cat": "Business",
+      "visual": "business",
+      "art": "The Price of Money",
+      "title": "Why a Fed rate decision can change borrowing costs without setting your mortgage",
+      "summary": "The federal funds target influences consumer credit and economic activity, but changes reach households indirectly and at different speeds.",
+      "kind": "explainer",
+      "body": [
+        "When the Federal Reserve announces a change in interest-rate policy, households often wonder what will happen to their loans or savings. The starting point is a rate most consumers never pay directly: the federal funds rate, which concerns overnight lending between banks.",
+        "The Federal Open Market Committee sets a target range for this rate. The Federal Reserve explains that its decisions influence broader financial conditions, including the availability and cost of credit. The central bank does not set every mortgage, credit card or auto-loan offer directly.",
+        "Some short-term borrowing costs respond relatively quickly to the federal funds target. Variable-rate products may adjust through their benchmark rates or contract terms. Longer-term financing, however, also reflects investor expectations about future inflation, economic growth and the path of monetary policy.",
+        "That is why mortgage rates do not necessarily move by the same amount as a Fed announcement—or even in the same direction on the announcement day. Traders may have anticipated a decision well before it was made, and longer-term bond yields can shift for reasons beyond the overnight rate.",
+        "The economic goal is to influence spending and inflation while supporting employment. When borrowing becomes more expensive, some families delay large purchases and some businesses reconsider expansion. Less spending can reduce inflationary pressure, but it can also weaken hiring or economic activity.",
+        "Lower borrowing costs can support spending and investment, though they carry different risks for inflation. The Fed describes the transmission of monetary policy as indirect and not immediate. Energy prices, supply disruptions, consumer confidence and other developments can change the result.",
+        "Readers can separate three questions the next time rates make headlines: What did the FOMC decide? What happened to the particular loan or savings rate being discussed? And what else may have influenced that rate? Treating these as separate questions avoids promising that one policy action will have an identical effect on every household.",
+        "Reporting note: This is an explanatory article based on Federal Reserve materials. It is not individualized borrowing advice or a prediction about the next rate decision."
+      ],
+      "sources": [
+        "Federal Reserve policy rate explainer: https://www.federalreserve.gov/economy-at-a-glance-policy-rate.htm",
+        "Federal Reserve monetary policy transmission: https://www.federalreserve.gov/monetarypolicy/monetary-policy-what-are-its-goals-how-does-it-work.htm",
+        "Federal Reserve policy overview: https://www.federalreserve.gov/aboutthefed/fedexplained/monetary-policy.htm"
+      ],
+      "status": "published",
+      "author": "Civora Research Desk",
+      "publishedAt": "2026-11-09",
+      "updatedAt": null
+    },
+    {
+      "id": "how-a-bill-becomes-law",
+      "cat": "U.S.",
+      "visual": "us",
+      "art": "From Bill to Law",
+      "title": "A bill is not a law: how proposals actually move through Congress",
+      "summary": "Committees, votes in both chambers, and presidential action separate an introduced proposal from an enforceable federal statute.",
+      "kind": "explainer",
+      "body": [
+        "A headline saying that Congress has introduced a bill can sound as though a new rule already exists. It does not. A bill is a legislative proposal, and many proposals never pass. Tracking the stages between introduction and enactment helps readers distinguish political intentions from laws that have actually been approved.",
+        "Legislation generally begins when a member of the House of Representatives or Senate introduces a proposal. It is typically referred to a committee responsible for the subject. Committee members may examine the text, seek evidence, hear testimony, propose changes or decide not to advance it.",
+        "If the bill proceeds, one chamber may debate and vote on it before the other chamber considers it. Both the House and Senate must ultimately agree on identical legislative language. That requirement can be a major obstacle when each chamber approves a different version.",
+        "The specific rules vary. House procedures, Senate debate practices, the type of measure and political circumstances can determine how an issue reaches a vote. A simplified diagram of the legislative process is useful, but it does not capture every procedural step or the bills that never advance.",
+        "After both chambers pass the same bill, it goes to the president. The president may sign it or veto it. Congress can override a presidential veto with two-thirds votes in both chambers. The Constitution also establishes timing rules under which a bill may become law without a presidential signature.",
+        "Even becoming law does not always mean every provision takes effect immediately. A statute may contain a delayed effective date or direct an executive agency to develop rules. Accurate reporting on a new law therefore requires checking its final text and implementation timeline.",
+        "Congress.gov makes bill texts, actions and legislative histories available to the public. A reader can check the latest version, identify whether a bill was amended and see whether an action was a committee step, a chamber vote or enactment.",
+        "The most useful habit is simple: when a headline says lawmakers 'moved' or 'approved' a proposal, find out exactly who acted, on which version, and what must still happen. Legislative status is an essential part of the story, not a minor procedural detail.",
+        "Reporting note: Civora prepared this civic explainer using official congressional resources. No lawmakers were interviewed for this article."
+      ],
+      "sources": [
+        "U.S. House legislative process: https://www.house.gov/the-house-explained/the-legislative-process",
+        "USAGov how laws are made: https://www.usa.gov/how-laws-are-made",
+        "Congress.gov legislation search: https://www.congress.gov/"
+      ],
+      "status": "published",
+      "author": "Civora Research Desk",
+      "publishedAt": "2026-11-09",
+      "updatedAt": null
     }
   ]
 }
