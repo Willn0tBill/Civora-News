@@ -43,3 +43,7 @@ All initial articles are marked as demonstration samples. No current-event cover
 Article pages now offer optional reading-progress tracking, estimated read time, a quick jump to references, and copy-link support. Search responds to live input while keeping the full archive accessible without JavaScript. A custom 404 page gives lost readers a route home.
 
 The additional site-integrity test checks actual generated pages and links. Initial articles remain clearly labeled demonstration content, not reported breaking news.
+
+## Card-based home edition (PPW-inspired)
+
+The homepage uses a featured cover card plus a responsive grid of interactive cover cards, inspired by PPW's rounded, approachable newspaper card layout. Pointer hover and keyboard focus rotate cards to show the headline and summary. On touch/narrow screens, first tap reveals an overlay with the summary, second action opens the article; a close button and Escape key close the preview. Without JavaScript, the front of every card remains a regular direct article link. The cards respect reduced-motion settings, and published article pages remain unchanged.

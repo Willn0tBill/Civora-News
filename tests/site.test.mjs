@@ -18,3 +18,8 @@ assert(fs.existsSync(target),"Missing internal asset or page: "+page+" → "+hre
 }}
 assert(fs.existsSync("content/articles.json"),"Missing article library");
 console.log("PASS "+pages.length+" HTML pages, "+verified+" internal links/assets.");
+
+const home=fs.readFileSync("index.html","utf8");
+assert(home.includes('class="flip-grid"'),"Cover-card homepage missing");
+assert((home.match(/data-flip-card/g)||[]).length>=8,"Expected eight cover cards");
+assert(home.includes("data-flip-close")&&home.includes("Read full article"),"Missing mobile preview controls");
