@@ -8,7 +8,9 @@ for(const path of walk(".").map(x=>x.replace(/^\.\//,""))){
  const html=fs.readFileSync(path,"utf8");
  if(path.startsWith("studio/")||path.startsWith("editor/")){
   assert(!html.includes(tag),"Admin must not load advertising: "+path);
- }else if(path!=="404.html"){
+ }else if(path==="404.html"||path==="search/index.html"){
+  assert(!html.includes(tag),"Search and error pages must not load AdSense: "+path);
+ }else{
   assert.equal(html.split(tag).length-1,1,"Expected one AdSense tag in "+path);
   assert(html.includes('crossorigin="anonymous"'),"AdSense tag missing crossorigin: "+path);
   assert(html.includes('name="google-adsense-account" content="'+pub+'"'),"AdSense publisher meta missing: "+path);
