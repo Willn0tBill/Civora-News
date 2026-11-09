@@ -134,7 +134,7 @@ function startEditor(a=null,isDraft=false){
  if(a){
   editingId=a.id;
   $("story-title").value=a.title||"";$("story-slug").value=a.id||"";$("story-summary").value=a.summary||"";
-  $("story-category").value=a.cat||"U.S.";$("story-author").value=a.author||"Civora Editorial";
+  $("story-category").value=a.cat||"U.S.";$("story-type").value=a.kind||(a.id==="critical-reviews"?"review":["understanding-policy","global-context","ai-literacy","inflation-basics","research-check","source-check","business-records"].includes(a.id)?"explainer":"news");$("story-author").value=a.author||"Civora Editorial";
   $("story-cover").value=a.art||"";$("story-date").value=a.publishedAt||localDate();
   $("story-body").value=(a.body||[]).join("\n\n");$("story-sources").value=(a.sources||[]).join("\n");
   $("editor-heading").textContent=isDraft?"Edit draft":"Edit article";
@@ -148,7 +148,7 @@ function startEditor(a=null,isDraft=false){
 }
 $("story-title").addEventListener("input",()=>{if(!editingId && !$("story-slug").dataset.edited)$("story-slug").value=normalizeSlug($("story-title").value);renderPreview()});
 $("story-slug").addEventListener("input",()=>{$("story-slug").dataset.edited="true";renderPreview()});
-for(const id of ["story-summary","story-category","story-author","story-cover","story-date","story-body","story-sources"])$(id).addEventListener("input",renderPreview);
+for(const id of ["story-summary","story-category","story-type","story-author","story-cover","story-date","story-body","story-sources"])$(id).addEventListener("input",renderPreview);
 function renderPreview(){
  const title=$("story-title").value.trim()||"Your headline will appear here.";
  $("article-preview").querySelector("h2").textContent=title;
@@ -160,7 +160,7 @@ function renderPreview(){
 }
 const validSource=s=>/^[^:]+: https:\/\/[^\s]+$/i.test(s);
 function articleFromForm(asPublished){
- const fields={id:$("story-slug").value.trim(),title:$("story-title").value.trim(),summary:$("story-summary").value.trim(),cat:$("story-category").value,author:$("story-author").value.trim(),art:$("story-cover").value.trim()||$("story-title").value.trim(),visual:categories[$("story-category").value],body:paragraphs($("story-body").value),sources:lines($("story-sources").value),status:asPublished?"published":"draft",publishedAt:asPublished?$("story-date").value||localDate():null,updatedAt:null};
+ const fields={id:$("story-slug").value.trim(),title:$("story-title").value.trim(),summary:$("story-summary").value.trim(),cat:$("story-category").value,kind:$("story-type").value,author:$("story-author").value.trim(),art:($("story-cover").value.trim()||$("story-title").value.trim().split(/\s+/).slice(0,4).join(" ")).slice(0,60),visual:categories[$("story-category").value],body:paragraphs($("story-body").value),sources:lines($("story-sources").value),status:asPublished?"published":"draft",publishedAt:asPublished?$("story-date").value||localDate():null,updatedAt:null};
  if(!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(fields.id))throw Error("Use a lowercase URL slug containing only letters, numbers and hyphens.");
  if(!fields.title||!fields.summary||!fields.author||!fields.art||!fields.body.length)throw Error("Headline, summary, author and article text are required.");
  if(fields.sources.some(s=>!validSource(s)))throw Error("References must follow: Source name: https://example.com/page");

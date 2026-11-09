@@ -33,6 +33,8 @@ function validate(articles){
  for(const a of articles){
   if(!a||!(/^[a-z0-9]+(?:-[a-z0-9]+)*$/).test(a.id||"")||seen.has(a.id))throw Error("Duplicate or invalid slug");seen.add(a.id);
   if(!["published","sample"].includes(a.status)||!validSections.has(a.cat)||!validVisual.has(a.visual))throw Error("Invalid section or status");
+  if(a.kind!==undefined&&!["news","explainer","opinion","review","fact-check"].includes(a.kind))throw Error("Invalid article format");
+  if(typeof a.art!=="string"||a.art.length>60)throw Error("Cover text is too long");
   for(const k of ["title","summary","art","author"])if(typeof a[k]!=="string"||!a[k].trim()||a[k].length>1500)throw Error("Missing or oversized "+k);
   if(!Array.isArray(a.body)||!a.body.length||a.body.length>250||a.body.some(p=>typeof p!=="string"||!p.trim()||p.length>20000))throw Error("Invalid article paragraphs");
   if(!Array.isArray(a.sources)||a.sources.length>100||a.sources.some(s=>typeof s!=="string"||s.length>1500||!/^[^:]+: https:\/\/\S+$/.test(s)))throw Error("Invalid references");
