@@ -25,14 +25,14 @@ window.CIVORA_AD_SLOTS = Object.freeze({
   newsFeedLayoutKey: "-fb+5w+4e-db+86",
   readingRoom: "4259678663",
   readingRoomLayoutKey: "-fb+5w+4e-db+86",
-  inArticle: "IN_ARTICLE_SLOT_NUMBER",
-  multiplex: "MULTIPLEX_SLOT_NUMBER"
+  inArticle: "7979431824",
+  multiplex: "3541493367"
 });
 ```
 
-The first four numeric slot values shown above are the **actual user-provided AdSense IDs**; the remaining In-article and Multiplex examples are illustrative text and must be replaced with their exact AdSense IDs. Leave either remaining slot empty until then. Deploy the changes through GitHub Pages. You do **not** need to paste the full Google script four times. The publisher-wide async loader already exists.
+All six numeric slot values shown above are the **actual user-provided AdSense IDs**. The In-article and Multiplex units were activated in the site configuration on November 9, 2026. Deploy the configuration through GitHub Pages. You do **not** need to paste the full Google script four times. The publisher-wide async loader already exists.
 
-**Without slot IDs:** these manual ad containers are invisible and request **no** manual ads, so Civora doesn't show fake ads or empty placeholder panels. Existing Auto ads can still display separately if enabled in AdSense. The four formats are built and supported; actual ad serving requires valid IDs, AdSense approval, and applicable consent settings.
+**If a slot ID is empty:** that manual ad container remains invisible and requests **no** manual ad, so Civora does not show fake ads or empty placeholder panels. Existing Auto ads can still display separately if enabled in AdSense. The four formats are built and supported; actual ad serving requires valid IDs, AdSense approval, and applicable consent settings.
 
 Civora hides known unfilled units, doesn't run manual advertising inside staff Studio, and keeps advertising labeled and outside the main article text links. Always review ad density on mobile. Avoid layering excessive Auto ads on top of the manual placements; tune Auto ads settings in AdSense if needed.
 
