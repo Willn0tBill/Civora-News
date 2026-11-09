@@ -95,7 +95,7 @@
 }
 @media(prefers-reduced-motion:reduce){.front-feature .editorial-art,.front-path,.front-brief{transition:none!important}}
 @media(prefers-reduced-motion:no-preference){
- .front-path[data-front-reveal=pending]{opacity:0;transform:translateY(16px)}
+ .front-path[data-front-reveal=pending]{opacity:1;transform:translateY(9px)}
  .front-path[data-front-reveal=shown]{opacity:1;transform:translateY(0);transition:opacity .45s ease,transform .45s ease,box-shadow .28s,border-color .28s}
 }
 
