@@ -7,6 +7,7 @@ const PUBLIC_ROOT="https://civoranews.org/";
 const DRAFT_KEY="civora-studio-local-drafts-v1";
 const categories={"U.S.":"us","World":"world","Technology":"tech","Business":"business","Science":"science","Culture":"culture"};
 let authClient=null, identity=null, remoteDoc={schemaVersion:1,articles:[]}, remoteSha=null;
+let authReady=Promise.resolve(),activationInFlight=false;
 let drafts=[], editingId=null, editingDraft=false, editorDirty=false, busy=false, currentPanel="overview", lastSync=null;
 let publicationCheck=null;
 const $=id=>document.getElementById(id);
@@ -60,25 +61,45 @@ async function reloadContent(){
  remoteDoc=updated.doc;remoteSha=updated.sha;lastSync=new Date();renderEverything();
 }
 async function activate(user){
- identity={email:user.email};await reloadContent();
- $("authenticated").hidden=false;$("connect-screen").hidden=true;$("disconnect").hidden=false;
- $("identity").textContent=user.email||"Staff";
- showPanel("overview");
+ if(activationInFlight||identity?.email===user.email)return;
+ activationInFlight=true;
+ try{
+  await reloadContent();
+  identity={email:user.email};
+  $("authenticated").hidden=false;$("connect-screen").hidden=true;$("disconnect").hidden=false;
+  $("identity").textContent=user.email||"Approved staff";
+  showPanel("overview");
+  notify("Newsroom connected as "+user.email+".");
+ }catch(e){
+  identity=null;
+  $("authenticated").hidden=true;$("connect-screen").hidden=false;$("disconnect").hidden=false;
+  notify(e.message||"Login succeeded, but the publishing backend could not be reached.",true);
+ }finally{activationInFlight=false}
 }
 async function connect(event){
  event.preventDefault();if(busy||!secureTransport)return;
- if(!authClient){notify("Email login has not been connected to Firebase yet.",true);return}
+ if(!authClient){notify("Email login still needs its Firebase Web app configuration.",true);return}
  const email=$("email").value.trim(),password=$("password").value;
  if(!email||!password){notify("Enter your email and password.",true);return}
  busyState(true);
  try{
-  await signInWithEmailAndPassword(authClient,email,password);
+  await authReady;
+  const result=await signInWithEmailAndPassword(authClient,email,password);
   $("password").value="";
-  const user=authClient.currentUser;if(!user)throw Error("Login did not return an account.");
-  if(!user.emailVerified){await sendEmailVerification(user);await signOut(authClient);throw Error("Check your inbox to verify your email before entering Studio.");}
-  await activate(user);notify("Signed in as "+user.email+".");
- }catch(e){notify(e.message||"Sign-in failed.",true)}
- finally{busyState(false)}
+  if(!result.user.emailVerified){
+   try{await sendEmailVerification(result.user)}catch{}
+   await signOut(authClient);
+   throw Error("Verify your email first. We attempted to send a verification link.");
+  }
+  // onAuthStateChanged owns the single newsroom activation so it cannot race a second load.
+ }catch(e){
+  const code=e?.code||"";
+  const message=code==="auth/invalid-credential"||code==="auth/wrong-password"||code==="auth/user-not-found"
+   ?"Email or password not recognized.":code==="auth/too-many-requests"
+   ?"Too many sign-in attempts. Try again later.":code==="auth/user-disabled"
+   ?"This staff account is disabled.":e.message||"Unable to sign in.";
+  notify(message,true);
+ }finally{busyState(false)}
 }
 $("connect-form").addEventListener("submit",connect);
 $("disconnect").addEventListener("click",async()=>{
@@ -94,15 +115,27 @@ $("reset-password").addEventListener("click",async()=>{
  if(!email){notify("Enter your email address first.",true);return}
  try{await sendPasswordResetEmail(authClient,email);notify("If this address has an account, a password reset email will arrive.")}catch{notify("Unable to request a password reset. Try again later.",true)}
 });
-if(secureTransport&&firebaseConfig.apiKey&&firebaseConfig.projectId&&publisherUrl.startsWith("https://")){
+if(secureTransport&&firebaseConfig.apiKey&&firebaseConfig.projectId&&firebaseConfig.authDomain&&firebaseConfig.appId&&publisherUrl.startsWith("https://")){
  try{
   authClient=getAuth(initializeApp(firebaseConfig));
-  setPersistence(authClient,browserLocalPersistence).catch(()=>{});
-  onAuthStateChanged(authClient,async user=>{
-   if(user&&!identity){if(!user.emailVerified){notify("Verify your email address before entering Studio.",true);return;}try{await activate(user)}catch(e){notify(e.message||"Unable to load newsroom.",true)}}
-   else if(!user){identity=null;$("authenticated").hidden=true;$("connect-screen").hidden=false;$("disconnect").hidden=true;}
+  authReady=setPersistence(authClient,browserLocalPersistence).catch(e=>{
+   notify("Persistent sessions are unavailable in this browser. You may need to sign in again.",true);
   });
- }catch(e){notify("Firebase configuration is invalid.",true);$("setup-status").hidden=false}
+  onAuthStateChanged(authClient,async user=>{
+   await authReady;
+   if(user){
+    if(!user.emailVerified){
+     $("authenticated").hidden=true;$("connect-screen").hidden=false;
+     return;
+    }
+    await activate(user);
+   }else{
+    identity=null;activationInFlight=false;
+    $("authenticated").hidden=true;$("connect-screen").hidden=false;$("disconnect").hidden=true;
+    $("identity").textContent="Not connected";
+   }
+  },e=>notify("Authentication service unavailable: "+e.message,true));
+ }catch(e){notify("Firebase configuration is invalid.",true);$("setup-status").hidden=false;$("connect-btn").disabled=true}
 }else{
  $("setup-status").hidden=false;
  $("connect-btn").disabled=true;
