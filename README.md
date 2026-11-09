@@ -47,3 +47,11 @@ The additional site-integrity test checks actual generated pages and links. Init
 ## Card-based home edition (PPW-inspired)
 
 The homepage uses a featured cover card plus a responsive grid of interactive cover cards, inspired by PPW's rounded, approachable newspaper card layout. Pointer hover and keyboard focus rotate cards to show the headline and summary. On touch/narrow screens, first tap reveals an overlay with the summary, second action opens the article; a close button and Escape key close the preview. Without JavaScript, the front of every card remains a regular direct article link. The cards respect reduced-motion settings, and published article pages remain unchanged.
+
+## Civora Studio — publishing dashboard
+
+The new [Civora Studio](studio/) at `/studio/` replaces the old Draft Desk link. It uses GitHub's authenticated REST API as the publishing backend: create/edit articles, preview content, save local-only drafts, and publish or remove articles with an atomic commit containing the source JSON and generated HTML. No separate server is required. Studio retains access tokens in tab memory only; use a narrowly scoped, short-lived fine-grained token with Contents: Read and write on **this repository only**.
+
+The old `/editor/` route now redirects to Studio. CI verifies generator parity, generated pages, mobile layouts and internal links. For setup, editorial and security details, see [studio/README.md](studio/README.md).
+
+Note: The code and static deployment are testable automatically, but the first real post needs an authorized editor to test browser token authentication and GitHub API permissions. Do not treat the publishing interaction as end-to-end verified before that test.
