@@ -75,3 +75,11 @@ Article pages include related reading recommendations, a local **Save for later*
 Saved and recently opened article IDs are stored in the reader's own `localStorage` under `civora-reading-list-v1` and `civora-reading-history-v1`. No reader login, server-side behavioral profile, ad trackers, or third-party analytics are introduced. Site-data clearing removes the local data, and visitors who change devices won't see the same list there. `privacy/index.html` describes this behavior.
 
 Run `node tests/reading-room.test.mjs` and `node --check assets/reading.js && node --check assets/discover.js` for regression coverage. Always regenerate the public HTML and the synchronized `studio/generator.mjs` after changing the article templates; CI verifies parity.
+
+## The Front Page — visible journalism and guided reading paths
+
+Civora's homepage leads with an always-visible article headline, summary, honest editorial status, reading estimate, and three additional edition headlines. The original interactive cover cards are preserved below this newspaper-style front page.
+
+Three curated **reading paths** connect relevant articles by category: context, evidence, and critical reading. They are generated from the current article library, so future published articles update the page without hard-coded demo IDs. The page uses local recently opened article IDs to show progress on each path; no reader account or backend data collection is added. Content remains readable with JavaScript off, and path entry animations never hide article links.
+
+Run `node tests/frontpage.test.mjs` and `node --check assets/frontpage.js` along with the other CI tests. The production health workflow now checks the front page and related assets over HTTPS.

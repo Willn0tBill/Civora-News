@@ -36,6 +36,8 @@ jobs:
           get "/" /tmp/civora-health/home.html
           grep -q 'CIVORA' /tmp/civora-health/home.html
           grep -q 'class="flip-grid"' /tmp/civora-health/home.html
+          grep -q 'class="front-grid"' /tmp/civora-health/home.html
+          grep -q 'data-reading-path' /tmp/civora-health/home.html
 
           get "/search/" /tmp/civora-health/search.html
           grep -q 'id="site-search"' /tmp/civora-health/search.html
@@ -54,6 +56,8 @@ jobs:
           get "/assets/reading.js" /tmp/civora-health/reader.js
           get "/assets/discover.css" /tmp/civora-health/discover.css
           get "/assets/discover.js" /tmp/civora-health/discover.js
+          get "/assets/frontpage.css" /tmp/civora-health/frontpage.css
+          get "/assets/frontpage.js" /tmp/civora-health/frontpage.js
           get "/sitemap.xml" /tmp/civora-health/sitemap.xml
           grep -q 'https://civoranews.org/' /tmp/civora-health/sitemap.xml
           if grep -q 'willn0tbill.github.io/Civora-News/' /tmp/civora-health/sitemap.xml; then
