@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://willn0tbill.github.io/Civora-News/sitemap.xml

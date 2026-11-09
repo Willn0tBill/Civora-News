@@ -1,63 +1,37 @@
-# Civora News
+# Civora News — Rebuilt
 
-**Clarity in context.** An independent digital newspaper prototype.
+A **fully static, multi-page publication** designed for GitHub Pages. The entire newspaper renders as real HTML, rather than loading the page contents through a JavaScript fetch. No framework, paid account, package install or API key is required.
 
-## V1 sections — separate HTML pages
+## Pages
 
-Civora News now uses real static page paths (not a one-page scrolling layout or hash navigation). Pages can be directly bookmarked and hosted on GitHub Pages.
+Home, Latest, U.S., World, Technology, Business, Science, Culture, Explainers, Fact Checks, Opinion, Reviews, Newsletter, Search, About, Editorial Standards, Corrections, Privacy, Advertise, Contact, and one dedicated article page per non-draft story.
 
-- `/` — homepage
-- `/latest/` — latest archive
-- `/section/us/`, `/section/world/`, `/section/technology/`, `/section/business/`, `/section/science/`, `/section/culture/` — six reporting categories
-- `/explainers/` — background and context
-- `/fact-checks/` — placeholder for properly verified checks
-- `/opinion/` — analysis and editorials
-- `/reviews/` — culture and technology reviews
-- `/newsletter/` — future newsletter information, no unconfigured signup form
-- `/search/` — searchable sample archive
-- `/article/<slug>/` — one real directory page per launch article
-- `/about/`, `/standards/`, `/corrections/`, `/privacy/` — newsroom and transparency pages
+## Live hosting
 
-Every page contains its own HTML document, loads `assets/site.css` and `assets/site.js`, and uses a shared editorial design. No paid hosting or build tool is required.
+Configure **Settings → Pages → Deploy from a branch → main → /(root)**. The expected URL is https://willn0tbill.github.io/Civora-News/ . Once the deployment succeeds, all category and article URLs are directly accessible, even without JavaScript. If the site remains inaccessible, inspect **Actions → pages build and deployment** in GitHub; a committed file does not itself prove a successful Pages deployment.
 
-## Development and publishing
+## Publishing articles
 
-Run `python -m http.server 8000` from the project root, then open `http://localhost:8000/`. Each folder contains an `index.html` so opening `/reviews/` or `/section/world/` directly works through a web server.
+1. Add or update records in `content/articles.json` (or use the `/editor/` draft utility to export that JSON).
+2. Validate every factual claim, quotation, license and reference. Set `status` to `published` **only** for verified articles; `draft` records are excluded. The existing eight pieces are labeled `sample`.
+3. On a local checkout with Node.js 20+, run `node scripts/build.mjs`. The script generates separate article, category, and archive HTML pages, plus sitemap.
+4. Commit **both** the updated source file and generated HTML. GitHub Pages then publishes the files from the `main` branch. The CI workflow checks that generated HTML is in sync.
 
-For GitHub Pages: Settings → Pages → Deploy from a branch → `main` → `/(root)`. The expected default URL is `https://willn0tbill.github.io/Civora-News/`, but deployment must be verified in GitHub's Pages settings.
+This is intentional: the previous automated bot-generated commits did not necessarily trigger a subsequent GitHub Pages deployment. There is no automatic publishing via a bot commit in this version.
 
-## Editorial status
+## Search
 
-Eight initial articles are explicitly labeled demonstration content, **not current news reports**. Fact Checks and Newsletter do not claim to operate services that are not launched. Sponsored placements are placeholders and not sold advertisements.
+`/search/` contains a complete server-rendered article list. A tiny optional JavaScript enhancement filters it interactively; the archive remains readable with JavaScript disabled.
 
-## Next production priorities
+## Editorial and monetization status
 
-1. Replace demo content with original sourced journalism.
-2. Move stories into structured article files or a CMS and add real author/date metadata.
-3. Add RSS, sitemap, and structured data once real publication dates exist.
-4. Configure an official newsroom email and privacy-compliant newsletter provider.
-5. Test all routes and accessibility with a browser on the deployed site.
-6. Configure honest, age-compliant payment arrangements before monetizing.
+All initial articles are marked as demonstration samples. No current-event coverage is invented, no newsletter is collecting subscribers, no sponsors are active, and there is no tracking or ad account. Before monetization, use truthful, age-compliant billing and payment arrangements.
 
-Do not publish unverified AI-generated news or bypass service age requirements.
+## Files
 
-## Editorial publishing workflow (implemented)
-
-**Draft Desk:** Open `/editor/` on the deployed site. Write or edit your article, select a status, and preview it. Click **Save to export list**, then **Download articles.json**.
-
-**Commit to publish:** In GitHub, replace the contents of [`content/articles.json`](content/articles.json) with your exported JSON. Commit to `main`. The [Publish newsroom content workflow](.github/workflows/publish.yml) will validate every article, regenerate `assets/articles.json`, build standalone `article/<slug>/index.html` pages, and commit generated files automatically.
-
-**Status rules:**
-- `draft`: stays in the source library but is excluded from the public feed.
-- `sample`: visible and explicitly labeled as editorial demonstration material.
-- `published`: visible, requires a valid `publishedAt` date, and should only be selected after human fact checking.
-
-**Source format:** one string per reference in the form `Source name: https://example.com/source`. The editor shows a live preview but does not transmit unpublished articles to a server. Its export includes all records loaded from the public library plus local changes: when multiple editors work in parallel, merge carefully to avoid losing unpublished drafts. The public draft editor is not an authenticated CMS and cannot directly push to GitHub.
-
-**Local validation:**
-```sh
-node tools/publish.mjs
-```
-Node.js 20+ is sufficient; no npm install required.
-
-**Limits:** This is a lightweight publishing tool, not a newsroom fact-checking substitute. GitHub Actions validates data format, not whether a story is true. The site still needs actual editorial oversight, authentic stories, verified public deployments, and a secure collaborative CMS if more contributors are added.
+- `content/articles.json`: source of truth for stories
+- `scripts/build.mjs`: zero-dependency HTML generator
+- `assets/site.css`: site-wide responsive design
+- `assets/site.js`: progressive search enhancement only
+- `.github/workflows/validate.yml`: content/site consistency check
+- `editor/index.html`: existing client-side draft/export tool
