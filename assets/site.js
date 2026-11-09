@@ -44,4 +44,39 @@ if("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: red
  let n=0;
  for(const el of targets)if(el.getBoundingClientRect().top>innerHeight-24){el.dataset.reveal="pending";el.style.setProperty("--delay",(n%4*45)+"ms");observer.observe(el);n++}
 }
+
+/* Cover cards: hover on fine pointers; first tap previews on touch devices. */
+const flipCards=[...document.querySelectorAll("[data-flip-card]")];
+if(flipCards.length){
+ const touchMode=()=>matchMedia("(hover: none), (max-width: 760px)").matches;
+ const closeCard=(card,focus=false)=>{
+  card.classList.remove("is-flipped");
+  const trigger=card.querySelector("[data-flip-trigger]");
+  trigger?.setAttribute("aria-expanded","false");
+  if(focus)trigger?.focus({preventScroll:true});
+ };
+ for(const card of flipCards){
+  const front=card.querySelector("[data-flip-trigger]");
+  const read=card.querySelector(".flip-read");
+  const dismiss=card.querySelector("[data-flip-close]");
+  if(!front||!read||!dismiss)continue;
+  front.setAttribute("aria-expanded","false");
+  front.addEventListener("click",event=>{
+   if(!touchMode())return;
+   event.preventDefault();
+   for(const other of flipCards)if(other!==card)closeCard(other);
+   card.classList.add("is-flipped");
+   front.setAttribute("aria-expanded","true");
+   read.focus({preventScroll:true});
+  });
+  dismiss.addEventListener("click",()=>closeCard(card,true));
+  card.addEventListener("keydown",event=>{
+   if(event.key==="Escape"&&card.classList.contains("is-flipped")){
+    event.preventDefault();
+    closeCard(card,true);
+   }
+  });
+ }
+ addEventListener("resize",()=>{if(!touchMode())for(const c of flipCards)closeCard(c)},{passive:true});
+}
 })();
