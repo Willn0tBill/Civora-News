@@ -10,7 +10,19 @@ if(header&&body){const meta=header.querySelector(".article-meta");if(meta){const
 const progress=document.createElement("div");progress.className="reading-progress";progress.setAttribute("aria-hidden","true");const bar=document.createElement("span");progress.appendChild(bar);document.body.prepend(progress);
 let scheduled=false;const draw=()=>{const h=document.documentElement.scrollHeight-innerHeight;bar.style.width=(h>0?Math.min(100,Math.max(0,scrollY/h*100)):100)+"%";scheduled=false;};const tick=()=>{if(!scheduled){scheduled=true;requestAnimationFrame(draw);}};addEventListener("scroll",tick,{passive:true});addEventListener("resize",tick,{passive:true});draw();
 const tools=document.createElement("div");tools.className="reader-tools";if(sources){sources.id="article-sources";const jump=document.createElement("a");jump.href="#article-sources";jump.textContent="Jump to sources ↓";tools.appendChild(jump);}
-const copy=document.createElement("button");copy.type="button";copy.textContent="Copy article link ↗";const msg=document.createElement("span");msg.className="share-message";msg.setAttribute("role","status");msg.setAttribute("aria-live","polite");copy.addEventListener("click",async()=>{try{await navigator.clipboard.writeText(location.href);msg.textContent="Link copied."}catch{msg.textContent="Copy the URL from your browser's address bar."}});tools.append(copy,msg);header.appendChild(tools);}}
+const copy=document.createElement("button");copy.type="button";copy.textContent="Copy article link ↗";const msg=document.createElement("span");msg.className="share-message";msg.setAttribute("role","status");msg.setAttribute("aria-live","polite");copy.addEventListener("click",async()=>{try{await navigator.clipboard.writeText(location.href);msg.textContent="Link copied."}catch{msg.textContent="Copy the URL from your browser's address bar."}});tools.append(copy,msg);
+const storyId=article.closest(".article-frame")?.dataset.storyId;
+if(storyId){
+ const save=document.createElement("button");save.type="button";save.dataset.saveStory=storyId;
+ save.dataset.storyTitle=header.querySelector("h1")?.textContent||"article";
+ save.setAttribute("aria-pressed","false");save.textContent="＋ Save for later";
+ const focus=document.createElement("button");focus.type="button";focus.dataset.readingFocus="";
+ focus.setAttribute("aria-pressed","false");focus.textContent="Focus on the story";
+ const size=document.createElement("button");size.type="button";size.dataset.textSize="";
+ size.textContent="Text size: Standard";size.setAttribute("aria-label","Change article text size");
+ tools.append(save,focus,size);
+}
+header.appendChild(tools);}}
 
 /* A single theme preference follows the reader between real HTML pages. */
 const searchLink=document.querySelector(".masthead-inner .header-search");
