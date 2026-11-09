@@ -40,11 +40,20 @@ jobs:
           get "/search/" /tmp/civora-health/search.html
           grep -q 'id="site-search"' /tmp/civora-health/search.html
 
+          get "/discover/" /tmp/civora-health/discover.html
+          grep -q 'id="quiz-stage"' /tmp/civora-health/discover.html
+          grep -q 'data-discover-item' /tmp/civora-health/discover.html
+          grep -q 'id="saved-stories"' /tmp/civora-health/discover.html
+
           get "/article/ai-literacy/" /tmp/civora-health/article.html
           grep -q 'Editorial sample' /tmp/civora-health/article.html
 
           get "/assets/site.css" /tmp/civora-health/site.css
           get "/assets/site.js" /tmp/civora-health/site.js
+          get "/assets/reading-room.css" /tmp/civora-health/reader.css
+          get "/assets/reading.js" /tmp/civora-health/reader.js
+          get "/assets/discover.css" /tmp/civora-health/discover.css
+          get "/assets/discover.js" /tmp/civora-health/discover.js
           get "/sitemap.xml" /tmp/civora-health/sitemap.xml
           grep -q 'https://civoranews.org/' /tmp/civora-health/sitemap.xml
           if grep -q 'willn0tbill.github.io/Civora-News/' /tmp/civora-health/sitemap.xml; then
