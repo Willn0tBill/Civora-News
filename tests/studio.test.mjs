@@ -27,7 +27,7 @@ assert(script.includes('remoteSha'),"Publishing missing concurrency protection")
 assert(script.includes('localStorage.setItem(DRAFT_KEY'),"Missing local-only draft persistence");
 assert(!/localStorage\.setItem\([^)]*accessToken/.test(script),"Never store authentication tokens persistently");
 assert(!page.includes("service_role"),"Secret role reference should not be in public HTML");
-assert(text("index.html").includes('studio/">Civora Studio'),"Main site lacks Studio navigation");
+assert(!text("index.html").includes('studio/">Civora Studio'),"Staff dashboard should not be advertised on the public newspaper");
 console.log("PASS: "+Object.keys(generated).length+" browser-generator outputs, drafts exclusion, GitHub publishing controls and Studio security.");
 
 assert(text("sitemap.xml").includes("https://civoranews.org/"),"Sitemap should point to the custom domain");
@@ -49,3 +49,13 @@ for(const article of docs.articles.filter(x=>x.status==="sample")){
 }
 assert(text("studio/index.html").includes('id="story-type"'),"Studio cannot classify new stories");
 assert(text("studio/secure/index.html").includes('id="story-type"'),"Secure Studio cannot classify new stories");
+
+const yesterday={...docs.articles[0],id:"older-live-story",kind:"news",status:"published",publishedAt:"2026-11-08",title:"Older verified story",sources:["Reference: https://example.org/"]};
+const today={...docs.articles[0],id:"newer-live-story",kind:"news",status:"published",publishedAt:"2026-11-09",title:"Newest verified story",sources:["Reference: https://example.org/"]};
+const ranked=generateSite([...docs.articles,yesterday,today]);
+const homepage=ranked["index.html"];
+assert(homepage.indexOf("Newest verified story")<homepage.indexOf("Older verified story"),"Newest reporting must lead older reporting");
+assert(homepage.indexOf("Older verified story")<homepage.indexOf(docs.articles[0].title),"Published reporting must precede demos");
+const todaySameDate={...docs.articles[0],id:"same-date-latest",kind:"news",status:"published",publishedAt:"2026-11-09",title:"Even newer same-day story",sources:["Reference: https://example.org/"]};
+const tied=generateSite([...docs.articles,yesterday,today,todaySameDate])["index.html"];
+assert(tied.indexOf("Even newer same-day story")<tied.indexOf("Newest verified story"),"Same-day new articles should lead older entries");
