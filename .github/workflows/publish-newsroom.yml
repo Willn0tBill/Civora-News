@@ -1,0 +1,46 @@
+name: Publish Civora newsroom articles
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/5 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: civora-newsroom-publication
+  cancel-in-progress: false
+
+jobs:
+  synchronize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Synchronize published articles from Civora's Supabase database
+        run: node scripts/sync-supabase.mjs
+      - name: Verify generated pages and article links
+        run: |
+          node scripts/build.mjs --check
+          node tests/site.test.mjs
+      - name: Commit publication changes
+        run: |
+          if git diff --quiet && test -z "$(git ls-files --others --exclude-standard)"; then
+            echo "No new published changes"
+            exit 0
+          fi
+          git config user.name "civora-publisher[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nothing to commit"
+            exit 0
+          fi
+          git commit -m "publish: sync Civora newsroom articles"
+          git push
