@@ -61,3 +61,7 @@ Note: The code and static deployment are testable automatically, but the first r
 A standalone [email/password upgrade](studio/secure/README.md) is prepared at `/studio/secure/`, using **Firebase Authentication + Cloudflare Worker**. It is not the active publisher yet. The existing `/studio/` remains available until the new Firebase project, Cloudflare Worker, staff allowlist and Worker secrets are configured under the owner's accounts and successfully tested.
 
 No private keys or GitHub publishing credentials belong in the browser. The login uses refreshable Firebase sessions and admin-controlled user accounts, rather than a permanently valid user-side GitHub token. The staged version fails closed while `studio/secure/config.mjs` is empty. See the setup guide for the remaining authorized account steps.
+
+## Operations and uptime
+
+For production health checks, TLS readiness, recoveries, and the launch checklist, see [docs/OPERATIONS.md](docs/OPERATIONS.md). An independent GitHub Actions workflow checks the actual HTTPS website twice daily, including the homepage, article pages, assets, sitemap, search and custom-domain 404. The admin dashboard remains at its direct URL but is no longer linked from the public footer.
