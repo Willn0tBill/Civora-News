@@ -27,7 +27,7 @@ fetch(url,{headers:{apikey:key,Accept:"application/json"},cache:"no-store",signa
  const target=isHome?document.querySelector(".front-edition"):document.querySelector(".page-intro")||document.querySelector(".feed-list")||document.querySelector("main .container >section");
  if(!target)return;
  const container=document.createElement("section");
- container.className="civora-live-updates"+(isHome?" container":"");
+ container.className="civora-live-updates";
  container.setAttribute("aria-label","Newly published stories");
  const header=document.createElement("div");header.className="live-feed-heading";
  const eyebrow=document.createElement("div");eyebrow.textContent="NEW FROM THE NEWSROOM · LIVE EDITION";

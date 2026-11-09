@@ -324,3 +324,6 @@ input,textarea,select,button{max-width:100%}
   .flip-card--lead .flip-front .art-word{font-size:clamp(33px,9vw,47px)}
   .flip-cover-foot{padding:14px 17px 18px;min-height:68px}
 }
+
+/* Author-uploaded cover photography, with legible editorial type. */
+.editorial-art.has-photo{position:relative;isolation:isolate;overflow:hidden;background:#182b3d}.editorial-art.has-photo .art-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.55);z-index:-1}.editorial-art.has-photo .art-no,.editorial-art.has-photo .art-word,.editorial-art.has-photo .art-mark{color:#fff;text-shadow:0 2px 15px #0009}.editorial-art.has-photo .art-orbit{opacity:.23}@media(prefers-reduced-motion:reduce){.editorial-art.has-photo .art-photo{transition:none}}
