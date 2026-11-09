@@ -13,7 +13,7 @@ Configure **Settings → Pages → Deploy from a branch → main → /(root)**. 
 ## Publishing articles
 
 1. Add or update records in `content/articles.json` (or use the `/editor/` draft utility to export that JSON).
-2. Validate every factual claim, quotation, license and reference. Set `status` to `published` **only** for verified articles; `draft` records are excluded. The existing eight pieces are labeled `sample`.
+2. Validate every factual claim, quotation, license and reference. Set `status` to `published` **only** for verified articles; `draft` records are excluded. The first edition contains nine published, original source-based articles dated November 9, 2026, with primary references and reporting-method notes.
 3. On a local checkout with Node.js 20+, run `node scripts/build.mjs`. The script generates separate article, category, and archive HTML pages, plus sitemap.
 4. Commit **both** the updated source file and generated HTML. GitHub Pages then publishes the files from the `main` branch. The CI workflow checks that generated HTML is in sync.
 
@@ -25,7 +25,7 @@ This is intentional: the previous automated bot-generated commits did not necess
 
 ## Editorial and monetization status
 
-All initial articles are marked as demonstration samples. No current-event coverage is invented, no newsletter is collecting subscribers, no sponsors are active, and there is no tracking or ad account. Before monetization, use truthful, age-compliant billing and payment arrangements.
+The first edition consists of nine source-based articles using publicly available reports. It includes current 2026 findings as well as explainers and a fact check; no interviews were conducted. AI drafting assistance is disclosed on the About and Editorial Standards pages. No newsletter is collecting subscribers, no sponsors are active, and there is no tracking or ad account. Before monetization, use truthful, age-compliant billing and payment arrangements.
 
 ## Files
 
@@ -42,7 +42,7 @@ All initial articles are marked as demonstration samples. No current-event cover
 
 Article pages now offer optional reading-progress tracking, estimated read time, a quick jump to references, and copy-link support. Search responds to live input while keeping the full archive accessible without JavaScript. A custom 404 page gives lost readers a route home.
 
-The additional site-integrity test checks actual generated pages and links. Initial articles remain clearly labeled demonstration content, not reported breaking news.
+Site-integrity and editorial tests check generated pages, links, source attribution, publishing dates and removal of the previous demonstration article URLs.
 
 ## Card-based home edition (PPW-inspired)
 
@@ -80,6 +80,6 @@ Run `node tests/reading-room.test.mjs` and `node --check assets/reading.js && no
 
 Civora's homepage leads with an always-visible article headline, summary, honest editorial status, reading estimate, and three additional edition headlines. The original interactive cover cards are preserved below this newspaper-style front page.
 
-Three curated **reading paths** connect relevant articles by category: context, evidence, and critical reading. They are generated from the current article library, so future published articles update the page without hard-coded demo IDs. The page uses local recently opened article IDs to show progress on each path; no reader account or backend data collection is added. Content remains readable with JavaScript off, and path entry animations never hide article links.
+Three curated **reading paths** connect relevant articles by category: context, evidence, and critical reading. They are generated from the current article library, so future published articles update the page without hard-coded article IDs. The page uses local recently opened article IDs to show progress on each path; no reader account or backend data collection is added. Content remains readable with JavaScript off, and path entry animations never hide article links.
 
 Run `node tests/frontpage.test.mjs` and `node --check assets/frontpage.js` along with the other CI tests. The production health workflow now checks the front page and related assets over HTTPS.
