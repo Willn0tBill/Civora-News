@@ -11,4 +11,37 @@ const progress=document.createElement("div");progress.className="reading-progres
 let scheduled=false;const draw=()=>{const h=document.documentElement.scrollHeight-innerHeight;bar.style.width=(h>0?Math.min(100,Math.max(0,scrollY/h*100)):100)+"%";scheduled=false;};const tick=()=>{if(!scheduled){scheduled=true;requestAnimationFrame(draw);}};addEventListener("scroll",tick,{passive:true});addEventListener("resize",tick,{passive:true});draw();
 const tools=document.createElement("div");tools.className="reader-tools";if(sources){sources.id="article-sources";const jump=document.createElement("a");jump.href="#article-sources";jump.textContent="Jump to sources ↓";tools.appendChild(jump);}
 const copy=document.createElement("button");copy.type="button";copy.textContent="Copy article link ↗";const msg=document.createElement("span");msg.className="share-message";msg.setAttribute("role","status");msg.setAttribute("aria-live","polite");copy.addEventListener("click",async()=>{try{await navigator.clipboard.writeText(location.href);msg.textContent="Link copied."}catch{msg.textContent="Copy the URL from your browser's address bar."}});tools.append(copy,msg);header.appendChild(tools);}}
+
+/* A single theme preference follows the reader between real HTML pages. */
+const searchLink=document.querySelector(".masthead-inner .header-search");
+if(searchLink){
+ const controls=document.createElement("div");controls.className="header-controls";
+ searchLink.replaceWith(controls);
+ const toggle=document.createElement("button");toggle.type="button";toggle.className="theme-toggle";
+ toggle.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><span class="theme-label">Theme</span>';
+ controls.append(toggle,searchLink);
+ const root=document.documentElement;
+ try{
+  const remembered=localStorage.getItem("civora-theme");
+  root.dataset.theme=(remembered==="dark"||remembered==="light")?remembered:(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");
+ }catch{root.dataset.theme="light"}
+ const refresh=()=>{
+  const dark=root.dataset.theme==="dark",name=dark?"Switch to light mode":"Switch to dark mode";
+  toggle.setAttribute("aria-label",name);
+  toggle.setAttribute("title",name);
+  toggle.setAttribute("aria-pressed",String(dark));
+  toggle.querySelector(".theme-label").textContent=dark?"Light mode":"Dark mode";
+  toggle.querySelector("svg").innerHTML=dark?'<circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>':'<path d="M20.5 14.1A8.5 8.5 0 0 1 9.9 3.5a8.5 8.5 0 1 0 10.6 10.6Z"/>';
+  const meta=document.querySelector('meta[name="theme-color"]');if(meta)meta.setAttribute("content",dark?"#0b1623":"#f8f9f7");
+ };
+ refresh();
+ toggle.addEventListener("click",()=>{root.dataset.theme=root.dataset.theme==="dark"?"light":"dark";try{localStorage.setItem("civora-theme",root.dataset.theme)}catch{}refresh()});
+}
+/* Animate once when cards arrive; no JavaScript means all content is visible. */
+if("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches){
+ const targets=document.querySelectorAll(".story-card,.desk-item,.feed-item,.category-lead,.split-feature,.sponsor-box,.side-headline");
+ const observer=new IntersectionObserver(entries=>{for(const e of entries)if(e.isIntersecting){e.target.dataset.reveal="visible";observer.unobserve(e.target)}},{threshold:.08,rootMargin:"0px 0px -24px 0px"});
+ let n=0;
+ for(const el of targets)if(el.getBoundingClientRect().top>innerHeight-24){el.dataset.reveal="pending";el.style.setProperty("--delay",(n%4*45)+"ms");observer.observe(el);n++}
+}
 })();
