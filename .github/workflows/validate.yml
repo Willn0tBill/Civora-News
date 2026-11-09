@@ -25,6 +25,10 @@ jobs:
           node --check assets/reading.js
           node --check assets/discover.js
           node tests/reading-room.test.mjs
+      - name: Validate editorial front page and reading paths
+        run: |
+          node --check assets/frontpage.js
+          node tests/frontpage.test.mjs
       - name: Verify Studio builds exact published HTML
         run: node tests/studio.test.mjs
       - name: Verify staged secure Studio and Worker
