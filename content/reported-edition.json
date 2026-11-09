@@ -166,6 +166,88 @@
       "author": "Civora Research Desk",
       "publishedAt": "2026-11-09",
       "updatedAt": null
+    },
+    {
+      "id": "webb-exoplanet-spectra-explained",
+      "cat": "Science",
+      "visual": "science",
+      "art": "Reading Starlight",
+      "title": "How NASA's Webb telescope studies worlds it cannot visit",
+      "summary": "Astronomers use light passing through distant atmospheres to infer what gases may be present, while carefully checking the limits of the evidence.",
+      "kind": "explainer",
+      "body": [
+        "A planet around another star may be visible only through a tiny change in the star's light. Yet researchers can sometimes learn about its atmosphere without sending a spacecraft there. One method is transmission spectroscopy, which examines what happens to starlight as it passes through an atmosphere.",
+        "When a planet crosses its star from our viewpoint, some starlight travels through the planet's atmospheric gases before reaching an observatory. Molecules absorb light at characteristic wavelengths. Scientists examine the resulting spectrum and compare patterns with laboratory measurements and physical models.",
+        "NASA demonstrates this technique using a simulated spectrum of an Earth-like planet. Absorption features are not direct photographs of clouds, cities or oceans. They are measured differences in light that may support an inference about which molecules are present.",
+        "The James Webb Space Telescope is particularly sensitive to infrared wavelengths that contain useful information about certain atmospheric compounds. NASA explains how observations at different wavelengths help astronomers investigate the chemical composition of exoplanets.",
+        "But detection is not a simple matter of matching one dip in a chart. Observations contain noise, the host star may vary, and different atmospheric scenarios can sometimes produce similar spectral patterns. A proposed explanation needs uncertainty estimates and tests against alternatives.",
+        "Even a molecule associated with life on Earth would not be an automatic discovery of life elsewhere. Chemistry can arise through multiple processes, and a potential signal must be considered alongside the planet's temperature, environment and other evidence.",
+        "The impressive part of this research is not only the distance involved. It is the ability to extract information from extraordinarily faint light while distinguishing what the instrument measured from what researchers infer. Responsible science reporting preserves that distinction.",
+        "Reporting note: This Civora explainer draws on NASA's publicly available descriptions of transmission spectroscopy and does not announce a new planetary discovery."
+      ],
+      "sources": [
+        "NASA simulated exoplanet spectrum: https://science.nasa.gov/asset/webb/reading-an-earth-like-exoplanets-transmission-spectrum/",
+        "NASA Webb atmosphere science explainer: https://science.nasa.gov/mission/webb/science-overview/science-explainers/what-would-earths-atmosphere-look-like-from-the-james-webb-space-telescope/"
+      ],
+      "status": "published",
+      "author": "Civora Research Desk",
+      "publishedAt": "2026-11-09",
+      "updatedAt": null
+    },
+    {
+      "id": "music-two-copyrights",
+      "cat": "Culture",
+      "visual": "culture",
+      "art": "Behind the Song",
+      "title": "One song, two copyrights: what musicians should know before releasing music",
+      "summary": "A musical composition and its recorded performance are distinct protected works, affecting ownership, credits and permissions.",
+      "kind": "explainer",
+      "body": [
+        "A finished track may seem like one creative work, but United States copyright law often treats it as two. The song's composition—including the music and any lyrics—is a musical work. A particular recorded performance is a sound recording. The U.S. Copyright Office emphasizes that these are separate forms of protected work.",
+        "Imagine that one person composes a song and another artist records a performance of it. The new recording does not erase rights in the original composition. Depending on agreements, different people or organizations may own the songwriting rights and rights to the specific recording.",
+        "The distinction matters when releasing, distributing and licensing music. Permission to use one recording does not automatically resolve permission for the underlying composition. Likewise, permission to use a composition does not necessarily authorize copying someone else's finished recording.",
+        "Copyright generally arises when an original work is fixed in a tangible form. A composition may be written in sheet music or recorded, and a performance may be fixed in an audio file. The Copyright Office explains that registration is not required for protection to begin, although registering a work can provide additional legal benefits.",
+        "Credits also are not identical to ownership. A performer might record music without having composed it; a producer may contribute to the recorded performance without writing the song. The specific contributions and agreements matter, especially when several creators collaborate.",
+        "Streaming, covers, samples, videos and public performances can involve different rights and licensing arrangements. The requirements depend on the particular use and law. Buying access to a song for listening does not, by itself, establish permission to distribute it in another production.",
+        "For independent artists, a useful starting point is to identify the composers and lyricists, identify the owners of the recording, keep written collaboration agreements and confirm what permissions each planned use requires. These questions are much easier to settle before a release than after a disagreement.",
+        "Reporting note: This article summarizes U.S. Copyright Office materials and is not legal advice about an individual song, contract or dispute."
+      ],
+      "sources": [
+        "U.S. Copyright Office guidance for musicians: https://www.copyright.gov/engage/musicians/",
+        "Copyright Office compositions and recordings: https://www.copyright.gov/register/pa-sr.html",
+        "Copyright Office album rights FAQ: https://copyright.gov/help/faq/faq-gram.html"
+      ],
+      "status": "published",
+      "author": "Civora Research Desk",
+      "publishedAt": "2026-11-09",
+      "updatedAt": null
+    },
+    {
+      "id": "fact-check-2025-climate-trend",
+      "cat": "Science",
+      "visual": "science",
+      "art": "One Year Is Not a Trend",
+      "title": "Fact check: Did a cooler 2025 mean global warming had stopped?",
+      "summary": "No. NASA found 2025 cooler than record-setting 2024, yet still 1.19°C above its historical reference average.",
+      "kind": "fact-check",
+      "body": [
+        "Claim examined: Because 2025 was cooler than 2024, the long-term warming of Earth's surface must have ended. This claim starts with a correct comparison but draws a conclusion the temperature record does not support. NASA's January 2026 release says 2025 was cooler than record-setting 2024, not that temperatures returned to an earlier climate.",
+        "NASA's analysis places the average global surface temperature of 2025 at 1.19 degrees Celsius above its 1951–1980 average. The agency described 2025 and 2023 as effectively tied within measurement uncertainty. That finding is inconsistent with the assertion that warming vanished when one exceptional annual record was not repeated.",
+        "The central mistake is confusing year-to-year variation with a decades-long trend. Temperatures naturally fluctuate, and a long period of warming does not mean every year must exceed the last. One downward movement is not enough to establish a reversal.",
+        "Reference periods matter too. A temperature anomaly compares an observation with a defined baseline. Looking only at the difference between 2024 and 2025 obscures how warm 2025 remained compared with NASA's 1951–1980 reference average.",
+        "NASA's release also describes analyses by other scientific groups using related observations and somewhat different methods. NOAA, Berkeley Earth, the Hadley Centre and Copernicus all placed 2025 among the warmest years on record. Small ranking differences do not erase the broad agreement on longer-term warming.",
+        "Verdict: The claim that a cooler 2025 proves global warming stopped is not supported by the cited observations. It confuses short-term variability with the long-run pattern. This verdict addresses the stated interpretation of the data, not every question about individual weather events or future climate conditions.",
+        "A reader can check similar claims by finding the original temperature dataset, confirming the baseline, examining more than two years and comparing an online interpretation with what the cited researchers actually concluded. A cropped graph or isolated number should not substitute for that review.",
+        "Method note: Civora compared the claim with NASA's January 2026 temperature release and publicly available indicator data. No new measurements or interviews were performed."
+      ],
+      "sources": [
+        "NASA January 2026 temperature release: https://www.nasa.gov/news-release/nasa-releases-global-temperature-data/",
+        "NASA global temperature indicator: https://science.nasa.gov/earth/explore/earth-indicators/global-temperature/"
+      ],
+      "status": "published",
+      "author": "Civora Research Desk",
+      "publishedAt": "2026-11-09",
+      "updatedAt": null
     }
   ]
 }
