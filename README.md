@@ -40,3 +40,24 @@ Eight initial articles are explicitly labeled demonstration content, **not curre
 6. Configure honest, age-compliant payment arrangements before monetizing.
 
 Do not publish unverified AI-generated news or bypass service age requirements.
+
+## Editorial publishing workflow (implemented)
+
+**Draft Desk:** Open `/editor/` on the deployed site. Write or edit your article, select a status, and preview it. Click **Save to export list**, then **Download articles.json**.
+
+**Commit to publish:** In GitHub, replace the contents of [`content/articles.json`](content/articles.json) with your exported JSON. Commit to `main`. The [Publish newsroom content workflow](.github/workflows/publish.yml) will validate every article, regenerate `assets/articles.json`, build standalone `article/<slug>/index.html` pages, and commit generated files automatically.
+
+**Status rules:**
+- `draft`: stays in the source library but is excluded from the public feed.
+- `sample`: visible and explicitly labeled as editorial demonstration material.
+- `published`: visible, requires a valid `publishedAt` date, and should only be selected after human fact checking.
+
+**Source format:** one string per reference in the form `Source name: https://example.com/source`. The editor shows a live preview but does not transmit unpublished articles to a server. Its export includes all records loaded from the public library plus local changes: when multiple editors work in parallel, merge carefully to avoid losing unpublished drafts. The public draft editor is not an authenticated CMS and cannot directly push to GitHub.
+
+**Local validation:**
+```sh
+node tools/publish.mjs
+```
+Node.js 20+ is sufficient; no npm install required.
+
+**Limits:** This is a lightweight publishing tool, not a newsroom fact-checking substitute. GitHub Actions validates data format, not whether a story is true. The site still needs actual editorial oversight, authentic stories, verified public deployments, and a secure collaborative CMS if more contributors are added.
