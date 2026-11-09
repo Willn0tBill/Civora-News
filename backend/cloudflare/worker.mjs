@@ -1,6 +1,6 @@
 import {generateSite} from "../../studio/generator.mjs";
 const REPO="https://api.github.com/repos/Willn0tBill/Civora-News";
-const KEYS="https://www.googleapis.com/robot/v1/metadata/x509/securetoken@system.gserviceaccount.com";
+const KEYS="https://www.googleapis.com/service_accounts/v1/jwk/securetoken@system.gserviceaccount.com";
 const enc=new TextEncoder(),dec=new TextDecoder();
 const bad=(code,message)=>new Response(JSON.stringify({error:message}),{status:code,headers:{"content-type":"application/json"}});
 function bytes(str){const b=str.replace(/-/g,"+").replace(/_/g,"/");return Uint8Array.from(atob(b+"=".repeat((4-b.length%4)%4)),ch=>ch.charCodeAt(0));}
@@ -10,9 +10,9 @@ async function verify(token,project){
  const parts=token.split(".");if(parts.length!==3)throw Error("Bad token");
  const h=JSON.parse(dec.decode(bytes(parts[0]))),p=JSON.parse(dec.decode(bytes(parts[1]))),now=Math.floor(Date.now()/1000);
  if(h.alg!=="RS256"||!h.kid||p.aud!==project||p.iss!=="https://securetoken.google.com/"+project||!p.sub||typeof p.exp!=="number"||p.exp<=now||p.iat>now+30||p.auth_time>now+30||p.email_verified!==true)throw Error("Invalid identity");
- if(Date.now()>keyCache.until){const r=await fetch(KEYS);if(!r.ok)throw Error("Unable to verify identity");const max=Number(r.headers.get("cache-control")?.match(/max-age=(\d+)/)?.[1]||300);keyCache={until:Date.now()+Math.min(3600,max)*1000,keys:await r.json()};}
- if(!keyCache.keys[h.kid])throw Error("Untrusted signing key");
- const pub=await crypto.subtle.importKey("spki",pemBytes(keyCache.keys[h.kid]),{name:"RSASSA-PKCS1-v1_5",hash:"SHA-256"},false,["verify"]);
+ if(Date.now()>keyCache.until){const r=await fetch(KEYS);if(!r.ok)throw Error("Unable to verify identity");const max=Number(r.headers.get("cache-control")?.match(/max-age=(\d+)/)?.[1]||300);const parsed=await r.json();keyCache={until:Date.now()+Math.min(3600,max)*1000,keys:parsed.keys||[]};}
+ const jwk=keyCache.keys.find(k=>k.kid===h.kid);if(!jwk)throw Error("Untrusted signing key");
+ const pub=await crypto.subtle.importKey("jwk",jwk,{name:"RSASSA-PKCS1-v1_5",hash:"SHA-256"},false,["verify"]);
  if(!await crypto.subtle.verify("RSASSA-PKCS1-v1_5",pub,bytes(parts[2]),enc.encode(parts[0]+"."+parts[1])))throw Error("Bad signature");
  return {uid:p.sub,email:p.email};
 }
