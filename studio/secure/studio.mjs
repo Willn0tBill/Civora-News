@@ -255,13 +255,59 @@ $("draft-import").addEventListener("change",async event=>{
 });
 
 
+function showPublicationStatus(id,title,commitSha,removed=false){
+ publicationCheck={id,title,removed};
+ $("publish-status").hidden=false;
+ $("publication-state").textContent=removed?"Unpublishing submitted":"Publishing submitted";
+ $("publication-note").textContent=removed
+  ?"GitHub accepted the removal. The old article may remain visible until Pages finishes deploying."
+  :"GitHub accepted the article. It is not public until GitHub Pages finishes deploying; check the live site below.";
+ const commit=$("publication-commit");
+ commit.href="https://github.com/Willn0tBill/Civora-News/commit/"+encodeURIComponent(commitSha||"");
+ commit.hidden=!commitSha;
+ const link=$("publication-link");
+ link.href=PUBLIC_ROOT+"article/"+encodeURIComponent(id)+"/";
+ link.textContent=removed?"Check removed article URL ↗":"Open article URL ↗";
+ $("check-publication").disabled=false;
+}
+$("check-publication").addEventListener("click",async()=>{
+ if(!publicationCheck)return;
+ const {id,title,removed}=publicationCheck,button=$("check-publication");
+ const path=PUBLIC_ROOT+"article/"+encodeURIComponent(id)+"/";
+ button.disabled=true;$("publication-state").textContent="Checking live deployment…";
+ try{
+  const response=await fetch(path+"?studio-check="+Date.now(),{cache:"no-store",redirect:"follow"});
+  if(removed){
+   if(response.status===404){
+    $("publication-state").textContent="Unpublished on the live site";
+    $("publication-note").textContent="The article URL now returns 404. The public version has been removed.";
+   }else{
+    $("publication-state").textContent="Deployment still processing";
+    $("publication-note").textContent="The article is still accessible. Check again after GitHub Pages finishes.";
+   }
+  }else{
+   if(!response.ok)throw Error("Article is not live yet (HTTP "+response.status+").");
+   const html=await response.text();
+   const page=new DOMParser().parseFromString(html,"text/html");
+   const headline=page.querySelector(".article-header h1")?.textContent?.trim();
+   if(headline!==title)throw Error("The deployed article does not match this revision yet.");
+   $("publication-state").textContent="Article is live";
+   $("publication-note").textContent="The public website returned the article with the expected headline.";
+  }
+ }catch(e){
+  $("publication-state").textContent="Not confirmed live yet";
+  $("publication-note").textContent=(e.message||"Unable to reach the public website.")+" The GitHub commit was accepted; check again after deployment.";
+ }finally{button.disabled=false;}
+});
+
 async function commitArticles(nextArticles,summary){
  if(busy)throw Error("Another operation is already running.");
  busyState(true);
  try{
   const next=nextArticles.filter(a=>a.status!=="draft");
   const result=await backend("publish",{articles:next,expectedSha:remoteSha});
-  await reloadContent();return result.commit;
+  try{await reloadContent()}catch(e){remoteDoc={...remoteDoc,articles:next};remoteSha=null;renderEverything();notify("Article was committed but newsroom sync failed. Refresh before publishing again.",true)}
+  return result.commit;
  }finally{busyState(false)}
 }
 async function publish(){
@@ -275,29 +321,31 @@ async function publish(){
  try{
   const sha=await commitArticles(doc,"publish: "+story.title);
   drafts=drafts.filter(x=>x.id!==story.id);saveDrafts();renderEverything();
-  editingId=story.id;$("editor-status").textContent="PUBLISHED";$("unpublish-story").hidden=false;$("delete-story").hidden=false;
-  notify("Article committed! GitHub Pages deployment started. Commit: "+sha.slice(0,8));
-  const link=document.createElement("a");link.href=PUBLIC_ROOT+"article/"+encodeURIComponent(story.id)+"/";link.target="_blank";link.rel="noopener noreferrer";link.textContent="Open published article ↗";
-  const toast=$("toast");toast.append(" · ",link);
+  editingId=story.id;editingDraft=false;editorDirty=false;
+  $("editor-status").textContent="AWAITING DEPLOYMENT";$("unpublish-story").hidden=false;$("delete-story").hidden=false;
+  showPublicationStatus(story.id,story.title,sha);
+  notify("GitHub accepted the article. Check the public deployment before sharing its URL.");
  }catch(e){notify(e.message,true)}
 }
 $("publish-story").addEventListener("click",publish);
 $("unpublish-story").addEventListener("click",async()=>{
- if(busy||!editingId)return;const current=remoteDoc.articles.find(a=>a.id===editingId);if(!current)return;
+ if(busy||!editingId||editingDraft)return;const current=remoteDoc.articles.find(a=>a.id===editingId);if(!current)return;
  if(!confirm("Unpublish '"+current.title+"'? Its article page will be removed from the live site after deployment."))return;
  try{
-  const record=articleFromForm(false);saveLocal(record,false);
+  const record=articleFromForm(false);
+  if(!saveLocal(record,false))throw Error("Cannot unpublish until a local backup of the article is saved.");
   const sha=await commitArticles(remoteDoc.articles.filter(a=>a.id!==editingId),"unpublish: "+current.title);
-  notify("Unpublished in commit "+sha.slice(0,8)+". Saved an editable local draft.");
-  startEditor(record,true);
+  editorDirty=false;startEditor(record,true);
+  showPublicationStatus(current.id,current.title,sha,true);
+  notify("Removal committed. Keep the backup draft and verify the live site is updated.");
  }catch(e){notify(e.message,true)}
 });
 $("delete-story").addEventListener("click",async()=>{
- if(busy||!editingId)return;const original=remoteDoc.articles.find(a=>a.id===editingId);
+ if(busy||!editingId)return;const original=editingDraft?null:remoteDoc.articles.find(a=>a.id===editingId);
  if(!confirm("Permanently remove '"+$("story-title").value+"' from "+(original?"the publication and local drafts":"local drafts")+"?"))return;
  try{
   if(original)await commitArticles(remoteDoc.articles.filter(a=>a.id!==editingId),"remove: "+original.title);
-  drafts=drafts.filter(x=>x.id!==editingId);saveDrafts();renderEverything();showPanel("stories");notify("Article removed.");
+  drafts=drafts.filter(x=>x.id!==editingId);saveDrafts();renderEverything();editorDirty=false;showPanel("stories");notify(original?"Article removal committed to GitHub. Public changes await deployment.":"Local draft deleted; the published article, if any, was not touched.");
  }catch(e){notify(e.message,true)}
 });
 
