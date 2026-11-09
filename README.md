@@ -1,46 +1,42 @@
 # Civora News
 
-**Clarity in context.** A responsive independent news publication prototype.
+**Clarity in context.** An independent digital newspaper prototype.
 
-## Version 1
+## V1 sections — separate HTML pages
 
-- Responsive editorial homepage and six categories (U.S., World, Technology, Business, Science, Culture)
-- Article reading views with references and clear editorial-demo labels
-- Instant client-side story search
-- About, editorial standards, corrections, and privacy pages
-- Visible future sponsorship placement (no active advertising)
-- Accessible navigation, keyboard focus states, reduced-motion support
-- Fully static site, with no paid dependencies, external fonts, tracking, or backend
+Civora News now uses real static page paths (not a one-page scrolling layout or hash navigation). Pages can be directly bookmarked and hosted on GitHub Pages.
 
-## Important editorial status
+- `/` — homepage
+- `/latest/` — latest archive
+- `/section/us/`, `/section/world/`, `/section/technology/`, `/section/business/`, `/section/science/`, `/section/culture/` — six reporting categories
+- `/explainers/` — background and context
+- `/fact-checks/` — placeholder for properly verified checks
+- `/opinion/` — analysis and editorials
+- `/reviews/` — culture and technology reviews
+- `/newsletter/` — future newsletter information, no unconfigured signup form
+- `/search/` — searchable sample archive
+- `/article/<slug>/` — one real directory page per launch article
+- `/about/`, `/standards/`, `/corrections/`, `/privacy/` — newsroom and transparency pages
 
-The eight launch articles are **demonstration/evergreen editorial samples**, not current reporting. Do not represent them as verified breaking stories. External reference links are examples of primary information sources and further reading, not evidence that all current events have been independently investigated.
+Every page contains its own HTML document, loads `assets/site.css` and `assets/site.js`, and uses a shared editorial design. No paid hosting or build tool is required.
 
-## Local preview
+## Development and publishing
 
-Open `index.html` in a browser. No build step is required.
+Run `python -m http.server 8000` from the project root, then open `http://localhost:8000/`. Each folder contains an `index.html` so opening `/reviews/` or `/section/world/` directly works through a web server.
 
-For a local web server, run `python -m http.server 8000` from the repository and visit `http://localhost:8000`.
+For GitHub Pages: Settings → Pages → Deploy from a branch → `main` → `/(root)`. The expected default URL is `https://willn0tbill.github.io/Civora-News/`, but deployment must be verified in GitHub's Pages settings.
 
-## Publishing to GitHub Pages
+## Editorial status
 
-1. In GitHub, open **Settings → Pages**.
-2. Under **Build and deployment**, select **Deploy from a branch**.
-3. Set branch to **main** and folder to **/(root)**, then save.
-4. After GitHub publishes, the expected site URL is `https://willn0tbill.github.io/Civora-News/` (check Pages settings for the actual link).
+Eight initial articles are explicitly labeled demonstration content, **not current news reports**. Fact Checks and Newsletter do not claim to operate services that are not launched. Sponsored placements are placeholders and not sold advertisements.
 
-Page navigation uses hash routes, so article links should function on static GitHub Pages hosting.
+## Next production priorities
 
-## Future production work
+1. Replace demo content with original sourced journalism.
+2. Move stories into structured article files or a CMS and add real author/date metadata.
+3. Add RSS, sitemap, and structured data once real publication dates exist.
+4. Configure an official newsroom email and privacy-compliant newsletter provider.
+5. Test all routes and accessibility with a browser on the deployed site.
+6. Configure honest, age-compliant payment arrangements before monetizing.
 
-- Replace samples with carefully reported, sourced original articles.
-- Add publishing dates, author profiles, an actual newsroom email, and a structured CMS.
-- Add real metadata feeds (RSS, sitemap and structured article data) when stories have genuine published timestamps.
-- Add newsletter signup only after choosing a compliant service and writing a complete privacy policy.
-- Add advertising only when sponsor placements, disclosures, billing, and age-appropriate payment arrangements are in place.
-
-## Maintainer notes
-
-Site content is currently held in the `articles` array near the start of the inline script in `index.html`. This keeps V1 deployable without infrastructure, but should become structured content files as the publication grows.
-
-No paid monetization accounts or age verification workarounds are part of this project.
+Do not publish unverified AI-generated news or bypass service age requirements.
