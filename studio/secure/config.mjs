@@ -6,4 +6,4 @@ export const firebaseConfig = {
   projectId: "",
   appId: ""
 };
-export const publisherUrl = "";
+export const publisherUrl = "https://civora-publisher.winotbill.workers.dev";
