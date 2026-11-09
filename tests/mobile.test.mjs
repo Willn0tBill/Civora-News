@@ -3,6 +3,8 @@ import assert from "node:assert/strict";
 const css=fs.readFileSync("assets/site.css","utf8");
 const js=fs.readFileSync("assets/site.js","utf8");
 const editor=fs.readFileSync("editor/index.html","utf8");
+const studio=fs.readFileSync("studio/index.html","utf8");
+const studioCss=fs.readFileSync("studio/studio.css","utf8");
 const home=fs.readFileSync("index.html","utf8");
 const routes=["index.html","latest/index.html","section/us/index.html","section/world/index.html","section/technology/index.html","section/business/index.html","section/science/index.html","section/culture/index.html","article/ai-literacy/index.html","search/index.html","about/index.html","newsletter/index.html","reviews/index.html","fact-checks/index.html"];
 for(const path of routes){
@@ -26,8 +28,10 @@ assert(js.includes("data-flip-trigger")&&js.includes("data-flip-close"),"Missing
 assert(js.includes("touchMode()"),"Missing touch-specific preview behavior");
 assert(home.includes('class="flip-grid"'),"Home cover collection missing");
 assert(editor.includes('name="viewport"'),"Editor missing viewport");
-assert(editor.includes("@media(max-width:480px)"),"Editor missing small-screen layout");
-assert(editor.includes("#save,#reset,#download"),"Editor actions must stack on phones");
+assert(studio.includes('name="viewport"'),"Studio missing mobile viewport");
+assert(studioCss.includes("@media(max-width:600px)"),"Studio missing small-screen layout");
+assert(studioCss.includes(".editor-buttons"),"Studio article actions need mobile layout");
+assert(editor.includes("../studio/"),"Old editor should redirect to mobile-friendly Studio");
 console.log("PASS mobile: "+routes.length+" responsive routes, navigation, card previews, editor, touch sizing, reduced motion.");
 
 /* Regression: mobile card covers must reserve distinct space for the label/CTA. */
