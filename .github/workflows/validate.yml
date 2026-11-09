@@ -20,3 +20,5 @@ jobs:
         run: node tests/site.test.mjs
       - name: Validate responsive layouts and touch interactions
         run: node tests/mobile.test.mjs
+      - name: Verify Studio builds exact published HTML
+        run: node tests/studio.test.mjs
