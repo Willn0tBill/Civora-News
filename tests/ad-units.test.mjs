@@ -29,8 +29,8 @@ assert.equal(parsed.CIVORA_AD_SLOTS.newsFeed,"1467149312");
 assert.equal(parsed.CIVORA_AD_SLOTS.readingRoom,"4259678663");
 assert.equal(parsed.CIVORA_AD_SLOTS.newsFeedLayoutKey,"-fb+5w+4e-db+86");
 assert.equal(parsed.CIVORA_AD_SLOTS.readingRoomLayoutKey,"-fb+5w+4e-db+86");
-assert.equal(parsed.CIVORA_AD_SLOTS.inArticle,"");
-assert.equal(parsed.CIVORA_AD_SLOTS.multiplex,"");
+assert.equal(parsed.CIVORA_AD_SLOTS.inArticle,"7979431824");
+assert.equal(parsed.CIVORA_AD_SLOTS.multiplex,"3541493367");
 assert(read("assets/live-news.js").includes('ad.dataset.civoraAd="newsFeed"'),"Database articles should use News Feed slot");
 
 assert(!read("studio/index.html").includes("assets/ad-units.js"),"Staff dashboard should remain ad-free");
