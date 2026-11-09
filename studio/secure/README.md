@@ -49,3 +49,19 @@ node tests/secure-studio.test.mjs
 ```
 
 These are static/integration-independent checks. They do not substitute for testing a real Firebase sign-in and Cloudflare-to-GitHub publish. The older token-based Studio is intentionally preserved until the new service is activated.
+
+## Verified Studio workflow (November 9, 2026)
+
+Both Civora Studio clients have been tested in Chrome using isolated mock GitHub/Firebase responses for login, local draft save, article submission, live deployment verification, and safe deletion of a draft with the same slug as a published article. **The mock test did not publish a test article to the real news website.**
+
+The editor now supports exporting/importing local draft JSON backups, an unsaved-changes warning, protected deletion of local drafts, and a publication status panel. A successful GitHub commit is labeled **awaiting deployment**, not **live**. After Pages deploys, use **Check live website** to verify the exact article headline; unpublishing can likewise be checked for a 404. Do not share newly published article links until the public check succeeds.
+
+Drafts live in that browser's local storage, not a private newsroom database, so export important work before clearing site data or changing devices. The secure email/password backend must be configured before it is used for a real publish.
+
+## Remaining account activation
+
+The Cloudflare Worker `civora-publisher` exists at `https://civora-publisher.winotbill.workers.dev`, but **its account configuration is incomplete**: `backend/cloudflare/wrangler.toml` still has a placeholder `FIREBASE_PROJECT_ID`, the public `studio/secure/config.mjs` has empty Firebase fields, and the deployed Worker has no `GITHUB_TOKEN` or `STAFF_UIDS` secrets. Those blanks are intentional: nothing should be invented or copied from another project.
+
+The newsroom owner must first create/register a Civora-specific Firebase Web app, enable Authentication → Email/Password, create and verify the owner's staff login, and obtain the owner's Firebase Auth UID. Put the public Web app `apiKey`, `authDomain`, `projectId`, and `appId` into `studio/secure/config.mjs`. Set `FIREBASE_PROJECT_ID` to that exact Civora project ID and redeploy the Worker. Configure Worker secrets `STAFF_UIDS` (approved UIDs) and `GITHUB_TOKEN` (GitHub credential restricted to the Civora News repository, Contents read/write) through the Cloudflare dashboard. **Never commit secrets or send credentials through chat.** Users log in by email and password; the private GitHub credential is a server-side integration.
+
+Finally test one authorized login, article creation, deployment, update and unpublication against production before redirecting `/studio/` from the legacy GitHub-connected publisher to `/studio/secure/`. No real end-to-end authenticated Firebase publish has yet been verified.

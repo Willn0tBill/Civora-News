@@ -34,3 +34,11 @@ This is an initial GitHub-authorized administration system **rather than a hoste
 ## Verification and limitations
 
 Automated CI validates generator parity and website links. Actual token-based browser publishing must be tested by an authorized GitHub editor; a GitHub API connection made by ChatGPT does not grant its credentials to this web application.
+
+## Verified Studio workflow (November 9, 2026)
+
+Both Civora Studio clients have been tested in Chrome using isolated mock GitHub/Firebase responses for login, local draft save, article submission, live deployment verification, and safe deletion of a draft with the same slug as a published article. **The mock test did not publish a test article to the real news website.**
+
+The editor now supports exporting/importing local draft JSON backups, an unsaved-changes warning, protected deletion of local drafts, and a publication status panel. A successful GitHub commit is labeled **awaiting deployment**, not **live**. After Pages deploys, use **Check live website** to verify the exact article headline; unpublishing can likewise be checked for a 404. Do not share newly published article links until the public check succeeds.
+
+Drafts live in that browser's local storage, not a private newsroom database, so export important work before clearing site data or changing devices. The secure email/password backend must be configured before it is used for a real publish.

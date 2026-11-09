@@ -83,3 +83,7 @@ Civora's homepage leads with an always-visible article headline, summary, honest
 Three curated **reading paths** connect relevant articles by category: context, evidence, and critical reading. They are generated from the current article library, so future published articles update the page without hard-coded article IDs. The page uses local recently opened article IDs to show progress on each path; no reader account or backend data collection is added. Content remains readable with JavaScript off, and path entry animations never hide article links.
 
 Run `node tests/frontpage.test.mjs` and `node --check assets/frontpage.js` along with the other CI tests. The production health workflow now checks the front page and related assets over HTTPS.
+
+## Civora Studio publishing status
+
+The GitHub-connected publisher lives at `/studio/`; the Firebase email/password publisher is staged at `/studio/secure/` until account settings and Cloudflare Worker secrets are added and a genuine authorized publish is confirmed. Both editor workflows pass simulated browser publication tests, but **email/password publishing is not yet activated in production**. See [Studio's secure activation guide](studio/secure/README.md). The public website remains operational independently of the admin backend.
