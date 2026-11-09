@@ -12,6 +12,6 @@ window.CIVORA_AD_SLOTS = Object.freeze({
   newsFeedLayoutKey: "-fb+5w+4e-db+86",
   readingRoom: "4259678663",
   readingRoomLayoutKey: "-fb+5w+4e-db+86",
-  inArticle: "",
-  multiplex: ""
+  inArticle: "7979431824",
+  multiplex: "3541493367"
 });
