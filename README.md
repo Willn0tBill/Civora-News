@@ -91,3 +91,7 @@ The GitHub-connected publisher lives at `/studio/`; the Firebase email/password 
 ## Google AdSense integration (2026-11-09)
 
 The substantive public pages include Google's asynchronous AdSense Auto ads bootstrap with publisher ID `ca-pub-1423460909106679`. The dynamic `/story/` reader also loads it, but the staff `/studio/` pages do not. Root `ads.txt` authorizes the same publisher. Ads may remain absent until site verification, approval, Auto ads settings and applicable consent requirements are completed in AdSense. The Privacy and Advertising pages describe this integration; do not represent ad serving or earnings as approved before they are confirmed. When editing templates, keep the Studio/browser generator synchronized. CI checks the AdSense marker and `ads.txt`.
+
+## Manual AdSense formats
+
+Civora supports responsive **Display**, native **In-feed**, native **In-article**, and **Multiplex** Google AdSense units alongside its existing Auto ads bootstrap. Their locations are built into the homepage, article archive, Reading Room, static articles and dynamic Supabase article reader. Each unit remains hidden and does not request an ad until its real numeric slot ID is configured in `assets/ads-config.js`. See the [four-format AdSense setup guide](docs/ADSENSE-UNITS.md). The private Studio dashboard remains ad-free.
