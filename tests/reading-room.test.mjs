@@ -42,5 +42,5 @@ assert(next["discover/index.html"].includes(future.title),"New articles aren't s
 assert(next["index.html"].includes(future.title),"New articles aren't surfaced on homepage");
 assert(next["article/"+future.id+"/index.html"].includes('class="reading-next-grid"'),"New articles lack recommendations");
 const sample=next["discover/index.html"];
-assert(sample.includes("EDITORIAL SAMPLE"),"Demo pieces must still be labeled in Discover");
+assert(!sample.includes("EDITORIAL SAMPLE"),"Demonstration cards must not remain");
 console.log("PASS Reading Room: story shuffle, all stories, reading shelves, quiz, article tools, privacy, responsive layout, and new publication.");

@@ -6,7 +6,7 @@ const editor=fs.readFileSync("editor/index.html","utf8");
 const studio=fs.readFileSync("studio/index.html","utf8");
 const studioCss=fs.readFileSync("studio/studio.css","utf8");
 const home=fs.readFileSync("index.html","utf8");
-const routes=["index.html","latest/index.html","section/us/index.html","section/world/index.html","section/technology/index.html","section/business/index.html","section/science/index.html","section/culture/index.html","article/ai-literacy/index.html","search/index.html","about/index.html","newsletter/index.html","reviews/index.html","fact-checks/index.html"];
+const routes=["index.html","latest/index.html","section/us/index.html","section/world/index.html","section/technology/index.html","section/business/index.html","section/science/index.html","section/culture/index.html","article/2026-global-digital-divide/index.html","search/index.html","about/index.html","newsletter/index.html","reviews/index.html","fact-checks/index.html"];
 for(const path of routes){
  const html=fs.readFileSync(path,"utf8");
  assert.match(html,/<meta name="viewport" content="width=device-width,initial-scale=1">/,"Missing mobile viewport: "+path);

@@ -12,6 +12,7 @@ const build=text("scripts/build.mjs"),browser=text("studio/generator.mjs");
 const start="const sections=",end="const source=JSON.parse";
 assert.equal(browser.slice(browser.indexOf(start),browser.indexOf("export {generateSite};")).trim(),build.slice(build.indexOf(start),build.indexOf(end)).trim(),"Browser generator has drifted from Node source.");
 const sample=docs.articles[0];
+assert(docs.articles.every(a=>a.status==="published"&&a.sources.length>=2),"Live edition must have only original sourced articles");
 const scratch={...sample,id:"draft-only-test",status:"draft"};
 const withDraft=generateSite([...docs.articles,scratch]);
 assert(!Object.keys(withDraft).some(p=>p.includes("draft-only-test")),"Draft escaped into published pages");
@@ -55,7 +56,7 @@ const today={...docs.articles[0],id:"newer-live-story",kind:"news",status:"publi
 const ranked=generateSite([...docs.articles,yesterday,today]);
 const homepage=ranked["index.html"];
 assert(homepage.indexOf("Newest verified story")<homepage.indexOf("Older verified story"),"Newest reporting must lead older reporting");
-assert(homepage.indexOf("Older verified story")<homepage.indexOf(docs.articles[0].title),"Published reporting must precede demos");
+assert(homepage.indexOf(docs.articles[0].title)<homepage.indexOf("Older verified story"),"Current reporting must precede an older published item");
 const todaySameDate={...docs.articles[0],id:"same-date-latest",kind:"news",status:"published",publishedAt:"2026-11-09",title:"Even newer same-day story",sources:["Reference: https://example.org/"]};
 const tied=generateSite([...docs.articles,yesterday,today,todaySameDate])["index.html"];
 assert(tied.indexOf("Even newer same-day story")<tied.indexOf("Newest verified story"),"Same-day new articles should lead older entries");

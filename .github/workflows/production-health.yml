@@ -47,8 +47,8 @@ jobs:
           grep -q 'data-discover-item' /tmp/civora-health/discover.html
           grep -q 'id="saved-stories"' /tmp/civora-health/discover.html
 
-          get "/article/ai-literacy/" /tmp/civora-health/article.html
-          grep -q 'Editorial sample' /tmp/civora-health/article.html
+          get "/article/2026-global-digital-divide/" /tmp/civora-health/article.html
+          grep -q 'ITU' /tmp/civora-health/article.html
 
           get "/assets/site.css" /tmp/civora-health/site.css
           get "/assets/site.js" /tmp/civora-health/site.js

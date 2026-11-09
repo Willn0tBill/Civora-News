@@ -30,7 +30,7 @@ assert(!/\bfetch\s*\(/.test(js),"Reading path must not upload history");
 assert(css.includes("@media(max-width:650px)"),"No narrow phone front-page adjustments");
 assert(css.includes("@media(prefers-reduced-motion:reduce)"),"Front page must respect reduced-motion preference");
 assert(!/data-front-reveal=pending\]\{opacity:0/.test(css),"Reading cards must remain visible before scroll effects fire");
-assert(home.includes("EDITORIAL SAMPLE"),"Editorial demonstrations must remain labeled");
+assert(!home.includes("EDITORIAL SAMPLE"),"Demonstration articles must not remain");
 const fresh={...doc.articles[0],id:"test-live-report",title:"A newly verified public report",status:"published",kind:"news",publishedAt:"2026-11-09"};
 const generated=generateSite([...doc.articles,fresh]);
 assert(generated["index.html"].includes(fresh.title),"Future published reporting should populate front page");

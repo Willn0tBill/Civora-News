@@ -2,163 +2,251 @@
   "schemaVersion": 1,
   "articles": [
     {
-      "id": "understanding-policy",
-      "cat": "U.S.",
-      "visual": "us",
-      "art": "The Public Square",
-      "title": "How to read a public policy proposal before forming an opinion",
-      "summary": "A practical guide to understanding primary documents, costs, timelines, and the claims behind political debates.",
-      "body": [
-        "A proposal can sound simple in a headline and become much more complicated in its source document. The first step is to establish what is actually being proposed, which authority could approve it, and when it might take effect.",
-        "Look for the official text, independent budget analysis, and explanations from people with different perspectives. Separate claims about what the proposal does from predictions about what it might accomplish.",
-        "When coverage is incomplete, responsible reporting should say so explicitly. Readers deserve to see both the evidence and its limitations."
-      ],
-      "sources": [
-        "California Legislative Information: https://leginfo.legislature.ca.gov/",
-        "Congress.gov: https://www.congress.gov/"
-      ],
-      "status": "sample",
-      "author": "Civora Editorial",
-      "publishedAt": null,
-      "updatedAt": null
-    },
-    {
-      "id": "global-context",
-      "cat": "World",
-      "visual": "world",
-      "art": "Beyond Borders",
-      "title": "Why context matters when following international developments",
-      "summary": "A framework for distinguishing verified events, diplomatic statements, and speculation during fast-moving global stories.",
-      "body": [
-        "International news often arrives in fragments. Official statements, eyewitness accounts, satellite observations, and independent reporting may provide different pieces of a developing situation.",
-        "Careful reporting establishes where each claim came from, when it was made, and whether it was independently corroborated. A source's proximity to an event does not automatically guarantee accuracy.",
-        "Maps, historical background, and timelines help readers understand developments without mistaking incomplete information for a finished account."
-      ],
-      "sources": [
-        "United Nations: https://www.un.org/",
-        "Reuters Institute: https://reutersinstitute.politics.ox.ac.uk/"
-      ],
-      "status": "sample",
-      "author": "Civora Editorial",
-      "publishedAt": null,
-      "updatedAt": null
-    },
-    {
-      "id": "ai-literacy",
-      "cat": "Technology",
-      "visual": "tech",
-      "art": "The New Machine",
-      "title": "A reader's guide to evaluating artificial intelligence claims",
-      "summary": "Benchmarks, demonstrations, marketing language, and real-world reliability aren't interchangeable.",
-      "body": [
-        "An impressive AI demonstration is not the same as a measured improvement across real tasks. Ask which model was tested, against what benchmark, and whether the results can be reproduced.",
-        "Independent evaluations should disclose limitations, uncertainty, and the kinds of tasks where the system performs poorly. Real-world usefulness also depends on cost, latency, privacy, and safety.",
-        "Civora's technology coverage will distinguish company statements from independently tested performance."
-      ],
-      "sources": [
-        "NIST AI Risk Management Framework: https://www.nist.gov/itl/ai-risk-management-framework"
-      ],
-      "status": "sample",
-      "author": "Civora Editorial",
-      "publishedAt": null,
-      "updatedAt": null
-    },
-    {
-      "id": "inflation-basics",
-      "cat": "Business",
-      "visual": "business",
-      "art": "The Economy",
-      "title": "Inflation, prices, and purchasing power: what the numbers mean",
-      "summary": "Why a lower inflation rate does not necessarily mean prices are falling.",
-      "body": [
-        "Inflation measures the rate of change in a price index. When that rate slows but remains positive, the overall index continues to rise, only more slowly.",
-        "Different households experience price changes differently because they buy different goods and services. Comparing a headline inflation figure with personal expenses requires care.",
-        "Source methodology matters: note the measure, geographic coverage, adjustment method, and publication date."
-      ],
-      "sources": [
-        "U.S. Bureau of Labor Statistics CPI: https://www.bls.gov/cpi/"
-      ],
-      "status": "sample",
-      "author": "Civora Editorial",
-      "publishedAt": null,
-      "updatedAt": null
-    },
-    {
-      "id": "research-check",
+      "id": "fact-check-2025-climate-trend",
       "cat": "Science",
       "visual": "science",
-      "art": "Evidence Matters",
-      "title": "How to tell whether a scientific headline matches the research",
-      "summary": "A straightforward way to read studies without confusing preliminary findings for established conclusions.",
+      "art": "One Year Is Not a Trend",
+      "title": "Fact check: Did a cooler 2025 mean global warming had stopped?",
+      "summary": "No. NASA found 2025 cooler than record-setting 2024, yet still 1.19°C above its historical reference average.",
+      "kind": "fact-check",
       "body": [
-        "Scientific results vary in strength. A small observational study can reveal a useful association without proving cause and effect.",
-        "Before trusting a dramatic headline, check the study design, sample size, limitations, publication status, and whether other researchers have reproduced the finding.",
-        "Good science reporting explains the uncertainty rather than burying it at the end."
+        "Claim examined: Because 2025 was cooler than 2024, the long-term warming of Earth's surface must have ended. This claim starts with a correct comparison but draws a conclusion the temperature record does not support. NASA's January 2026 release says 2025 was cooler than record-setting 2024, not that temperatures returned to an earlier climate.",
+        "NASA's analysis places the average global surface temperature of 2025 at 1.19 degrees Celsius above its 1951–1980 average. The agency described 2025 and 2023 as effectively tied within measurement uncertainty. That finding is inconsistent with the assertion that warming vanished when one exceptional annual record was not repeated.",
+        "The central mistake is confusing year-to-year variation with a decades-long trend. Temperatures naturally fluctuate, and a long period of warming does not mean every year must exceed the last. One downward movement is not enough to establish a reversal.",
+        "Reference periods matter too. A temperature anomaly compares an observation with a defined baseline. Looking only at the difference between 2024 and 2025 obscures how warm 2025 remained compared with NASA's 1951–1980 reference average.",
+        "NASA's release also describes analyses by other scientific groups using related observations and somewhat different methods. NOAA, Berkeley Earth, the Hadley Centre and Copernicus all placed 2025 among the warmest years on record. Small ranking differences do not erase the broad agreement on longer-term warming.",
+        "Verdict: The claim that a cooler 2025 proves global warming stopped is not supported by the cited observations. It confuses short-term variability with the long-run pattern. This verdict addresses the stated interpretation of the data, not every question about individual weather events or future climate conditions.",
+        "A reader can check similar claims by finding the original temperature dataset, confirming the baseline, examining more than two years and comparing an online interpretation with what the cited researchers actually concluded. A cropped graph or isolated number should not substitute for that review.",
+        "Method note: Civora compared the claim with NASA's January 2026 temperature release and publicly available indicator data. No new measurements or interviews were performed."
       ],
       "sources": [
-        "PubMed: https://pubmed.ncbi.nlm.nih.gov/"
+        "NASA January 2026 temperature release: https://www.nasa.gov/news-release/nasa-releases-global-temperature-data/",
+        "NASA global temperature indicator: https://science.nasa.gov/earth/explore/earth-indicators/global-temperature/"
       ],
-      "status": "sample",
-      "author": "Civora Editorial",
-      "publishedAt": null,
+      "status": "published",
+      "author": "Civora Research Desk",
+      "publishedAt": "2026-11-09",
       "updatedAt": null
     },
     {
-      "id": "critical-reviews",
+      "id": "music-two-copyrights",
       "cat": "Culture",
       "visual": "culture",
-      "art": "The Culture Edit",
-      "title": "What makes an entertainment review useful?",
-      "summary": "An argument for reviews that explain craft, audience, and perspective rather than just handing out scores.",
+      "art": "Behind the Song",
+      "title": "One song, two copyrights: what musicians should know before releasing music",
+      "summary": "A musical composition and its recorded performance are distinct protected works, affecting ownership, credits and permissions.",
+      "kind": "explainer",
       "body": [
-        "A useful review tells readers what the work tries to do, how it does it, and which creative choices support or undermine its goals.",
-        "Criticism is inherently interpretive, so distinguish personal judgment from verifiable production facts. Where relevant, discuss the work's context without telling everyone they must feel the same way.",
-        "Civora will label reviews and opinions clearly, keeping them distinct from reported news."
-      ],
-      "sources": [],
-      "status": "sample",
-      "author": "Civora Editorial",
-      "publishedAt": null,
-      "updatedAt": null
-    },
-    {
-      "id": "source-check",
-      "cat": "Technology",
-      "visual": "tech",
-      "art": "Digital Trust",
-      "title": "Five questions to ask before sharing a viral claim",
-      "summary": "A short checklist for slowing misinformation before it spreads.",
-      "body": [
-        "Identify the original source, rather than trusting a screenshot or a repost.",
-        "Check the date, full context, and whether another credible source confirms the specific claim.",
-        "Be especially cautious when a dramatic image or quotation lacks a traceable origin. If the evidence is not there, hold off on sharing."
+        "A finished track may seem like one creative work, but United States copyright law often treats it as two. The song's composition—including the music and any lyrics—is a musical work. A particular recorded performance is a sound recording. The U.S. Copyright Office emphasizes that these are separate forms of protected work.",
+        "Imagine that one person composes a song and another artist records a performance of it. The new recording does not erase rights in the original composition. Depending on agreements, different people or organizations may own the songwriting rights and rights to the specific recording.",
+        "The distinction matters when releasing, distributing and licensing music. Permission to use one recording does not automatically resolve permission for the underlying composition. Likewise, permission to use a composition does not necessarily authorize copying someone else's finished recording.",
+        "Copyright generally arises when an original work is fixed in a tangible form. A composition may be written in sheet music or recorded, and a performance may be fixed in an audio file. The Copyright Office explains that registration is not required for protection to begin, although registering a work can provide additional legal benefits.",
+        "Credits also are not identical to ownership. A performer might record music without having composed it; a producer may contribute to the recorded performance without writing the song. The specific contributions and agreements matter, especially when several creators collaborate.",
+        "Streaming, covers, samples, videos and public performances can involve different rights and licensing arrangements. The requirements depend on the particular use and law. Buying access to a song for listening does not, by itself, establish permission to distribute it in another production.",
+        "For independent artists, a useful starting point is to identify the composers and lyricists, identify the owners of the recording, keep written collaboration agreements and confirm what permissions each planned use requires. These questions are much easier to settle before a release than after a disagreement.",
+        "Reporting note: This article summarizes U.S. Copyright Office materials and is not legal advice about an individual song, contract or dispute."
       ],
       "sources": [
-        "News Literacy Project: https://newslit.org/"
+        "U.S. Copyright Office guidance for musicians: https://www.copyright.gov/engage/musicians/",
+        "Copyright Office compositions and recordings: https://www.copyright.gov/register/pa-sr.html",
+        "Copyright Office album rights FAQ: https://copyright.gov/help/faq/faq-gram.html"
       ],
-      "status": "sample",
-      "author": "Civora Editorial",
-      "publishedAt": null,
+      "status": "published",
+      "author": "Civora Research Desk",
+      "publishedAt": "2026-11-09",
       "updatedAt": null
     },
     {
-      "id": "business-records",
+      "id": "webb-exoplanet-spectra-explained",
+      "cat": "Science",
+      "visual": "science",
+      "art": "Reading Starlight",
+      "title": "How NASA's Webb telescope studies worlds it cannot visit",
+      "summary": "Astronomers use light passing through distant atmospheres to infer what gases may be present, while carefully checking the limits of the evidence.",
+      "kind": "explainer",
+      "body": [
+        "A planet around another star may be visible only through a tiny change in the star's light. Yet researchers can sometimes learn about its atmosphere without sending a spacecraft there. One method is transmission spectroscopy, which examines what happens to starlight as it passes through an atmosphere.",
+        "When a planet crosses its star from our viewpoint, some starlight travels through the planet's atmospheric gases before reaching an observatory. Molecules absorb light at characteristic wavelengths. Scientists examine the resulting spectrum and compare patterns with laboratory measurements and physical models.",
+        "NASA demonstrates this technique using a simulated spectrum of an Earth-like planet. Absorption features are not direct photographs of clouds, cities or oceans. They are measured differences in light that may support an inference about which molecules are present.",
+        "The James Webb Space Telescope is particularly sensitive to infrared wavelengths that contain useful information about certain atmospheric compounds. NASA explains how observations at different wavelengths help astronomers investigate the chemical composition of exoplanets.",
+        "But detection is not a simple matter of matching one dip in a chart. Observations contain noise, the host star may vary, and different atmospheric scenarios can sometimes produce similar spectral patterns. A proposed explanation needs uncertainty estimates and tests against alternatives.",
+        "Even a molecule associated with life on Earth would not be an automatic discovery of life elsewhere. Chemistry can arise through multiple processes, and a potential signal must be considered alongside the planet's temperature, environment and other evidence.",
+        "The impressive part of this research is not only the distance involved. It is the ability to extract information from extraordinarily faint light while distinguishing what the instrument measured from what researchers infer. Responsible science reporting preserves that distinction.",
+        "Reporting note: This Civora explainer draws on NASA's publicly available descriptions of transmission spectroscopy and does not announce a new planetary discovery."
+      ],
+      "sources": [
+        "NASA simulated exoplanet spectrum: https://science.nasa.gov/asset/webb/reading-an-earth-like-exoplanets-transmission-spectrum/",
+        "NASA Webb atmosphere science explainer: https://science.nasa.gov/mission/webb/science-overview/science-explainers/what-would-earths-atmosphere-look-like-from-the-james-webb-space-telescope/"
+      ],
+      "status": "published",
+      "author": "Civora Research Desk",
+      "publishedAt": "2026-11-09",
+      "updatedAt": null
+    },
+    {
+      "id": "how-a-bill-becomes-law",
+      "cat": "U.S.",
+      "visual": "us",
+      "art": "From Bill to Law",
+      "title": "A bill is not a law: how proposals actually move through Congress",
+      "summary": "Committees, votes in both chambers, and presidential action separate an introduced proposal from an enforceable federal statute.",
+      "kind": "explainer",
+      "body": [
+        "A headline saying that Congress has introduced a bill can sound as though a new rule already exists. It does not. A bill is a legislative proposal, and many proposals never pass. Tracking the stages between introduction and enactment helps readers distinguish political intentions from laws that have actually been approved.",
+        "Legislation generally begins when a member of the House of Representatives or Senate introduces a proposal. It is typically referred to a committee responsible for the subject. Committee members may examine the text, seek evidence, hear testimony, propose changes or decide not to advance it.",
+        "If the bill proceeds, one chamber may debate and vote on it before the other chamber considers it. Both the House and Senate must ultimately agree on identical legislative language. That requirement can be a major obstacle when each chamber approves a different version.",
+        "The specific rules vary. House procedures, Senate debate practices, the type of measure and political circumstances can determine how an issue reaches a vote. A simplified diagram of the legislative process is useful, but it does not capture every procedural step or the bills that never advance.",
+        "After both chambers pass the same bill, it goes to the president. The president may sign it or veto it. Congress can override a presidential veto with two-thirds votes in both chambers. The Constitution also establishes timing rules under which a bill may become law without a presidential signature.",
+        "Even becoming law does not always mean every provision takes effect immediately. A statute may contain a delayed effective date or direct an executive agency to develop rules. Accurate reporting on a new law therefore requires checking its final text and implementation timeline.",
+        "Congress.gov makes bill texts, actions and legislative histories available to the public. A reader can check the latest version, identify whether a bill was amended and see whether an action was a committee step, a chamber vote or enactment.",
+        "The most useful habit is simple: when a headline says lawmakers 'moved' or 'approved' a proposal, find out exactly who acted, on which version, and what must still happen. Legislative status is an essential part of the story, not a minor procedural detail.",
+        "Reporting note: Civora prepared this civic explainer using official congressional resources. No lawmakers were interviewed for this article."
+      ],
+      "sources": [
+        "U.S. House legislative process: https://www.house.gov/the-house-explained/the-legislative-process",
+        "USAGov how laws are made: https://www.usa.gov/how-laws-are-made",
+        "Congress.gov legislation search: https://www.congress.gov/"
+      ],
+      "status": "published",
+      "author": "Civora Research Desk",
+      "publishedAt": "2026-11-09",
+      "updatedAt": null
+    },
+    {
+      "id": "how-federal-reserve-rates-work",
       "cat": "Business",
       "visual": "business",
-      "art": "On The Record",
-      "title": "Where reporters find reliable information about businesses",
-      "summary": "Company filings, public records, and the importance of reading beyond a press release.",
+      "art": "The Price of Money",
+      "title": "Why a Fed rate decision can change borrowing costs without setting your mortgage",
+      "summary": "The federal funds target influences consumer credit and economic activity, but changes reach households indirectly and at different speeds.",
+      "kind": "explainer",
       "body": [
-        "Company announcements describe a business's own version of events. Public filings, official registries, and independently verified data can offer useful additional context.",
-        "A financial figure is only meaningful when it includes a period, a unit, and a clear definition. Revenue, profit, and cash flow measure different things.",
-        "When reporting on private firms, acknowledge when records are unavailable rather than filling gaps with guesses."
+        "When the Federal Reserve announces a change in interest-rate policy, households often wonder what will happen to their loans or savings. The starting point is a rate most consumers never pay directly: the federal funds rate, which concerns overnight lending between banks.",
+        "The Federal Open Market Committee sets a target range for this rate. The Federal Reserve explains that its decisions influence broader financial conditions, including the availability and cost of credit. The central bank does not set every mortgage, credit card or auto-loan offer directly.",
+        "Some short-term borrowing costs respond relatively quickly to the federal funds target. Variable-rate products may adjust through their benchmark rates or contract terms. Longer-term financing, however, also reflects investor expectations about future inflation, economic growth and the path of monetary policy.",
+        "That is why mortgage rates do not necessarily move by the same amount as a Fed announcement—or even in the same direction on the announcement day. Traders may have anticipated a decision well before it was made, and longer-term bond yields can shift for reasons beyond the overnight rate.",
+        "The economic goal is to influence spending and inflation while supporting employment. When borrowing becomes more expensive, some families delay large purchases and some businesses reconsider expansion. Less spending can reduce inflationary pressure, but it can also weaken hiring or economic activity.",
+        "Lower borrowing costs can support spending and investment, though they carry different risks for inflation. The Fed describes the transmission of monetary policy as indirect and not immediate. Energy prices, supply disruptions, consumer confidence and other developments can change the result.",
+        "Readers can separate three questions the next time rates make headlines: What did the FOMC decide? What happened to the particular loan or savings rate being discussed? And what else may have influenced that rate? Treating these as separate questions avoids promising that one policy action will have an identical effect on every household.",
+        "Reporting note: This is an explanatory article based on Federal Reserve materials. It is not individualized borrowing advice or a prediction about the next rate decision."
       ],
       "sources": [
-        "SEC EDGAR: https://www.sec.gov/edgar/search/"
+        "Federal Reserve policy rate explainer: https://www.federalreserve.gov/economy-at-a-glance-policy-rate.htm",
+        "Federal Reserve monetary policy transmission: https://www.federalreserve.gov/monetarypolicy/monetary-policy-what-are-its-goals-how-does-it-work.htm",
+        "Federal Reserve policy overview: https://www.federalreserve.gov/aboutthefed/fedexplained/monetary-policy.htm"
       ],
-      "status": "sample",
-      "author": "Civora Editorial",
-      "publishedAt": null,
+      "status": "published",
+      "author": "Civora Research Desk",
+      "publishedAt": "2026-11-09",
+      "updatedAt": null
+    },
+    {
+      "id": "nist-generative-ai-risk-profile",
+      "cat": "Technology",
+      "visual": "tech",
+      "art": "Beyond the Prompt",
+      "title": "What NIST's generative AI guidance says about building trustworthy systems",
+      "summary": "The U.S. standards agency treats AI safety as a process of identifying, measuring and managing risks—not merely passing one accuracy test.",
+      "kind": "explainer",
+      "body": [
+        "A fluent answer is not automatically a trustworthy one. Organizations using generative artificial intelligence must consider how a system behaves when it produces unsupported information, uses sensitive data or operates where a mistake could have serious consequences. The National Institute of Standards and Technology offers voluntary guidance for evaluating such risks.",
+        "NIST published its AI Risk Management Framework in January 2023 and a generative AI companion profile in July 2024. The latter, identified as NIST AI 600-1, addresses issues arising when a system generates text, images, code or other content. The document is a tool for managing risks, not an automatic legal certification or binding requirement for every developer.",
+        "Trustworthiness is broader than whether a chatbot gets a test question right. Reliability, safety, security, privacy, transparency and fairness all matter, as does the purpose for which a system is used. A tool that performs acceptably as an optional brainstorming aid might be unsuitable for a setting where people cannot easily challenge its outputs.",
+        "That is why evaluation must continue after a product launches. Teams need to identify potential harm, examine who could be affected, test realistic use cases, document limitations and monitor what happens as circumstances change. A single demonstration can show a feature working; it cannot establish how the system will perform in every situation.",
+        "Generative systems create a particular problem for source verification. An output can look authoritative while offering a mistaken statement or a nonexistent citation. Users should be able to separate generated claims from independently checked evidence. A newsroom, for example, cannot turn a polished draft into a verified news report merely by publishing it.",
+        "Human oversight matters, but its design matters too. A reviewer needs the information, time and authority to spot a problem and stop or correct it. Organizations also need useful routes to report failures and update systems when new risks emerge, rather than treating their safeguards as permanent.",
+        "The lesson is not that generative AI is inherently useless or automatically safe. NIST's approach encourages evidence-based decisions about benefits and harms, together with meaningful accountability over time. The choice of deployment context can be as important as the model itself.",
+        "Reporting note: This article summarizes NIST's published risk-management framework and does not evaluate or certify a particular AI product."
+      ],
+      "sources": [
+        "NIST Generative AI Risk Management Profile: https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+        "NIST AI Risk Management Framework: https://www.nist.gov/itl/ai-risk-management-framework"
+      ],
+      "status": "published",
+      "author": "Civora Research Desk",
+      "publishedAt": "2026-11-09",
+      "updatedAt": null
+    },
+    {
+      "id": "nasa-2025-global-temperature",
+      "cat": "Science",
+      "visual": "science",
+      "art": "The Warming Record",
+      "title": "NASA's 2025 temperature analysis shows warming continued below 2024's record",
+      "summary": "NASA places 2025 at 1.19°C above its mid-20th-century baseline, showing why one cooler year does not erase a decades-long trend.",
+      "kind": "news",
+      "body": [
+        "A year can be cooler than its predecessor and still rank among the hottest ever measured. In its January 14, 2026 analysis, NASA reported that global surface temperature in 2025 was 1.19 degrees Celsius above its 1951–1980 reference average. The year was cooler than 2024, the record holder, but remained close to 2023.",
+        "NASA described 2023 and 2025 as effectively tied within the study's uncertainty. The agency identifies 2024 as the hottest year in its temperature record, which begins in 1880. That result is easy to misunderstand if an annual decline is interpreted as evidence that the longer warming trend has ended.",
+        "The reported number is a temperature anomaly: a difference from an explicitly chosen reference average. NASA uses 1951–1980 as its baseline. A 1.19-degree anomaly does not describe Earth's absolute average temperature, nor is it necessarily interchangeable with a figure measured from a different historical reference period.",
+        "The analysis draws on measurements from more than 25,000 land weather stations, ships and ocean buoys, and Antarctic research stations. Scientists account for uneven station coverage and other factors that can bias a simple comparison, including local urban heat effects.",
+        "Independent groups can rank close years slightly differently because they process observations and missing coverage differently. NASA noted that NOAA, Berkeley Earth, the Hadley Centre and Europe's Copernicus service also placed 2025 as the third warmest year in their analyses. Their methods differ, but all show the broader warming pattern.",
+        "Short-term variations can arise from ocean conditions and natural climate variability. A record-setting year does not require the next year to be even hotter. To understand the long-term signal, researchers examine multiple years and decades instead of selecting one change between neighboring dates.",
+        "Three questions strengthen a climate headline: Which dataset is being used? What baseline defines the anomaly? And does the claim describe one year or a sustained trend? Those distinctions can prevent technically correct numbers from becoming misleading arguments.",
+        "Reporting note: This is an original Civora explanation of NASA's publicly released analysis, not a new climate measurement."
+      ],
+      "sources": [
+        "NASA January 2026 temperature release: https://www.nasa.gov/news-release/nasa-releases-global-temperature-data/",
+        "NASA global temperature indicator: https://science.nasa.gov/earth/explore/earth-indicators/global-temperature/"
+      ],
+      "status": "published",
+      "author": "Civora Research Desk",
+      "publishedAt": "2026-11-09",
+      "updatedAt": null
+    },
+    {
+      "id": "ftc-imposter-scams-2025",
+      "cat": "Business",
+      "visual": "business",
+      "art": "The Cost of Deception",
+      "title": "Imposter scams drew $3.5 billion in reported losses in 2025, FTC says",
+      "summary": "Federal figures show how fake bank alerts and other impersonation schemes contributed to billions in reported fraud losses.",
+      "kind": "news",
+      "body": [
+        "An urgent message that appears to come from a bank or government office may be the opening move in a costly deception. The Federal Trade Commission reported in June 2026 that people said they lost $3.5 billion to imposter scams during 2025, with scammers borrowing the identities of recognizable organizations and trusted contacts.",
+        "Imposter schemes accounted for nearly one in three fraud reports received by the FTC that year. The agency said people encountered them through calls, texts, email, social media, search results and other channels. The formats change, but the common tactic is to claim authority that has not actually been established.",
+        "Some of the costliest reported schemes begin with a fake security warning. Someone posing as a financial institution claims an account is at risk and tells a person to move money to keep it safe. The supposed emergency makes an unusual request sound like necessary protection.",
+        "The FTC said people reported losing nearly one billion dollars to business impersonators, with bank impersonators responsible for the highest reported business-impersonation losses. Government impersonators accounted for about $920 million. Both figures were higher than their counterparts in 2024.",
+        "Across all fraud categories, reported losses reached about $16 billion in 2025, approximately 25 percent above 2024, according to the release. The word reported is critical: these totals describe information consumers submitted to the agency, not a complete accounting of every fraudulent incident or dollar lost.",
+        "The distinction between a message and verification can help people recognize suspicious demands. An unexpected request for credentials, payment or a transfer should be checked through an independently located contact channel. A link, phone number or caller ID supplied by the alarming message is not, by itself, confirmation of authenticity.",
+        "The findings show why deception can be powerful even without a technical breach. Scammers may cause significant harm by persuading people to act on fabricated authority. Public fraud data can describe the scale of reported losses; individual situations still require careful verification.",
+        "Reporting note: This article is Civora's source-based analysis of the FTC's published consumer-report figures, not an interview-based investigation."
+      ],
+      "sources": [
+        "FTC 2026 report on imposter scams: https://www.ftc.gov/news-events/news/press-releases/2026/06/ftc-data-show-people-reported-losing-3-point-5-billion-imposter-scams-2025",
+        "FTC Consumer Advice scam information: https://consumer.ftc.gov/scams"
+      ],
+      "status": "published",
+      "author": "Civora Research Desk",
+      "publishedAt": "2026-11-09",
+      "updatedAt": null
+    },
+    {
+      "id": "2026-global-digital-divide",
+      "cat": "World",
+      "visual": "world",
+      "art": "The Offline Divide",
+      "title": "Two billion people remain offline as global internet access reaches 76%",
+      "summary": "The ITU says 6.3 billion people use the internet in 2026, but the newest figures reveal vast gaps in affordability and access.",
+      "kind": "news",
+      "body": [
+        "Internet access has passed a symbolic threshold, yet a connection remains out of reach for roughly two billion people. The International Telecommunication Union, the United Nations agency for digital technologies, estimated on November 3, 2026, that 6.3 billion people worldwide use the internet. That represents 76 percent of the global population, according to its Facts and Figures 2026 report.",
+        "The total was up from a revised 6.1 billion users in 2025. It signals continued expansion, but does not mean connectivity is universal or equally useful. Those who remain disconnected can face barriers to educational materials, job applications, public services and communication that increasingly assume digital access.",
+        "The global average conceals a striking income gap. The ITU estimates that 93 percent of people in high-income countries use the internet, compared with 32 percent in low-income countries. These figures describe actual usage rather than a simple count of mobile towers or cables, a distinction that matters when evaluating infrastructure claims.",
+        "Price remains part of the problem. According to the ITU, three in ten economies meet neither its fixed-broadband nor mobile-broadband affordability target. Even when a service is technically available, ongoing subscription charges, equipment costs and limited digital skills can prevent people from using it.",
+        "Quality is another dividing line. An unreliable shared connection may allow occasional messages but cannot support the same tasks as stable broadband. Being within cellular coverage is different from possessing a suitable device, affordable data and the skills to use online tools securely.",
+        "Readers should also compare statistics carefully. The ITU revised its estimate for 2025 upward from six billion to 6.1 billion internet users. Statistical revisions can reflect updated information and methods, so figures lifted from different editions should not automatically be treated as directly comparable.",
+        "The report therefore raises questions beyond coverage maps: Who can afford to connect, who has reliable service, and who benefits from new digital tools? The headline milestone is substantial, but the remaining exclusion is equally important.",
+        "Reporting note: This Civora News article is an original synthesis of the ITU's 2026 published statistics. No original interviews or field reporting were conducted."
+      ],
+      "sources": [
+        "ITU Facts and Figures 2026: https://www.itu.int/itu-d/reports/statistics/facts-figures-2026/",
+        "ITU November 2026 press release: https://www.itu.int/en/mediacentre/Pages/PR-2026-11-03-Facts-and-Figures.aspx",
+        "ITU digital statistics overview: https://www.itu.int/en/ITU-D/Statistics/pages/facts/default.aspx"
+      ],
+      "status": "published",
+      "author": "Civora Research Desk",
+      "publishedAt": "2026-11-09",
       "updatedAt": null
     }
   ]
