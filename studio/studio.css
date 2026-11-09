@@ -22,3 +22,15 @@
 /* Preserve native hidden states and avoid CSP-blocked inline row styles. */
 [hidden]{display:none!important}
 .story-actions{display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+
+/* Editorial safeguards and real deployment reporting */
+.draft-toolbar{display:flex;flex-wrap:wrap;gap:9px;align-items:center}
+.draft-toolbar .import-label{cursor:pointer;margin:0;font-size:12px;display:inline-flex;align-items:center}
+.publish-status{margin-top:20px;padding:21px 23px;background:var(--panel2);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:12px}
+.publish-status strong{display:block;font:700 14px/1.5 var(--sans);color:var(--ink)}
+.publish-status p{color:var(--muted);margin:10px 0 17px;font:12px/1.7 var(--sans)}
+.publication-links{display:flex;flex-wrap:wrap;align-items:center;gap:11px 17px}
+.publication-links>a{min-height:44px;display:inline-flex;align-items:center;color:var(--gold);font:700 12px/1.4 var(--sans)}
+.publication-links>a:hover{text-decoration:underline}
+.publication-links .button{font-size:12px}
+@media(max-width:600px){.draft-toolbar{width:100%}.draft-toolbar .button{flex:1 1 140px;justify-content:center}.publication-links{display:grid;grid-template-columns:1fr}.publication-links .button{width:100%}.publish-status{padding:17px}}
