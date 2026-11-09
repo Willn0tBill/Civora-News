@@ -7,7 +7,7 @@ A responsive editorial control room for [Civora News](../). This is a **separate
 1. Sign in to **your own GitHub account** and open [Fine-grained personal access tokens](https://github.com/settings/personal-access-tokens/new).
 2. Select **resource owner: Willn0tBill** and **only repository: Civora-News**.
 3. Grant **Contents: Read and write**. No organization-wide or additional access is needed. Set a short expiration and rotate your token regularly.
-4. Open `https://willn0tbill.github.io/Civora-News/studio/`, paste the token into the secure HTTPS page and choose **Connect to GitHub**.
+4. Open `https://civoranews.org/studio/`, paste the token into the page **only after its HTTPS certificate is valid** and choose **Connect to GitHub**.
 5. **Never paste a token into ChatGPT, Discord, messages, a GitHub commit, or an article.** Studio keeps it in JavaScript memory only; re-enter it after a page reload.
 
 Any other reporter or editor must have their own GitHub account and approved repository write access. A token alone cannot give access beyond that user's actual GitHub permissions.

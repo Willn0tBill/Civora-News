@@ -4,7 +4,7 @@ This directory contains a **new standalone email/password version of Studio**. I
 
 ## Architecture
 
-- **Public site**: GitHub Pages at `https://willn0tbill.github.io/Civora-News/`.
+- **Public site**: GitHub Pages at `https://civoranews.org/`.
 - **Admin site**: `/studio/secure/`, a separate web page with the current Civora editing interface.
 - **Authentication**: A new, dedicated Firebase Authentication project, configured with email/password sign-in. The Firebase SDK manages persistent sessions and refreshes expiring access tokens. **Accounts do not need a preset expiration date.** An administrator can revoke access.
 - **Publishing backend**: A Cloudflare Worker (`backend/cloudflare/worker.mjs`) verifies the signed Firebase JWT, checks a server-only allowlist of staff Firebase UIDs, and commits generated news pages to GitHub. The GitHub token is stored as a Cloudflare Worker **secret**, never in a website file.
@@ -13,7 +13,7 @@ This directory contains a **new standalone email/password version of Studio**. I
 ## Setup — required before email/password sign-in works
 
 1. Create a **new Firebase project for Civora** on the Firebase Spark (no-cost) plan. Do **not** reuse PPW or SwiftSupply accounts.
-2. In Firebase Authentication, enable **Email/Password**. Add `willn0tbill.github.io` to **Authorized domains** as needed for auth email actions. Register a Web app and obtain its Firebase web config (`apiKey`, `authDomain`, `projectId`, `appId`).
+2. In Firebase Authentication, enable **Email/Password**. Add `civoranews.org` to **Authorized domains** as needed for auth email actions. Register a Web app and obtain its Firebase web config (`apiKey`, `authDomain`, `projectId`, `appId`).
 3. Create the owner account using Firebase Authentication's administrative controls. Use a unique password and working email. When signing in, Studio will send a verification email if necessary; complete that verification before publishing.
 4. Get the owner's **Firebase Auth UID** from Authentication → Users. This is used for the Worker allowlist. Do not rely on editable profile fields or email addresses for publication authorization.
 5. Create a Cloudflare Worker on your account (Workers Free is suitable for a small newsroom). Edit `backend/cloudflare/wrangler.toml` to set `FIREBASE_PROJECT_ID` to the **same new project's ID**. Deploy the Worker from the repository root with:
@@ -24,9 +24,9 @@ This directory contains a **new standalone email/password version of Studio**. I
 6. In Cloudflare Worker **Secrets**, configure:
    - `GITHUB_TOKEN`: a secret repository-limited GitHub token with **Contents: Read and write** on `Willn0tBill/Civora-News`. Never put it in the public source code. Rotate it when appropriate, or replace it with a GitHub App integration later.
    - `STAFF_UIDS`: a comma-separated list of **Firebase Auth UIDs** allowed to use this publisher. Start with the owner only.
-   Keep `ALLOWED_ORIGIN=https://willn0tbill.github.io`. Cloudflare Workers securely inject these secrets on the server; they are **not browser variables**.
+   Keep `ALLOWED_ORIGINS=https://civoranews.org,https://willn0tbill.github.io` during the transition. The exact origin must be allowlisted before publishing. Cloudflare Workers securely inject these secrets on the server; they are **not browser variables**.
 7. Edit `studio/secure/config.mjs` and add the **public** Firebase web config values and the deployed Worker HTTPS URL as `publisherUrl`. Those web config fields are intended for browser use; **never add a service account JSON, private key, GitHub secret, or password**.
-8. Commit the configuration and redeploy GitHub Pages. Open `https://willn0tbill.github.io/Civora-News/studio/secure/`. Log in with the approved email/password, verify your email, and test reading articles.
+8. Commit the configuration and redeploy GitHub Pages. Open `https://civoranews.org/studio/secure/`. Log in with the approved email/password, verify your email, and test reading articles.
 9. Publish a verified, non-sensitive test article. Confirm the GitHub commit, the Pages deployment, and the resulting article page. Check the Worker logs if there is an error. Only after a successful publish should `/studio/` be redirected to the new login.
 
 ## Security

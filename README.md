@@ -8,7 +8,7 @@ Home, Latest, U.S., World, Technology, Business, Science, Culture, Explainers, F
 
 ## Live hosting
 
-Configure **Settings → Pages → Deploy from a branch → main → /(root)**. The expected URL is https://willn0tbill.github.io/Civora-News/ . Once the deployment succeeds, all category and article URLs are directly accessible, even without JavaScript. If the site remains inaccessible, inspect **Actions → pages build and deployment** in GitHub; a committed file does not itself prove a successful Pages deployment.
+Configure **Settings → Pages → Deploy from a branch → main → /(root)**. The custom-domain URL is https://civoranews.org/ (valid HTTPS requires GitHub Pages certificate provisioning). Once the deployment succeeds, all category and article URLs are directly accessible, even without JavaScript. If the site remains inaccessible, inspect **Actions → pages build and deployment** in GitHub; a committed file does not itself prove a successful Pages deployment.
 
 ## Publishing articles
 
