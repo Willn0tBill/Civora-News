@@ -1,0 +1,162 @@
+[
+  {
+    "id": "understanding-policy",
+    "cat": "U.S.",
+    "visual": "us",
+    "art": "The Public Square",
+    "title": "How to read a public policy proposal before forming an opinion",
+    "summary": "A practical guide to understanding primary documents, costs, timelines, and the claims behind political debates.",
+    "body": [
+      "A proposal can sound simple in a headline and become much more complicated in its source document. The first step is to establish what is actually being proposed, which authority could approve it, and when it might take effect.",
+      "Look for the official text, independent budget analysis, and explanations from people with different perspectives. Separate claims about what the proposal does from predictions about what it might accomplish.",
+      "When coverage is incomplete, responsible reporting should say so explicitly. Readers deserve to see both the evidence and its limitations."
+    ],
+    "sources": [
+      "California Legislative Information: https://leginfo.legislature.ca.gov/",
+      "Congress.gov: https://www.congress.gov/"
+    ],
+    "status": "sample",
+    "author": "Civora Editorial",
+    "publishedAt": null,
+    "updatedAt": null
+  },
+  {
+    "id": "global-context",
+    "cat": "World",
+    "visual": "world",
+    "art": "Beyond Borders",
+    "title": "Why context matters when following international developments",
+    "summary": "A framework for distinguishing verified events, diplomatic statements, and speculation during fast-moving global stories.",
+    "body": [
+      "International news often arrives in fragments. Official statements, eyewitness accounts, satellite observations, and independent reporting may provide different pieces of a developing situation.",
+      "Careful reporting establishes where each claim came from, when it was made, and whether it was independently corroborated. A source's proximity to an event does not automatically guarantee accuracy.",
+      "Maps, historical background, and timelines help readers understand developments without mistaking incomplete information for a finished account."
+    ],
+    "sources": [
+      "United Nations: https://www.un.org/",
+      "Reuters Institute: https://reutersinstitute.politics.ox.ac.uk/"
+    ],
+    "status": "sample",
+    "author": "Civora Editorial",
+    "publishedAt": null,
+    "updatedAt": null
+  },
+  {
+    "id": "ai-literacy",
+    "cat": "Technology",
+    "visual": "tech",
+    "art": "The New Machine",
+    "title": "A reader's guide to evaluating artificial intelligence claims",
+    "summary": "Benchmarks, demonstrations, marketing language, and real-world reliability aren't interchangeable.",
+    "body": [
+      "An impressive AI demonstration is not the same as a measured improvement across real tasks. Ask which model was tested, against what benchmark, and whether the results can be reproduced.",
+      "Independent evaluations should disclose limitations, uncertainty, and the kinds of tasks where the system performs poorly. Real-world usefulness also depends on cost, latency, privacy, and safety.",
+      "Civora's technology coverage will distinguish company statements from independently tested performance."
+    ],
+    "sources": [
+      "NIST AI Risk Management Framework: https://www.nist.gov/itl/ai-risk-management-framework"
+    ],
+    "status": "sample",
+    "author": "Civora Editorial",
+    "publishedAt": null,
+    "updatedAt": null
+  },
+  {
+    "id": "inflation-basics",
+    "cat": "Business",
+    "visual": "business",
+    "art": "The Economy",
+    "title": "Inflation, prices, and purchasing power: what the numbers mean",
+    "summary": "Why a lower inflation rate does not necessarily mean prices are falling.",
+    "body": [
+      "Inflation measures the rate of change in a price index. When that rate slows but remains positive, the overall index continues to rise, only more slowly.",
+      "Different households experience price changes differently because they buy different goods and services. Comparing a headline inflation figure with personal expenses requires care.",
+      "Source methodology matters: note the measure, geographic coverage, adjustment method, and publication date."
+    ],
+    "sources": [
+      "U.S. Bureau of Labor Statistics CPI: https://www.bls.gov/cpi/"
+    ],
+    "status": "sample",
+    "author": "Civora Editorial",
+    "publishedAt": null,
+    "updatedAt": null
+  },
+  {
+    "id": "research-check",
+    "cat": "Science",
+    "visual": "science",
+    "art": "Evidence Matters",
+    "title": "How to tell whether a scientific headline matches the research",
+    "summary": "A straightforward way to read studies without confusing preliminary findings for established conclusions.",
+    "body": [
+      "Scientific results vary in strength. A small observational study can reveal a useful association without proving cause and effect.",
+      "Before trusting a dramatic headline, check the study design, sample size, limitations, publication status, and whether other researchers have reproduced the finding.",
+      "Good science reporting explains the uncertainty rather than burying it at the end."
+    ],
+    "sources": [
+      "PubMed: https://pubmed.ncbi.nlm.nih.gov/"
+    ],
+    "status": "sample",
+    "author": "Civora Editorial",
+    "publishedAt": null,
+    "updatedAt": null
+  },
+  {
+    "id": "critical-reviews",
+    "cat": "Culture",
+    "visual": "culture",
+    "art": "The Culture Edit",
+    "title": "What makes an entertainment review useful?",
+    "summary": "An argument for reviews that explain craft, audience, and perspective rather than just handing out scores.",
+    "body": [
+      "A useful review tells readers what the work tries to do, how it does it, and which creative choices support or undermine its goals.",
+      "Criticism is inherently interpretive, so distinguish personal judgment from verifiable production facts. Where relevant, discuss the work's context without telling everyone they must feel the same way.",
+      "Civora will label reviews and opinions clearly, keeping them distinct from reported news."
+    ],
+    "sources": [],
+    "status": "sample",
+    "author": "Civora Editorial",
+    "publishedAt": null,
+    "updatedAt": null
+  },
+  {
+    "id": "source-check",
+    "cat": "Technology",
+    "visual": "tech",
+    "art": "Digital Trust",
+    "title": "Five questions to ask before sharing a viral claim",
+    "summary": "A short checklist for slowing misinformation before it spreads.",
+    "body": [
+      "Identify the original source, rather than trusting a screenshot or a repost.",
+      "Check the date, full context, and whether another credible source confirms the specific claim.",
+      "Be especially cautious when a dramatic image or quotation lacks a traceable origin. If the evidence is not there, hold off on sharing."
+    ],
+    "sources": [
+      "News Literacy Project: https://newslit.org/"
+    ],
+    "status": "sample",
+    "author": "Civora Editorial",
+    "publishedAt": null,
+    "updatedAt": null
+  },
+  {
+    "id": "business-records",
+    "cat": "Business",
+    "visual": "business",
+    "art": "On The Record",
+    "title": "Where reporters find reliable information about businesses",
+    "summary": "Company filings, public records, and the importance of reading beyond a press release.",
+    "body": [
+      "Company announcements describe a business's own version of events. Public filings, official registries, and independently verified data can offer useful additional context.",
+      "A financial figure is only meaningful when it includes a period, a unit, and a clear definition. Revenue, profit, and cash flow measure different things.",
+      "When reporting on private firms, acknowledge when records are unavailable rather than filling gaps with guesses."
+    ],
+    "sources": [
+      "SEC EDGAR: https://www.sec.gov/edgar/search/"
+    ],
+    "status": "sample",
+    "author": "Civora Editorial",
+    "publishedAt": null,
+    "updatedAt": null
+  }
+]
