@@ -16,6 +16,8 @@ jobs:
           node-version: '22'
       - name: Verify generated website matches article content
         run: node scripts/build.mjs --check
+      - name: Validate AdSense integration and privacy disclosure
+        run: node tests/adsense.test.mjs
       - name: Validate pages and internal links
         run: node tests/site.test.mjs
       - name: Validate responsive layouts and touch interactions

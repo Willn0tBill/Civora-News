@@ -25,7 +25,7 @@ This is intentional: the previous automated bot-generated commits did not necess
 
 ## Editorial and monetization status
 
-The first edition consists of nine source-based articles using publicly available reports. It includes current 2026 findings as well as explainers and a fact check; no interviews were conducted. AI drafting assistance is disclosed on the About and Editorial Standards pages. No newsletter is collecting subscribers, no sponsors are active, and there is no tracking or ad account. Before monetization, use truthful, age-compliant billing and payment arrangements.
+The first edition consists of nine source-based articles using publicly available reports. It includes current 2026 findings as well as explainers and a fact check; no interviews were conducted. AI drafting assistance is disclosed on the About and Editorial Standards pages. No newsletter is collecting subscribers, and no direct sponsors are active. Google AdSense has now been integrated, but ad serving and revenue depend on approval and account configuration. Before monetization, use truthful, age-compliant billing and payment arrangements.
 
 ## Files
 
@@ -87,3 +87,7 @@ Run `node tests/frontpage.test.mjs` and `node --check assets/frontpage.js` along
 ## Civora Studio publishing status
 
 The GitHub-connected publisher lives at `/studio/`; the Firebase email/password publisher is staged at `/studio/secure/` until account settings and Cloudflare Worker secrets are added and a genuine authorized publish is confirmed. Both editor workflows pass simulated browser publication tests, but **email/password publishing is not yet activated in production**. See [Studio's secure activation guide](studio/secure/README.md). The public website remains operational independently of the admin backend.
+
+## Google AdSense integration (2026-11-09)
+
+The substantive public pages include Google's asynchronous AdSense Auto ads bootstrap with publisher ID `ca-pub-1423460909106679`. The dynamic `/story/` reader also loads it, but the staff `/studio/` pages do not. Root `ads.txt` authorizes the same publisher. Ads may remain absent until site verification, approval, Auto ads settings and applicable consent requirements are completed in AdSense. The Privacy and Advertising pages describe this integration; do not represent ad serving or earnings as approved before they are confirmed. When editing templates, keep the Studio/browser generator synchronized. CI checks the AdSense marker and `ads.txt`.
