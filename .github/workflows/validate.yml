@@ -38,3 +38,4 @@ jobs:
           node --check studio/secure/studio.mjs
           node --check backend/cloudflare/worker.mjs
           node tests/secure-studio.test.mjs
+          node tests/studio-workflow.test.mjs
