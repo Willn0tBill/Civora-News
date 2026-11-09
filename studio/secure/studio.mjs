@@ -3,7 +3,7 @@ import {getAuth,signInWithEmailAndPassword,onAuthStateChanged,signOut,sendEmailV
 import {firebaseConfig,publisherUrl} from "./config.mjs";
 
 
-const PUBLIC_ROOT="https://willn0tbill.github.io/Civora-News/";
+const PUBLIC_ROOT="https://civoranews.org/";
 const DRAFT_KEY="civora-studio-local-drafts-v1";
 const categories={"U.S.":"us","World":"world","Technology":"tech","Business":"business","Science":"science","Culture":"culture"};
 let authClient=null, identity=null, remoteDoc={schemaVersion:1,articles:[]}, remoteSha=null;

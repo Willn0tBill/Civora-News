@@ -29,3 +29,7 @@ assert(!/localStorage\.setItem\([^)]*accessToken/.test(script),"Never store auth
 assert(!page.includes("service_role"),"Secret role reference should not be in public HTML");
 assert(text("index.html").includes('studio/">Civora Studio'),"Main site lacks Studio navigation");
 console.log("PASS: "+Object.keys(generated).length+" browser-generator outputs, drafts exclusion, GitHub publishing controls and Studio security.");
+
+assert(text("sitemap.xml").includes("https://civoranews.org/"),"Sitemap should point to the custom domain");
+assert(text("robots.txt").includes("https://civoranews.org/sitemap.xml"),"Robots should point to the custom-domain sitemap");
+assert(!text("sitemap.xml").includes("willn0tbill.github.io/Civora-News/"),"Old Pages URL still canonical in sitemap");

@@ -1,7 +1,7 @@
 import {generateSite} from "./generator.mjs";
 
 const REPO="Willn0tBill/Civora-News", API="https://api.github.com";
-const PUBLIC_ROOT="https://willn0tbill.github.io/Civora-News/";
+const PUBLIC_ROOT="https://civoranews.org/";
 const DRAFT_KEY="civora-studio-local-drafts-v1";
 const categories={"U.S.":"us","World":"world","Technology":"tech","Business":"business","Science":"science","Culture":"culture"};
 let accessToken=null, identity=null, remoteDoc={schemaVersion:1,articles:[]}, remoteSha=null;
