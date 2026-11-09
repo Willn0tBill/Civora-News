@@ -20,6 +20,11 @@ jobs:
         run: node tests/site.test.mjs
       - name: Validate responsive layouts and touch interactions
         run: node tests/mobile.test.mjs
+      - name: Verify Reading Room and article engagement
+        run: |
+          node --check assets/reading.js
+          node --check assets/discover.js
+          node tests/reading-room.test.mjs
       - name: Verify Studio builds exact published HTML
         run: node tests/studio.test.mjs
       - name: Verify staged secure Studio and Worker
