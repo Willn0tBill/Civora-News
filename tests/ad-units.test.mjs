@@ -22,7 +22,7 @@ assert(!read("studio/index.html").includes("assets/ad-units.js"),"Staff dashboar
 function run(slots){
  class Node{
   constructor(type="aside",format=""){
-   this.nodeType=1;this.type=type;this.dataset=format?{civoraAd:format}:{};this.children=[];
+   this.nodeType=1;this.type=type;this.dataset=format?{civoraAd:format}:{};this.children=[];this.style={};
    this.classSet=new Set();this.classList={add:(name)=>this.classSet.add(name),remove:name=>this.classSet.delete(name),contains:name=>this.classSet.has(name)};
   }
   matches(selector){return selector==="[data-civora-ad]"&&Boolean(this.dataset.civoraAd)}
