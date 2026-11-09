@@ -16,7 +16,13 @@ assert(read("story/index.html").includes("assets/ad-units.js"),"Live article rea
 assert(read("assets/live-story.js").includes("window.CivoraAds?.hydrate(root)"),"Live articles cannot initialize ads");
 assert(read("assets/live-news.js").includes("window.CivoraAds?.hydrate(container)"),"Live feed cannot initialize new ads");
 const config=read("assets/ads-config.js"),clientCode=read("assets/ad-units.js");
-assert(!/\b\d{10}\b/.test(config),"Do not hard-code invented slot IDs");
+const parsed={};
+vm.runInNewContext(config,{window:parsed},{timeout:1000});
+for(const type of ["display","inFeed","inArticle","multiplex"]){
+ const value=parsed.CIVORA_AD_SLOTS[type];
+ assert(value===""||/^[0-9]{6,20}$/.test(value),"Slot must be empty or a numeric ID issued by AdSense: "+type);
+}
+assert.equal(parsed.CIVORA_AD_SLOTS.display,"3659691671","Expected supplied homepage display ID");
 assert(!read("studio/index.html").includes("assets/ad-units.js"),"Staff dashboard should remain ad-free");
 
 function run(slots){
