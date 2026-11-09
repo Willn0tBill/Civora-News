@@ -7,3 +7,47 @@
 .reader-tools a,.reader-tools button{font:700 11px var(--sans);letter-spacing:.04em;color:var(--gold);background:transparent;border:0;padding:6px 0;text-align:left}
 .reader-tools a:hover,.reader-tools button:hover{text-decoration:underline}
 .share-message{font-size:11px;color:var(--muted)}
+
+/* Civora editorial themes — default remains the existing light design. */
+html{color-scheme:light}
+:root{--surface:#fff;--surface-alt:#ebeae4;--paper:#f8f9f7;--ink:#142438;--muted:#586a79;--line:#d8dfe2;--gold:#9b692b}
+html[data-theme=dark]{color-scheme:dark;--surface:#142338;--surface-alt:#1d3047;--paper:#0b1623;--ink:#ecf1f7;--muted:#b7c6d5;--line:#34495f;--gold:#e0b77a}
+html,body{background:var(--paper);color:var(--ink);min-height:100%}
+body{transition:background-color .24s ease,color .24s ease}
+.site-header{background:var(--paper)}.nav-outer{background:var(--surface)}
+.header-controls{display:flex;align-items:center;justify-self:end;gap:16px;white-space:nowrap}.header-controls .header-search{justify-self:auto}
+.theme-toggle{display:flex;align-items:center;gap:9px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:60px;padding:10px 12px;font:700 11px var(--sans);text-transform:uppercase;letter-spacing:.03em;transition:background .2s,border-color .2s,transform .2s}
+.theme-toggle svg{width:18px;height:18px}.theme-toggle:hover{border-color:var(--gold);background:var(--surface-alt);transform:translateY(-2px)}
+.wordmark:hover{color:inherit}.nav-scroll a{transition:color .2s,border-color .2s}
+.story-card h3 a,.feed-item h3 a,.side-headline h3 a{transition:color .2s}
+.story-card:hover h3 a,.feed-item:hover h3 a,.side-headline:hover h3 a{color:var(--gold)}
+.story-image-link,.lead-image,.category-image{display:block;overflow:hidden}
+.editorial-art{transition:transform .45s cubic-bezier(.2,.8,.2,1),filter .4s}
+.story-image-link:hover .editorial-art,.lead-image:hover .editorial-art,.category-image:hover .editorial-art{transform:scale(1.025);filter:brightness(1.08)}
+.desk-item{transition:background .2s,padding-left .2s}.desk-item:hover{background:var(--surface-alt);padding-left:10px}
+.image-flag{color:#142438}
+html[data-theme=dark] .utility-bar{background:#070f19}
+html[data-theme=dark] .topline{color:#c2ced8}
+html[data-theme=dark] .intro-note{color:#d9be93}
+html[data-theme=dark] .story-overline,html[data-theme=dark] .story-byline{color:#b5c5d3}
+html[data-theme=dark] .side-note,html[data-theme=dark] .about-panel,html[data-theme=dark] .sample-disclosure,html[data-theme=dark] .prose .policy-callout{background:var(--surface-alt)}
+html[data-theme=dark] .side-note p,html[data-theme=dark] .about-panel p,html[data-theme=dark] .prose,html[data-theme=dark] .sample-disclosure{color:var(--muted)}
+html[data-theme=dark] .prose h2,html[data-theme=dark] .article-rail p{color:var(--ink)}
+html[data-theme=dark] .category-lead,html[data-theme=dark] .empty-state{background:var(--surface)}
+html[data-theme=dark] .search-controls input{background:var(--surface);color:var(--ink);border-color:var(--line)}
+html[data-theme=dark] .search-controls button,html[data-theme=dark] .dark-button{background:#31536f;color:#fff}
+html[data-theme=dark] .story-number{color:#b6c3d3}
+html[data-theme=dark] .sponsor-box{border-color:var(--line);color:var(--muted)}
+html[data-theme=dark] .article-meta{color:var(--muted)}
+html[data-theme=dark] .article-meta strong{color:var(--ink)}
+html[data-theme=dark] .newsletter-panel{background:#1e344e}
+html[data-theme=dark] .site-footer{background:#080f19}
+html[data-theme=dark] .button-light:not(.dark-button){color:#142438;background:#f5f2ec}
+@media(prefers-reduced-motion:no-preference){
+.page-intro,.hero-grid{animation:cv-intro .65s cubic-bezier(.2,.8,.2,1) both}.hero-grid{animation-delay:.08s}
+[data-reveal=pending]{opacity:0;transform:translateY(18px)}
+[data-reveal=visible]{opacity:1;transform:none;transition:opacity .55s ease,transform .6s cubic-bezier(.2,.8,.2,1);transition-delay:var(--delay,0ms)}
+@keyframes cv-intro{from{opacity:0;transform:translateY(13px)}to{opacity:1;transform:translateY(0)}}
+}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}[data-reveal]{opacity:1!important;transform:none!important}}
+@media(max-width:760px){.header-controls{gap:10px}.theme-toggle{padding:9px}.theme-label{display:none}.desk-item:hover{padding-left:0}}
