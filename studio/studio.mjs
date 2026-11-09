@@ -99,7 +99,7 @@ function storyRow(story,isDraft=false){
  const headline=document.createElement("h3");headline.textContent=story.title||"Untitled draft";
  const byline=document.createElement("p");byline.textContent=(story.author||"Civora Editorial")+" · "+(isDraft?"Stored on this device":story.publishedAt||"Launch sample");
  info.append(kicker,headline,byline);
- const actions=document.createElement("div");actions.style.display="flex";actions.style.gap="8px";actions.style.alignItems="center";actions.style.flexWrap="wrap";
+ const actions=document.createElement("div");actions.className="story-actions";
  const button=document.createElement("button");button.type="button";button.className="button light";button.textContent="Edit ↗";button.addEventListener("click",()=>startEditor(story,isDraft));actions.appendChild(button);
  if(!isDraft){const view=document.createElement("a");view.href=PUBLIC_ROOT+"article/"+encodeURIComponent(story.id)+"/";view.target="_blank";view.rel="noopener noreferrer";view.className="text-action";view.textContent="View";actions.appendChild(view);}
  row.append(info,actions);return row;
