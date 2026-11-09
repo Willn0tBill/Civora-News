@@ -8,7 +8,7 @@ assert(pages.length>=25,"Missing expected separate pages");
 let verified=0;
 for(const page of pages){
 const h=fs.readFileSync(page,"utf8");
-if(page!=="404.html"&&!page.startsWith("editor/")&&!page.startsWith("studio/")){assert(h.includes('<main id="main-content"'),"Missing content: "+page);assert(h.includes('<h1>'),"Missing headline: "+page)}
+if(page!=="404.html"&&!page.startsWith("editor/")&&!page.startsWith("studio/")){assert(h.includes('<main id="main-content"'),"Missing content: "+page);assert(/<h1(?:\\s|>)/.test(h),"Missing headline: "+page)}
 if(page.startsWith("article/")){assert(h.includes("Sources & further reading"),"Missing sources: "+page);assert(h.includes("Editorial sample.")||h.includes("PUBLISHED"),"Article lacks disclosure: "+page)}
 for(const [,href] of h.matchAll(/\b(?:href|src)="([^"]+)"/g)){
 if(!href||href.startsWith("#")||href.startsWith("/Civora-News/")||/^(https?:|data:|mailto:|tel:)/i.test(href))continue;
