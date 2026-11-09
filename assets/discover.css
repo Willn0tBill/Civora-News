@@ -88,3 +88,10 @@
 @media(max-width:760px){.discover-hero,.discover-pair{grid-template-columns:1fr}.discover-feature{min-height:335px}.discover-side{padding:24px}.discover-grid{grid-template-columns:1fr}.discover-item{min-height:210px}.discover-pair{margin-bottom:60px}.discover-quiz{padding:21px;gap:20px}.quiz-panel{min-height:280px}.discover-shelf{padding:21px}.discover-section{margin:22px 0 55px}}
 @media(max-width:420px){.discover-feature{padding:24px;min-height:355px}.discover-feature-actions{align-items:stretch}.discover-feature-actions a,.discover-feature-actions button{flex:1 1 140px}.discover-item-actions{gap:6px}.discover-item{padding:20px}.discover-quiz{padding:16px}.quiz-panel{padding:19px}.topic-chip{padding:10px 12px}}
 @media(prefers-reduced-motion:reduce){.discover-item,.topic-chip,.discover-action,.discover-ghost{transition:none!important}}
+
+/* Reading shelf label and headline are distinct elements, not a run-on line. */
+.discover-shelf-list li>div{display:flex;flex-direction:column;align-items:flex-start;gap:5px;min-width:0;flex:1}
+.discover-shelf-list li>div small{display:block}
+.discover-shelf-list li>div a{display:block;line-height:1.45;overflow-wrap:anywhere}
+.discover-feature-actions .discover-ghost{white-space:nowrap}
+@media(max-width:420px){.discover-feature-actions .discover-ghost{white-space:normal}}
