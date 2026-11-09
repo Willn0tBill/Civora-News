@@ -18,3 +18,5 @@ jobs:
         run: node scripts/build.mjs --check
       - name: Validate pages and internal links
         run: node tests/site.test.mjs
+      - name: Validate responsive layouts and touch interactions
+        run: node tests/mobile.test.mjs
