@@ -29,3 +29,9 @@ assert(editor.includes('name="viewport"'),"Editor missing viewport");
 assert(editor.includes("@media(max-width:480px)"),"Editor missing small-screen layout");
 assert(editor.includes("#save,#reset,#download"),"Editor actions must stack on phones");
 console.log("PASS mobile: "+routes.length+" responsive routes, navigation, card previews, editor, touch sizing, reduced motion.");
+
+/* Regression: mobile card covers must reserve distinct space for the label/CTA. */
+assert(css.includes("Cover text collision fix:"),"Card/footer spacing fix was removed");
+assert(css.includes("padding-bottom:110px"),"Card title no longer reserves footer space");
+assert(css.includes(".flip-cover-label{display:none}"),"Redundant mobile cover caption may collide with preview label");
+assert(css.includes(".flip-cover-foot{padding:14px 17px 18px;min-height:68px}"),"Narrow-phone footer spacing changed");
