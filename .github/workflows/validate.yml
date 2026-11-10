@@ -36,7 +36,9 @@ jobs:
         run: |
           node --check assets/frontpage.js
           node tests/frontpage.test.mjs
-      - name: Check Civora voice essentials\n        run: node tests/editorial-voice.test.mjs\n      - name: Verify published journalism and source transparency
+      - name: Check Civora voice essentials
+        run: node tests/editorial-voice.test.mjs
+      - name: Verify published journalism and source transparency
         run: node tests/editorial.test.mjs
       - name: Verify Studio builds exact published HTML
         run: node tests/studio.test.mjs
