@@ -248,6 +248,69 @@
       "status": "published",
       "publishedAt": "2026-11-09",
       "updatedAt": null
+    },
+    {
+      "id": "space-station-night-lights-earth-2026",
+      "title": "What an astronaut's nighttime Earth photo reveals—and what it cannot",
+      "summary": "An image taken from the International Space Station shows U.S. city lights from orbit. The view is striking, but brightness alone cannot measure population or prosperity.",
+      "cat": "U.S.",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "Cities After Dark",
+      "visual": "us",
+      "body": [
+        "From hundreds of miles above Earth, urban landscapes become networks of light. In a photograph NASA published on September 28, 2026, cities across the eastern United States shine against the darkness, with the New York City area near the center of the view. NASA identifies the photographer as astronaut Jessica Meir and dates the picture to September 8.",
+        "The International Space Station was orbiting roughly 259 miles above Earth when the image was taken. The photograph captures an instant, not a continuous monitoring system or an economic report. It shows where illumination was visible from that angle and at that moment.",
+        "City lights can make highways and settlement patterns easier to see than they are by day. Large metropolitan areas stand out, while coastlines, rural regions and darker stretches of land can be difficult to distinguish. A glowing cluster may suggest an urban center, but its size on a photograph also depends on exposure, viewing conditions and how lights scatter through the atmosphere.",
+        "The scientific uses of nighttime imagery go beyond attractive pictures. Researchers can compare calibrated observations over time to study changing patterns of artificial lighting, infrastructure and disruptions. Those comparisons require careful methods; casually placing two photographs next to each other does not isolate change.",
+        "NASA's Earth Observatory highlighted a different view of the American Midwest in early November 2026, from a photograph taken on October 18. Its description identifies Chicago and Detroit among the bright concentrations and notes that the image had been cropped and adjusted for contrast. That is a useful reminder that editorial processing can affect how luminous an area looks.",
+        "Brightness should not be used as a direct substitute for population, income or electricity access. Two similarly populated places can have different lighting practices. Industrial sites can be exceptionally bright, while people in less illuminated locations may still have modern infrastructure. The absence of a bright spot is not evidence that nobody lives there.",
+        "The distinction also matters for environmental interpretation. Nighttime images illustrate artificial light at a planetary scale, but the effects of light pollution on wildlife, human environments or astronomical observing must be established using appropriate research, not assumed from one dramatic scene.",
+        "Seen this way, the image carries two stories: the extraordinary ability to observe Earth from orbit and the limits of inference from a single photograph. It is a starting point for better questions about cities, technology and the nighttime landscape—not a self-explanatory statistical map.",
+        "Image note: Cover photograph taken on September 8, 2026, from the ISS. Credit: NASA/Jessica Meir. The NASA Johnson Space Center image is identified as public-domain U.S. government work in its Wikimedia Commons record; Civora's responsive layout may crop it.",
+        "Reporting note: This explainer synthesizes NASA imagery and published descriptions. No original interviews, image measurements or independent data analysis were conducted."
+      ],
+      "sources": [
+        "NASA, Space Station View of Earth at Night (September 28, 2026): https://www.nasa.gov/image-article/space-station-view-of-earth-at-night/",
+        "NASA Earth Observatory, Before the Dawn in America's Heartland (November 4, 2026): https://science.nasa.gov/earth/earth-observatory/before-the-dawn-in-americas-heartland/",
+        "NASA Earth Observatory, Observing Changes in Nighttime Lights: https://earthobservatory.nasa.gov/images/90301/observing-changes-in-nighttime-lights",
+        "Image and public-domain declaration, Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Nighttime_view_of_the_United_States_from_the_International_Space_Station_(iss075e0102764).jpg"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null,
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nighttime_view_of_the_United_States_from_the_International_Space_Station_(iss075e0102764).jpg?width=1600"
+    },
+    {
+      "id": "hubble-m30-galactic-history-2026",
+      "title": "Hubble's new portrait of M30 offers clues to the Milky Way's ancient past",
+      "summary": "A newly released image of the star cluster Messier 30 combines years of Hubble observations—and points to unresolved questions about where some of the galaxy's oldest stars formed.",
+      "cat": "Science",
+      "kind": "news",
+      "author": "Civora Research Desk",
+      "art": "Ancient Star Cities",
+      "visual": "science",
+      "body": [
+        "NASA and the European Space Agency released a new view of Messier 30 on November 5, 2026. The dazzling cluster is not a newly discovered object. What is new is the portrait, assembled from Hubble Space Telescope observations that span ultraviolet, visible and near-infrared wavelengths. The image provides a way to examine stellar populations in a cluster astronomers have studied for decades.",
+        "Messier 30, or M30, lies about 27,500 light-years from Earth in the constellation Capricornus. It is a globular cluster: a densely packed, gravitationally bound group of stars. Globular clusters can hold tens of thousands to millions of stars, and many are old enough to preserve evidence about the early history of the galaxies they orbit.",
+        "That age makes M30 useful for reconstructing how the Milky Way assembled. Researchers can study a cluster's stellar chemistry, motion and distribution, then compare those findings with patterns in other clusters. Those clues help investigate whether a group formed within our galaxy or arrived through its interactions with other stellar systems.",
+        "NASA and ESA say M30 and several other globular clusters orbit opposite to the Milky Way's overall spin. That unusual motion is consistent with the possibility that some clusters formed elsewhere and were later captured. It is a clue, not definitive proof of any single origin story: astronomers must assess multiple measurements and models.",
+        "The latest image draws on three Hubble observing programs. One used the Advanced Camera for Surveys to examine numerous Milky Way clusters in red and near-infrared light. Another used Wide Field Camera 3 and bluer filters to help study different stellar populations. A later program revisited clusters to measure how stars had moved over roughly 15 years.",
+        "This is why a space telescope's longevity matters. A second image can be attractive, but measurements years apart can become a record of motion. Combined with observations at different wavelengths, the repeated visits reveal properties a single exposure cannot capture.",
+        "The release should not be mistaken for a newly observed collision or a discovery that M30 definitely came from another galaxy. The strongest claim is more measured: the new composite illustrates how long-running observation programs allow scientists to investigate the histories of ancient star clusters.",
+        "Image note: The cover shows the newly released processed Hubble image of M30, not a conventional camera photograph. Credit: ESA/Hubble & NASA, M. Libralato, G. Piotto, A. Sarajedini. Image distributed via Wikimedia Commons under Creative Commons Attribution 4.0; cropped by Civora's responsive layout.",
+        "Reporting note: This is Civora's original synthesis of NASA and ESA material. We conducted no original interviews or telescope observations."
+      ],
+      "sources": [
+        "NASA, Hubble Learns Galactic History From Stars (November 5, 2026): https://science.nasa.gov/missions/hubble/hubble-learns-galactic-history-from-stars/",
+        "ESA/Hubble, Lessons from a stellar instructor (November 5, 2026): https://esahubble.org/images/potm2610a/",
+        "Image and license information, Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Lessons_from_a_stellar_instructor_(potm2610a).jpg",
+        "Creative Commons Attribution 4.0 license: https://creativecommons.org/licenses/by/4.0/"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null,
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lessons_from_a_stellar_instructor_(potm2610a).jpg?width=1600"
     }
   ]
 }
