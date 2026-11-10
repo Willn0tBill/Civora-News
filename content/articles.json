@@ -156,6 +156,8 @@
         "Generative systems create a particular problem for source verification. An output can look authoritative while offering a mistaken statement or a nonexistent citation. Users should be able to separate generated claims from independently checked evidence. A newsroom, for example, cannot turn a polished draft into a verified news report merely by publishing it.",
         "Human oversight matters, but its design matters too. A reviewer needs the information, time and authority to spot a problem and stop or correct it. Organizations also need useful routes to report failures and update systems when new risks emerge, rather than treating their safeguards as permanent.",
         "The lesson is not that generative AI is inherently useless or automatically safe. NIST's approach encourages evidence-based decisions about benefits and harms, together with meaningful accountability over time. The choice of deployment context can be as important as the model itself.",
+        "Civora's applied example: Consider a newsroom using an AI tool to summarize a research report. Mapping risk would include identifying failure modes such as a fabricated citation or a missing methodological caveat. Measuring risk could include checking a sample of summaries line by line against the original publication. Managing risk could require human approval and correction procedures before publication; governance would specify who owns those decisions. This is Civora's illustration of the framework, not a NIST case study or a certification.",
+        "A useful distinction is between testing whether a model can produce a plausible answer and evaluating whether the complete workflow catches mistakes. Even a high accuracy score on a prepared test set does not by itself measure harm in a changed setting. Source links, documented limits and a route to correct failures make a newsroom process more accountable, but they do not establish that every published sentence is correct.",
         "Reporting note: This article summarizes NIST's published risk-management framework and does not evaluate or certify a particular AI product."
       ],
       "sources": [
@@ -165,7 +167,7 @@
       "status": "published",
       "author": "Civora Research Desk",
       "publishedAt": "2026-11-09",
-      "updatedAt": null
+      "updatedAt": "2026-11-09"
     },
     {
       "id": "nasa-2025-global-temperature",
@@ -183,6 +185,8 @@
         "Independent groups can rank close years slightly differently because they process observations and missing coverage differently. NASA noted that NOAA, Berkeley Earth, the Hadley Centre and Europe's Copernicus service also placed 2025 as the third warmest year in their analyses. Their methods differ, but all show the broader warming pattern.",
         "Short-term variations can arise from ocean conditions and natural climate variability. A record-setting year does not require the next year to be even hotter. To understand the long-term signal, researchers examine multiple years and decades instead of selecting one change between neighboring dates.",
         "Three questions strengthen a climate headline: Which dataset is being used? What baseline defines the anomaly? And does the claim describe one year or a sustained trend? Those distinctions can prevent technically correct numbers from becoming misleading arguments.",
+        "Civora's evidence check: NASA's 2025 estimate is 1.19 degrees Celsius above its own 1951–1980 baseline. The statement that 2025 was cooler than 2024 compares two adjacent annual anomalies; it does not say the 2025 anomaly returned to zero. A graph with a different baseline could display different anomaly numbers while still indicating the same underlying warming, so any comparison needs its reference period.",
+        "The agency's public temperature indicator also illustrates a five-year running average, which smooths some short-term changes for the purpose of seeing longer patterns. That is not a prediction and does not mean individual annual readings have been replaced. Readers can compare the annual sequence with the smoothed view instead of inferring a climate reversal from one downward step.",
         "Reporting note: This is an original Civora explanation of NASA's publicly released analysis, not a new climate measurement."
       ],
       "sources": [
@@ -192,7 +196,7 @@
       "status": "published",
       "author": "Civora Research Desk",
       "publishedAt": "2026-11-09",
-      "updatedAt": null
+      "updatedAt": "2026-11-09"
     },
     {
       "id": "ftc-imposter-scams-2025",
@@ -210,16 +214,20 @@
         "Across all fraud categories, reported losses reached about $16 billion in 2025, approximately 25 percent above 2024, according to the release. The word reported is critical: these totals describe information consumers submitted to the agency, not a complete accounting of every fraudulent incident or dollar lost.",
         "The distinction between a message and verification can help people recognize suspicious demands. An unexpected request for credentials, payment or a transfer should be checked through an independently located contact channel. A link, phone number or caller ID supplied by the alarming message is not, by itself, confirmation of authenticity.",
         "The findings show why deception can be powerful even without a technical breach. Scammers may cause significant harm by persuading people to act on fabricated authority. Public fraud data can describe the scale of reported losses; individual situations still require careful verification.",
+        "Civora's comparison: Dividing the FTC's approximately $3.5 billion in reported imposter-scam losses by its roughly $16 billion in reported losses across all fraud categories produces about 22 percent. That is a share of reported dollars, not the share of Americans targeted, the probability that a report involved fraud, or the proportion of all fraud occurring in the country. The FTC also says imposter scams represented nearly one in three fraud reports, illustrating why report counts and dollar losses answer different questions.",
+        "A second distinction concerns ranking. The FTC's March 2026 testimony identifies investment scams, not imposter scams, as the category with the largest aggregate reported losses in 2025, at about $7.9 billion. Imposter scams were most frequently reported, but were not the largest category by dollars. These two statements can both be true, and confusing them makes an already serious problem harder to understand.",
+        "Method note: The FTC's Consumer Sentinel figures are based on reports received and shared with the agency, not a randomized survey of the entire population. Victims may never file a report, and the figures do not measure all unreported activity. The original FTC release and its March 2026 testimony are linked below so readers can check both measures.",
         "Reporting note: This article is Civora's source-based analysis of the FTC's published consumer-report figures, not an interview-based investigation."
       ],
       "sources": [
         "FTC 2026 report on imposter scams: https://www.ftc.gov/news-events/news/press-releases/2026/06/ftc-data-show-people-reported-losing-3-point-5-billion-imposter-scams-2025",
-        "FTC Consumer Advice scam information: https://consumer.ftc.gov/scams"
+        "FTC Consumer Advice scam information: https://consumer.ftc.gov/scams",
+        "FTC March 2026 testimony on reported scam losses: https://www.ftc.gov/news-events/news/press-releases/2026/03/ftc-testifies-joint-economic-committee-agencys-efforts-combat-fraud"
       ],
       "status": "published",
       "author": "Civora Research Desk",
       "publishedAt": "2026-11-09",
-      "updatedAt": null
+      "updatedAt": "2026-11-09"
     },
     {
       "id": "2026-global-digital-divide",
@@ -237,6 +245,9 @@
         "Quality is another dividing line. An unreliable shared connection may allow occasional messages but cannot support the same tasks as stable broadband. Being within cellular coverage is different from possessing a suitable device, affordable data and the skills to use online tools securely.",
         "Readers should also compare statistics carefully. The ITU revised its estimate for 2025 upward from six billion to 6.1 billion internet users. Statistical revisions can reflect updated information and methods, so figures lifted from different editions should not automatically be treated as directly comparable.",
         "The report therefore raises questions beyond coverage maps: Who can afford to connect, who has reliable service, and who benefits from new digital tools? The headline milestone is substantial, but the remaining exclusion is equally important.",
+        "Civora's comparison: The ITU's 2026 estimate of 76 percent online versus its revised 2025 estimate of 74 percent represents a two-percentage-point increase, not a two-percent relative increase. The estimated user count grew by about 200 million, from 6.1 billion to 6.3 billion. Those figures are rounded population estimates, so subtracting them is an illustration of scale rather than an exact count of newly connected individuals.",
+        "The inequalities are larger than the global year-on-year change: 93 percent usage in high-income countries versus 32 percent in low-income countries is a 61-percentage-point gap. The ITU also estimates 82 percent of urban residents online versus 63 percent of rural residents, a 19-point gap. These are comparisons across different population groups; they do not prove that income or geography alone caused anyone to be disconnected.",
+        "Evidence check: The ITU publishes estimates, not a live census of every device. Its historical numbers can be revised, and network coverage, phone ownership and internet use measure different things. A responsible headline should name the indicator and distinguish the source's published estimate from Civora's arithmetic.",
         "Reporting note: This Civora News article is an original synthesis of the ITU's 2026 published statistics. No original interviews or field reporting were conducted."
       ],
       "sources": [
@@ -247,7 +258,7 @@
       "status": "published",
       "author": "Civora Research Desk",
       "publishedAt": "2026-11-09",
-      "updatedAt": null
+      "updatedAt": "2026-11-09"
     }
   ]
 }

@@ -1,4 +1,8 @@
 (()=>{"use strict";
+/* Clear only the on-device reading identifiers; ad cookies remain under browser/vendor controls. */
+const clearReading=document.querySelector("[data-clear-reading]");
+if(clearReading){clearReading.addEventListener("click",()=>{const status=document.querySelector("[data-clear-reading-status]");try{localStorage.removeItem("civora-reading-list-v1");localStorage.removeItem("civora-reading-history-v1");if(status)status.textContent="Saved stories and reading history were cleared on this device. Advertising cookies and provider logs are unaffected.";}catch{if(status)status.textContent="Unable to clear local data. Use your browser’s site-data settings.";}})}
+
 const input=document.querySelector("#site-search");
 if(input){const cards=[...document.querySelectorAll(".search-entry")],status=document.querySelector("#search-status"),empty=document.querySelector("#search-empty");
 input.value=new URLSearchParams(location.search).get("q")||"";
