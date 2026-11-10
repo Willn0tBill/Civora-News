@@ -250,6 +250,37 @@
       "updatedAt": null
     },
     {
+      "id": "hubble-m30-galactic-history-2026",
+      "title": "Hubble's newest look at M30 is also a look into the Milky Way's past",
+      "summary": "A new composite image of an old star cluster does more than look impressive: observations across decades help astronomers test where its stars came from.",
+      "cat": "Science",
+      "kind": "news",
+      "author": "Civora Research Desk",
+      "art": "Ancient Star Cities",
+      "visual": "science",
+      "body": [
+        "An image of a crowded star cluster can look like another spectacular space photograph. NASA and the European Space Agency's new view of Messier 30, released November 5, 2026, has a more interesting story. It brings together Hubble observations that help scientists study some of our galaxy's oldest stellar populations.",
+        "Messier 30, commonly called M30, is about 27,500 light-years away in Capricornus. It is a globular cluster, a dense collection of gravitationally bound stars. Clusters like this can preserve clues about conditions and events from the early history of the galaxies around them.",
+        "The image combines information collected at ultraviolet, visible and near-infrared wavelengths. Using different parts of the spectrum can make stellar populations easier to distinguish. Revisiting the same cluster years later can also reveal how individual stars move.",
+        "NASA and ESA note that M30 and several other globular clusters orbit in a direction opposite the Milky Way's overall rotation. That motion is consistent with the possibility that some clusters came from other stellar systems that merged with our galaxy. It is not a finished origin story, and the observation alone cannot prove one.",
+        "Three Hubble programs contributed to the composite. Some observations used the Advanced Camera for Surveys; others relied on Wide Field Camera 3. A later observing effort returned to selected clusters to measure star motions over roughly 15 years.",
+        "This is an underrated strength of a long-lived observatory. A new image is not just a better poster for a telescope. It can provide another point in a time series, allowing researchers to test hypotheses that were impossible with one set of observations.",
+        "The value of the release is therefore not a claim that astronomers just discovered M30 or watched an ancient galactic collision. The value is the evidence collected across years—and the questions it makes possible to investigate.",
+        "Image note: Processed Hubble composite of M30, credited to ESA/Hubble & NASA, M. Libralato, G. Piotto and A. Sarajedini. The Wikimedia Commons copy is distributed under CC BY 4.0 and may be cropped in Civora's layout.",
+        "Reporting note: Civora synthesized NASA and ESA materials. We did not conduct telescope observations or interviews."
+      ],
+      "sources": [
+        "NASA, Hubble Learns Galactic History From Stars (November 5, 2026): https://science.nasa.gov/missions/hubble/hubble-learns-galactic-history-from-stars/",
+        "ESA/Hubble, Lessons from a stellar instructor (November 5, 2026): https://esahubble.org/images/potm2610a/",
+        "Image and license information, Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Lessons_from_a_stellar_instructor_(potm2610a).jpg",
+        "Creative Commons Attribution 4.0 license: https://creativecommons.org/licenses/by/4.0/"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null,
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lessons_from_a_stellar_instructor_(potm2610a).jpg?width=1600"
+    },
+    {
       "id": "space-station-night-lights-earth-2026",
       "title": "Earth after dark looks like a map of lights. It's not a map of wealth.",
       "summary": "A NASA astronaut's nighttime photograph reveals the shape of cities from orbit. It also shows how easy it is to read too much into a striking image.",
@@ -280,37 +311,6 @@
       "publishedAt": "2026-11-10",
       "updatedAt": null,
       "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nighttime_view_of_the_United_States_from_the_International_Space_Station_(iss075e0102764).jpg?width=1600"
-    },
-    {
-      "id": "hubble-m30-galactic-history-2026",
-      "title": "Hubble's newest look at M30 is also a look into the Milky Way's past",
-      "summary": "A new composite image of an old star cluster does more than look impressive: observations across decades help astronomers test where its stars came from.",
-      "cat": "Science",
-      "kind": "news",
-      "author": "Civora Research Desk",
-      "art": "Ancient Star Cities",
-      "visual": "science",
-      "body": [
-        "An image of a crowded star cluster can look like another spectacular space photograph. NASA and the European Space Agency's new view of Messier 30, released November 5, 2026, has a more interesting story. It brings together Hubble observations that help scientists study some of our galaxy's oldest stellar populations.",
-        "Messier 30, commonly called M30, is about 27,500 light-years away in Capricornus. It is a globular cluster, a dense collection of gravitationally bound stars. Clusters like this can preserve clues about conditions and events from the early history of the galaxies around them.",
-        "The image combines information collected at ultraviolet, visible and near-infrared wavelengths. Using different parts of the spectrum can make stellar populations easier to distinguish. Revisiting the same cluster years later can also reveal how individual stars move.",
-        "NASA and ESA note that M30 and several other globular clusters orbit in a direction opposite the Milky Way's overall rotation. That motion is consistent with the possibility that some clusters came from other stellar systems that merged with our galaxy. It is not a finished origin story, and the observation alone cannot prove one.",
-        "Three Hubble programs contributed to the composite. Some observations used the Advanced Camera for Surveys; others relied on Wide Field Camera 3. A later observing effort returned to selected clusters to measure star motions over roughly 15 years.",
-        "This is an underrated strength of a long-lived observatory. A new image is not just a better poster for a telescope. It can provide another point in a time series, allowing researchers to test hypotheses that were impossible with one set of observations.",
-        "The value of the release is therefore not a claim that astronomers just discovered M30 or watched an ancient galactic collision. The value is the evidence collected across years—and the questions it makes possible to investigate.",
-        "Image note: Processed Hubble composite of M30, credited to ESA/Hubble & NASA, M. Libralato, G. Piotto and A. Sarajedini. The Wikimedia Commons copy is distributed under CC BY 4.0 and may be cropped in Civora's layout.",
-        "Reporting note: Civora synthesized NASA and ESA materials. We did not conduct telescope observations or interviews."
-      ],
-      "sources": [
-        "NASA, Hubble Learns Galactic History From Stars (November 5, 2026): https://science.nasa.gov/missions/hubble/hubble-learns-galactic-history-from-stars/",
-        "ESA/Hubble, Lessons from a stellar instructor (November 5, 2026): https://esahubble.org/images/potm2610a/",
-        "Image and license information, Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Lessons_from_a_stellar_instructor_(potm2610a).jpg",
-        "Creative Commons Attribution 4.0 license: https://creativecommons.org/licenses/by/4.0/"
-      ],
-      "status": "published",
-      "publishedAt": "2026-11-10",
-      "updatedAt": null,
-      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lessons_from_a_stellar_instructor_(potm2610a).jpg?width=1600"
     },
     {
       "id": "ftc-progress-residential-rental-fees-settlement-2026",
@@ -405,6 +405,1321 @@
       "publishedAt": "2026-11-10",
       "updatedAt": null,
       "image_url": "https://www.nasa.gov/wp-content/uploads/2026/11/blog-useva101-110526h.jpg"
+    },
+    {
+      "id": "public-school-money-revenue-sources",
+      "title": "School funding does not come from one giant federal check",
+      "summary": "U.S. public schools rely on state, local and federal revenues, and the mix changes across places. Per-student headlines rarely tell the whole story.",
+      "cat": "U.S.",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "Who Funds Schools",
+      "visual": "us",
+      "body": [
+        "When a school district faces cuts, people often ask why the federal government does not simply send more money. The question assumes a funding system that does not exist. U.S. public education is financed through a mix of state, local and federal sources, with substantial differences by location.",
+        "The National Center for Education Statistics reports that in the 2020–21 school year, state sources provided about 46% of public elementary and secondary school revenue, local sources about 44% and federal sources about 11%. Those are national shares for that year, not a formula that applies to every district today.",
+        "State funding policies, property-tax systems, enrollment changes and special-purpose grants can all influence local budgets. Two districts in the same state may have different financial circumstances, staffing demands and facilities costs.",
+        "Spending per student is useful, but it is not a complete measure of education quality. Transportation, special education, building maintenance and local labor costs can make the same dollar amount stretch differently across communities.",
+        "Budget discussions also mix revenue with expenditure. Money promised to a district is not the same as money spent in a classroom during a given period. One-time funding can temporarily increase resources without solving a long-term recurring shortfall.",
+        "The right questions are specific: which source is changing, which students and services are affected, and is the change temporary or structural? Looking at the actual adopted district budget is more informative than treating all education funding as one number.",
+        "Reporting note: Civora reviewed federal education finance statistics and Census Bureau school-finance resources. This article does not audit any specific district.",
+        "Image note: Illustrative photograph of a U.S. public high-school classroom; not a photographed district discussed in this article. Credit: Harrison Keely, Wikimedia Commons (CC BY 4.0); cropped to fit Civora's layout."
+      ],
+      "sources": [
+        "NCES, Public School Revenue Sources: https://nces.ed.gov/programs/coe/indicator/cma/public-school-expenditures",
+        "Census Bureau, Public Education Finances: https://www.census.gov/programs-surveys/school-finances.html",
+        "Cover image and license record: https://commons.wikimedia.org/wiki/File:A_public_school,_high_school_classroom_in_the_United_States_02.jpg"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null,
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/A_public_school%2C_high_school_classroom_in_the_United_States_02.jpg/1280px-A_public_school%2C_high_school_classroom_in_the_United_States_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+      "id": "electoral-college-process-explained",
+      "title": "Winning the most votes nationally does not automatically win the presidency",
+      "summary": "The Electoral College is a state-based constitutional process. Understanding electors and congressional counting is essential to interpreting presidential-election results.",
+      "cat": "U.S.",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "The Electoral Count",
+      "visual": "us",
+      "body": [
+        "Presidential elections generate two numbers that can point in different directions: the nationwide popular vote and the electoral vote. The United States does not choose its president through a single national popular-vote tally. It uses the Electoral College, a process written into the constitutional system.",
+        "The National Archives explains that the Electoral College has 538 electors, with 270 electoral votes required for a majority. States generally receive electors corresponding to their total congressional representation, while the District of Columbia has three.",
+        "Most states allocate all their electoral votes to the candidate who wins their statewide vote. Maine and Nebraska use different allocation approaches. That means the geographic distribution of votes can matter in a way that national totals alone do not show.",
+        "After voting, electors meet and cast their votes, which Congress later counts under the governing procedures. The formal count is not the same as a television network's election-night projection, even when the projected outcome turns out to be correct.",
+        "Discussions about changing the system are legitimate political debates, but reporting should separate arguments for reform from a description of the rules that currently exist. A candidate's national popular-vote lead and electoral-vote result are different measurements.",
+        "The simplest way to read an election map is to ask which states were won, how their electors were allocated and which results were official. A colorful map can summarize the outcome, but it does not replace the underlying vote totals or certification process.",
+        "Reporting note: This is a civic explainer based on the National Archives' electoral-process guidance and USAGov voter information. No original election analysis was conducted.",
+        "Image note: Illustrative photograph of the western front of the U.S. Capitol; not an image of an electoral vote count. Credit: Architect of the Capitol, Wikimedia Commons (Public domain); cropped to fit Civora's layout."
+      ],
+      "sources": [
+        "National Archives, What Is the Electoral College?: https://www.archives.gov/electoral-college/about",
+        "USAGov, Electoral College: https://www.usa.gov/electoral-college",
+        "Cover image and license record: https://commons.wikimedia.org/wiki/File:United_States_Capitol_-_west_front.jpg"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null,
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/United_States_Capitol_-_west_front.jpg/1280px-United_States_Capitol_-_west_front.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+      "id": "weather-watch-warning-difference",
+      "title": "A weather watch and a warning are not the same thing",
+      "summary": "A watch signals conditions that could produce danger; a warning means dangerous weather is occurring or imminent. The difference affects decisions.",
+      "cat": "U.S.",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "Know the Alert",
+      "visual": "us",
+      "body": [
+        "A severe-weather alert appears on your phone, but two words can change the meaning: watch and warning. They are not interchangeable labels for how dramatic a forecast sounds. They describe different stages of risk.",
+        "The National Weather Service uses a watch when conditions are favorable for certain hazardous weather to develop. A warning is issued when the threat is imminent or already happening in a defined area. An advisory generally flags hazardous conditions that do not meet the warning threshold.",
+        "That distinction changes what the alert is asking you to understand. A watch means paying attention to an evolving situation and being prepared; a warning means the dangerous weather is much closer or underway. The relevant safety response still depends on the type of threat and official local instructions.",
+        "Forecasts contain uncertainty even when warnings are justified. Storms can shift or weaken, and the fact that a warning did not result in damage at one address does not mean it was issued carelessly. Alerts are designed to communicate credible risk, not promise a specific outcome at every location.",
+        "Maps matter, too. A warning for part of a county or a polygon-shaped area does not necessarily apply equally to every nearby community. Readers should examine the location, time window and hazard rather than sharing only a cropped screenshot.",
+        "The practical reading habit is simple: identify the alert type, the exact area, what is expected and which official office issued it. Weather headlines can make a situation sound universal when the alert itself is much more precise.",
+        "Reporting note: Civora used National Weather Service explanations of its forecast products and alert terminology. No independent forecast was produced."
+      ],
+      "sources": [
+        "National Weather Service, Weather Watches, Warnings and Advisories: https://www.weather.gov/key/products",
+        "National Weather Service, Active Alerts: https://www.weather.gov/alerts"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "census-count-representation-power",
+      "title": "The census decides more than a population headline",
+      "summary": "The decennial count helps distribute House seats among states. Representation can shift without changing the total number of seats.",
+      "cat": "U.S.",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "Counting Representation",
+      "visual": "us",
+      "body": [
+        "Every ten years, the census produces a figure that looks straightforward: how many people live in each state. That count does more than answer a demographic question. It helps determine how political representation is distributed for the next decade.",
+        "The Census Bureau says the 435 seats in the U.S. House of Representatives are apportioned among the 50 states using decennial population figures. Every state receives at least one seat, and a mathematical method allocates the rest under federal law.",
+        "When one state gains a seat, the House does not necessarily become larger. With the total fixed at 435, population changes can shift representation from one state to another. A state's seat count can change even if its own population grew, because other states may have grown faster.",
+        "Apportionment is different from redistricting. The first determines how many House seats a state receives; the second draws district boundaries within states. Mixing the terms makes it easy to misunderstand what a particular census announcement changes.",
+        "Population counts also have limitations and administrative rules. The apportionment population uses specific criteria, including some overseas federal personnel and dependents, and is not identical to every other population estimate published by the Census Bureau.",
+        "A headline about a state's growth should therefore lead to two questions: how does it compare with the rest of the country, and what does that mean for representation? An absolute population increase and a political seat gain are not interchangeable outcomes.",
+        "Reporting note: Civora used Census Bureau apportionment guidance and historical data; it did not produce new population estimates."
+      ],
+      "sources": [
+        "Census Bureau, Congressional Apportionment FAQs: https://www.census.gov/topics/public-sector/congressional-apportionment/about/faqs.html",
+        "Census Bureau, Historical Apportionment Data: https://www.census.gov/data/tables/time-series/dec/apportionment-data-text.html"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "federal-court-ruling-scope",
+      "title": "A court ruling is not automatically the last word",
+      "summary": "Trial courts, appeals courts and the Supreme Court play different roles. A headline about a ruling should identify where it came from and what it actually ordered.",
+      "cat": "U.S.",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "Beyond the Headline",
+      "visual": "us",
+      "body": [
+        "A judge issues a decision and social media declares the debate over. The legal system rarely works that neatly. A ruling can resolve a specific dispute, change the rules for certain parties or become important precedent—but its reach depends on the court, the order and what happens next.",
+        "Federal district courts generally hear cases at the trial level. Appeals courts review legal questions and procedures from lower-court cases, while the Supreme Court selects a comparatively small number of matters for review. Different courts have different jurisdictions.",
+        "An appeals court ruling is generally binding on lower federal courts within that circuit, not automatically on every court in the country. A Supreme Court decision on federal law has different nationwide significance. Treating these levels as identical misstates the legal effect.",
+        "A ruling can also be stayed, appealed, narrowed or superseded. An order that takes effect immediately is different from a legal opinion whose practical impact depends on further proceedings or agency action.",
+        "Journalism about lawsuits needs careful verbs. 'A judge ruled,' 'a court blocked enforcement,' and 'a final judgment was entered' may describe different procedural events. A party's claim in a lawsuit is also not a fact established by the judge.",
+        "When an important case trends, read the order or a reliable court summary. Identify the court, the parties, the question decided and the current status. That is how readers distinguish a meaningful legal development from an overconfident headline.",
+        "Reporting note: Civora used U.S. Courts explanations of the federal judiciary. This is general information, not legal advice or analysis of a current case."
+      ],
+      "sources": [
+        "U.S. Courts, About the Courts of Appeals: https://www.uscourts.gov/about-federal-courts/court-role-and-structure/about-us-courts-appeals",
+        "U.S. Courts, Court Role and Structure: https://www.uscourts.gov/about-federal-courts/court-role-and-structure"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "federal-rulemaking-not-new-law",
+      "title": "A federal regulation is not the same as a new law",
+      "summary": "Agencies write detailed rules under authority from Congress. Proposed rules, final rules and effective dates represent different stages.",
+      "cat": "U.S.",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "Rules in Progress",
+      "visual": "us",
+      "body": [
+        "A federal agency announces a rule and the headline says the government has changed the law. Sometimes that shorthand obscures the actual process. Congress passes statutes; executive agencies usually write regulations to implement authority those statutes give them.",
+        "Rulemaking often begins with a proposal published for public comment. The agency explains what it wants to change, the legal basis and how people can submit responses. Comments are part of a formal record, not a public vote where the most popular side automatically wins.",
+        "A final rule is different from a proposed one. The agency may revise its approach after reviewing comments, and the final text often includes an explanation of the decision. An effective date determines when requirements take legal effect, which might not be the publication date.",
+        "Federal Register notices and Regulations.gov dockets provide public records of this process. A policy announcement can attract enormous attention, while the actual legal details sit inside an often less dramatic document that readers have to inspect.",
+        "Rules can be challenged in court or changed through later proceedings. Courts review agency actions under applicable law; a regulation's appearance in the Federal Register is not proof that every legal question about it has been resolved.",
+        "Before concluding that a regulation applies today, check its status, scope and date. A proposal is not a final rule; a final rule may have a later effective date; and a rule might face litigation. Those distinctions belong in every serious report.",
+        "Reporting note: Civora used federal rulemaking resources and official publications. This is a general civic explainer, not legal advice about a particular regulation."
+      ],
+      "sources": [
+        "Office of the Federal Register, The Rulemaking Process: https://uploads.federalregister.gov/uploads/2013/09/The-Rulemaking-Process.pdf",
+        "Regulations.gov, Federal rulemaking dockets: https://www.regulations.gov/"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "paycheck-withholding-tax-bill",
+      "title": "Money withheld from a paycheck is not your final tax bill",
+      "summary": "Payroll withholding is a way to prepay income tax. Refunds and balances depend on the gap between payments and actual liability.",
+      "cat": "U.S.",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "Reading the Paycheck",
+      "visual": "us",
+      "body": [
+        "A paycheck shows federal income tax withheld, and it is tempting to treat that number as the amount you owe the government. It is not that simple. Withholding is a payment made during the year toward an eventual tax calculation.",
+        "The Internal Revenue Service explains that actual income-tax liability depends on income, filing status, adjustments, deductions, credits and applicable law. Employers use payroll information and Form W-4 to estimate how much should be withheld, but an estimate can differ from the final result.",
+        "When a return is filed, total payments are compared with tax liability. Withholding that exceeds the liability can result in a refund; insufficient payment can mean a remaining balance. A large refund is not proof that taxes were low. It can mean more was prepaid than necessary.",
+        "Federal income-tax withholding is also distinct from Social Security and Medicare taxes shown on many paychecks. The IRS withholding estimator addresses income-tax planning and does not treat all payroll deductions as the same item.",
+        "Changes in jobs, household circumstances or law can affect the calculation. People with more than one job or income source may need to review estimates especially carefully, because payroll systems do not always know the full picture.",
+        "The useful comparison is not whether today's paycheck had a bigger deduction than last week's. It is whether the year's estimated payments are reasonably aligned with the expected tax liability. That requires accurate information rather than guesswork.",
+        "Reporting note: Civora reviewed IRS withholding guidance. This article is general information, not individualized tax or financial advice."
+      ],
+      "sources": [
+        "IRS, Tax Withholding Estimator FAQs: https://www.irs.gov/individuals/tax-withholding-estimator-faqs",
+        "IRS, Publication 505 Tax Withholding and Estimated Tax: https://www.irs.gov/publications/p505"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "crime-statistics-two-measures",
+      "title": "Two official crime statistics can disagree without either being fake",
+      "summary": "Police-reported incidents and victimization surveys measure different things. Comparing them without methods can turn numbers into misinformation.",
+      "cat": "U.S.",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "Reading Crime Data",
+      "visual": "us",
+      "body": [
+        "Two crime reports can give different numbers for the same country and year. That does not automatically mean someone falsified a statistic. Often the reports are measuring different things—and the distinction is essential before drawing a political conclusion.",
+        "The FBI's crime reporting program collects information from participating law-enforcement agencies. The Bureau of Justice Statistics also conducts the National Crime Victimization Survey, which asks people about some crimes whether or not they were reported to police.",
+        "Those datasets have different coverage. Police data can include categories that the household survey does not, while the survey can capture victimizations that never reached police records. Neither instrument is a perfect count of all harm.",
+        "Method changes matter, too. The Justice Department documented a redesigned victimization survey in 2025, meaning certain new estimates should not simply be spliced into older series as though nothing changed. Comparing incompatible numbers creates false trends.",
+        "Agency participation, definitions and reporting practices are equally important. A chart may legitimately describe reported offenses in a specific dataset, but it cannot automatically answer how safe every neighborhood feels or what every victim experienced.",
+        "A responsible crime headline should name the source, categories, geography, period and whether the figures are reported incidents or survey estimates. Those details are not footnotes to the story. They determine what the number means.",
+        "Reporting note: Civora reviewed FBI and Bureau of Justice Statistics methodology documents and 2026 reports. No independent crime data analysis was conducted."
+      ],
+      "sources": [
+        "FBI, 2025 Reported Crimes in the Nation: https://www.fbi.gov/news/press-releases/fbi-releases-2025-reported-crimes-in-the-nation-statistics",
+        "BJS, The Nation's Two Crime Measures 2015–2024: https://bjs.ojp.gov/library/publications/nations-two-crime-measures-2015-2024"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "food-prices-global-supply-pressure",
+      "title": "The price of food does not stop at a national border",
+      "summary": "Weather, shipping costs, currency shifts and trade policy can affect food bills far from where crops are grown.",
+      "cat": "World",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "From Field to Shelf",
+      "visual": "world",
+      "body": [
+        "A drought in one region or a disruption at a major port can affect grocery prices somewhere else. Food moves through international supply chains, and its final price reflects much more than the work of the farm that produced it.",
+        "The Food and Agriculture Organization tracks international prices for major food commodity groups. Its Food Price Index can show broad movements in world markets, but that does not mean a family's grocery receipt will rise or fall by exactly the same percentage.",
+        "Local food prices also reflect wages, processing, packaging, transportation, storage, taxes and retail competition. Exchange rates can change the cost of imports, even when the international commodity price itself has not moved much.",
+        "Trade restrictions and severe weather may reduce the available supply of particular goods. But the effect on consumers depends on alternative sources, inventories, contracts and how long a disruption lasts. Not every shortage produces the same outcome in every market.",
+        "The World Bank's food-security monitoring provides another perspective on why high food costs can be especially damaging to lower-income households. A small percentage increase may mean inconvenience for one family and an impossible choice for another.",
+        "When a food-price headline appears, ask whether it refers to global commodity prices, wholesale prices or retail bills. Those are connected measures, not interchangeable ones. A good explanation follows the product through the system instead of blaming one event for every price change.",
+        "Reporting note: Civora reviewed FAO and World Bank food-price and food-security resources. This is an explainer, not an original price survey.",
+        "Image note: Illustrative photograph of a wheat field near harvest in Sivas, Türkiye; not evidence of a specific 2026 price movement. Credit: Maurice Flesier, Wikimedia Commons (CC BY-SA 4.0); cropped to fit Civora's layout."
+      ],
+      "sources": [
+        "FAO, World Food Price Index: https://www.fao.org/worldfoodsituation/foodpricesindex/en/",
+        "World Bank, Food Security Update: https://www.worldbank.org/en/topic/agriculture/brief/food-security-update",
+        "Cover image and license record: https://commons.wikimedia.org/wiki/File:A_wheat_field_before_harvest.jpg"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null,
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/A_wheat_field_before_harvest.jpg/1280px-A_wheat_field_before_harvest.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+      "id": "executive-orders-laws-difference",
+      "title": "An executive order can change federal policy. It cannot rewrite the Constitution.",
+      "summary": "Presidents can direct executive agencies, but executive orders operate within legal limits. A signature is not the same thing as a new act of Congress.",
+      "cat": "U.S.",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "Power and Limits",
+      "visual": "us",
+      "body": [
+        "When a president signs an executive order, the cameras make it look like the law changed in one stroke. Sometimes the practical effect is immediate. But an executive order is not a law passed by Congress, and the distinction matters whenever a political announcement is presented as the final word.",
+        "Executive orders generally direct the operations of the federal executive branch. They can instruct agencies to prioritize work, review policies or use authority already granted by statute or the Constitution. They cannot automatically create powers the president does not legally possess.",
+        "Congress still writes federal statutes, controls appropriations and can alter the laws that agencies operate under. Courts can review executive actions when lawsuits raise a legal issue. Whether an order survives a challenge depends on the particular authority claimed and the facts of the case.",
+        "Presidents also can revoke or modify earlier executive orders, so their durability is not identical to a statute's. That is one reason agencies and affected organizations often examine the exact document rather than relying on the president's speech about it.",
+        "The Federal Register publishes presidential documents, including executive orders. Readers can compare the text with its stated legal authority and check later actions or court decisions. That is a better source than a viral clip or a summary written before anyone read the document.",
+        "The useful question is not merely whether an order was signed. It is what the text requires, which agencies can carry it out, what law supports it and what remains open to challenge. Those details determine whether a political headline translates into lasting change.",
+        "Reporting note: Civora prepared this explainer from official presidential-document and federal-courts resources. No original interviews or legal case review were conducted.",
+        "Image note: Archival photograph of the White House in 1911, not a photograph of a current executive order signing. Credit: Miscellaneous Items in High Demand, PPOC, Library of Congress, Wikimedia Commons (Public domain); cropped to fit Civora's layout."
+      ],
+      "sources": [
+        "Federal Register, Executive Orders: https://www.federalregister.gov/presidential-documents/executive-orders",
+        "U.S. Courts, Court Role and Structure: https://www.uscourts.gov/about-federal-courts/court-role-and-structure",
+        "Cover image and license record: https://commons.wikimedia.org/wiki/File:D.C._Washington._White_House._Exterior._1911._View_from_Washington_Monument_LCCN2003680448.jpg"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null,
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/D.C._Washington._White_House._Exterior._1911._View_from_Washington_Monument_LCCN2003680448.jpg/1280px-D.C._Washington._White_House._Exterior._1911._View_from_Washington_Monument_LCCN2003680448.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+      "id": "world-poverty-line-measurement",
+      "title": "A new poverty line can change the count without changing anyone's income",
+      "summary": "Global poverty statistics depend on definitions, price comparisons and updated data. Revisions deserve explanation before being treated as sudden economic shifts.",
+      "cat": "World",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "The Poverty Measure",
+      "visual": "world",
+      "body": [
+        "A global poverty estimate rises after a methodology update and the headline announces that millions suddenly became poorer. That conclusion may be wrong. When researchers change a measurement standard, the reported number can move even if daily life has not changed overnight.",
+        "The World Bank uses international poverty lines based on purchasing power parity, a method intended to compare living standards across countries with different price levels. Poverty figures are estimates built from surveys, prices and models, not a direct count of everyone at every moment.",
+        "Updating price comparisons or a poverty threshold can change the number classified as poor. New household surveys can do the same. Those revisions can make different editions of a chart harder to compare without adjustment.",
+        "Absolute poverty and inequality also answer different questions. One measures whether people fall beneath a defined resource threshold; the other looks at how resources are distributed. A country can reduce poverty while inequality remains high.",
+        "Global totals can also conceal regional differences and household experiences. Poverty in a conflict-affected area, a growing city and a remote rural community may involve very different barriers to improving livelihoods.",
+        "Before sharing a poverty statistic, check the poverty line, the year of prices, the population covered and whether the figure was revised. A number can be carefully measured and still be badly explained in a headline.",
+        "Reporting note: Civora reviewed World Bank poverty methodology and global poverty updates. No independent household surveys were conducted."
+      ],
+      "sources": [
+        "World Bank, Poverty and Inequality Platform: https://pip.worldbank.org/home",
+        "World Bank, Poverty Overview: https://www.worldbank.org/en/topic/poverty/overview"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "global-education-access-not-enough",
+      "title": "A child enrolled in school is not necessarily finishing school",
+      "summary": "UNESCO's 2026 global education research shows why enrollment, completion and equitable access need to be measured separately.",
+      "cat": "World",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "Beyond Enrollment",
+      "visual": "world",
+      "body": [
+        "School enrollment is one of the easiest education numbers to celebrate. It is also one of the easiest to overinterpret. A child can be enrolled yet miss classes, repeat years or leave school before completing a level.",
+        "UNESCO's 2026 Global Education Monitoring Report estimates that 273 million children and young people were out of school in 2024. The report also examines completion, grade repetition and access across countries, emphasizing that participation alone is not the full picture.",
+        "Different measures answer different questions. Enrollment reflects registration, attendance describes participation over time, and completion shows whether students reach a particular stage. Countries can improve one measure without matching progress in the others.",
+        "Location, household income, disability and local policy can shape whether education remains accessible. UNESCO argues that efforts must consider equity and sustained investment rather than assuming a single school-building program will solve every barrier.",
+        "Education statistics are also harder to collect in places affected by conflict or displacement. Missing data can make the exclusion of some children less visible, which is a reason to examine the methods behind an attractive national average.",
+        "The stronger measure of progress is not how many children entered a school once. It is whether they can attend, learn and complete meaningful education. That takes more than celebrating the opening of new classrooms.",
+        "Reporting note: Civora reviewed UNESCO's 2026 Global Education Monitoring Report and overview. We conducted no original interviews with students or educators."
+      ],
+      "sources": [
+        "UNESCO, 2026 GEM Report Access and Equity: https://www.unesco.org/reports/gem-report/en/2026-access-equity",
+        "UNESCO GEM Report, What the 2026 report says: https://www.unesco.org/gem-report/en/articles/what-does-2026-gem-report-say-about-access-and-equity-education"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "hunger-data-food-insecurity",
+      "title": "Hunger statistics measure more than a missing meal",
+      "summary": "Undernourishment and food insecurity reflect different forms of hardship. Treating a global estimate as an exact headcount obscures how the data work.",
+      "cat": "World",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "Measuring Hunger",
+      "visual": "world",
+      "body": [
+        "An estimate of how many people face hunger can make the crisis seem simple to count. In reality, food access changes across households and seasons, and researchers use more than one measure to understand it.",
+        "The UN's State of Food Security and Nutrition in the World report combines data from multiple agencies and distinguishes the prevalence of undernourishment from measures of food insecurity. The former estimates chronic insufficient dietary energy; the latter examines difficulty accessing enough appropriate food.",
+        "Food insecurity does not always mean someone has eaten nothing. Families may reduce diet quality, skip meals or worry about whether food will remain affordable. Severity and duration matter, and indicators are designed to capture different dimensions.",
+        "Conflict, economic shocks, climate extremes and displacement can influence food systems, but their effects vary by place. A global trend should not be casually presented as the cause of every local shortage.",
+        "Humanitarian agencies such as the World Food Programme also report acute food insecurity, which focuses on situations that can require urgent action. That measure is not interchangeable with long-term undernourishment estimates.",
+        "The next time a headline gives one enormous number, ask which definition it uses, what year the underlying data cover and whether the report measures chronic or acute conditions. Better reporting starts with those distinctions.",
+        "Reporting note: Civora reviewed UN food-security reporting and WFP explanatory materials. No new household surveys were carried out."
+      ],
+      "sources": [
+        "FAO, State of Food Security and Nutrition in the World: https://www.fao.org/publications/sofi/en/",
+        "World Food Programme, Hunger: https://www.wfp.org/global-hunger-crisis"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "climate-adaptation-finance-inequality",
+      "title": "Preparing for climate damage costs money. The countries needing it most often have less.",
+      "summary": "UNEP's adaptation research separates the cost of preparing for climate risks from the financing actually reaching developing countries.",
+      "cat": "World",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "The Adaptation Gap",
+      "visual": "world",
+      "body": [
+        "Climate debate often centers on how quickly emissions can fall. Another question is just as practical: who can afford to prepare for the damage that climate change is already making more likely? Flood defenses, water planning and heat protection all require investment.",
+        "UNEP's 2025 Adaptation Gap Report estimated developing-country adaptation finance needs for 2035 at hundreds of billions of dollars annually, depending on the method. It compared those projected needs with much smaller recorded international public finance flows.",
+        "Those two figures are not identical accounting categories. A projected future need and a historical financial flow can illustrate a gap, but readers should understand the years, definitions and assumptions behind the comparison.",
+        "Countries also face unequal exposure and fiscal capacity. A government managing several urgent public needs may struggle to pay for flood protection or drought resilience, even when future avoided losses could be large.",
+        "Adaptation spending can cover engineering projects, public health systems, warning networks and ecosystem management. Counting only large concrete structures would miss many ways communities attempt to reduce vulnerability.",
+        "Funding promises become meaningful when they translate into sustained programs that reach the people and places at risk. The sharper question is how adaptation plans will be financed, measured and maintained—not just how ambitious a conference statement sounds.",
+        "Reporting note: Civora reviewed UNEP's adaptation finance assessments and World Bank climate-development materials. No independent cost estimates were calculated."
+      ],
+      "sources": [
+        "UNEP, Adaptation Gap Report 2025: https://www.unep.org/en/publications/report/adaptation-gap-report-2025",
+        "World Bank, Climate Change Overview: https://www.worldbank.org/en/topic/climatechange/overview"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "water-access-beyond-pipes",
+      "title": "A water pipe is not the same thing as safe drinking water",
+      "summary": "Reliable clean-water service depends on quality, availability and accessibility—not simply whether infrastructure appears on a map.",
+      "cat": "World",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "More Than a Tap",
+      "visual": "world",
+      "body": [
+        "A new water pipeline can be a major accomplishment. But installing it does not prove every household has reliable, safe drinking water. The distinction is especially important when development claims are reduced to a photograph of a ribbon-cutting ceremony.",
+        "The World Health Organization and UNICEF monitor drinking-water services using categories that consider the source, access and whether water is available and free from contamination. Different service levels describe meaningfully different living conditions.",
+        "A household might have a water connection that works only intermittently. Another might have access to water that requires additional treatment. Infrastructure coverage and dependable service are connected, but they are not interchangeable statistics.",
+        "Water systems also need treatment, testing, maintenance and financing. A project that expands access today can deteriorate if it is not operated sustainably. Those recurring costs are easier to overlook than the visible expense of construction.",
+        "People who must travel for water also bear time costs that do not appear in a pipe-length metric. Public health, work and education can all be affected when access is unreliable. The experience of users matters alongside engineering figures.",
+        "Before declaring a clean-water project successful, check the definition of access, whether the water meets quality standards and whether households can use it consistently. The strongest result is not infrastructure built; it is safe service that lasts.",
+        "Reporting note: Civora reviewed WHO and UNICEF/WHO monitoring guidance. We did not test water quality or visit a water project."
+      ],
+      "sources": [
+        "WHO, Drinking-water fact sheet: https://www.who.int/news-room/fact-sheets/detail/drinking-water",
+        "WHO/UNICEF Joint Monitoring Programme: https://washdata.org/"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "passkeys-beyond-passwords",
+      "title": "Passkeys change the login problem instead of just shortening passwords",
+      "summary": "Passkeys use cryptography tied to a site or app, reducing some common phishing risks. They are useful, but account recovery still matters.",
+      "cat": "Technology",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "Log In Differently",
+      "visual": "tech",
+      "body": [
+        "A stronger password helps, but it cannot stop every fake login page. Someone can still be tricked into typing a perfect password into the wrong website. Passkeys are designed around a different idea: proving control of a credential without handing the website a reusable secret.",
+        "Passkeys use public-key cryptography. The service stores a public key, while a corresponding private key stays under the user's control through an authenticator or supported device ecosystem. Authentication checks a cryptographic response instead of asking for a password to be typed into a form.",
+        "That design can help resist phishing because the credential is associated with the legitimate service. A convincing look-alike webpage does not automatically obtain something it can reuse to sign in.",
+        "A passkey can still depend on device security, account recovery, synchronization arrangements and the service's implementation. If a person loses access to all trusted devices, recovery procedures matter. Security rarely disappears as a concern; the vulnerable steps shift.",
+        "NIST recommends phishing-resistant authentication for sensitive accounts and recognizes passkeys as an alternative to passwords. That is a stronger reason to use them than convenience alone.",
+        "Before switching methods, understand how a particular service handles backup access and account recovery. A login method is only as dependable as the surrounding system that lets legitimate users regain access safely.",
+        "Reporting note: Civora reviewed NIST guidance and FIDO Alliance technical explanations. We did not independently audit an authenticator."
+      ],
+      "sources": [
+        "NIST, Cybersecurity Basics: https://www.nist.gov/itl/smallbusinesscyber/cybersecurity-basics",
+        "FIDO Alliance, Passkeys: https://fidoalliance.org/passkeys/"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "software-updates-security-patches",
+      "title": "That software update might be fixing more than an annoying bug",
+      "summary": "Security patches address weaknesses attackers could exploit. Delaying updates can keep a known problem in place long after a fix exists.",
+      "cat": "Technology",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "The Patch Cycle",
+      "visual": "tech",
+      "body": [
+        "An update notification is easy to dismiss when an app still appears to work. But software can function normally while containing a security weakness. An update may repair a vulnerability that has little visible effect on the interface.",
+        "Vendors release patches to correct defects, close security gaps and improve compatibility. A version number does not reveal the seriousness of a specific fix; release notes and security advisories provide better context.",
+        "Cybersecurity agencies encourage users and organizations to keep systems current because attackers sometimes target weaknesses that have already been publicly documented and repaired. An outdated system can remain vulnerable after a fix is widely available.",
+        "Updates also create trade-offs. Large organizations may test compatibility before broad deployment, and some fixes can introduce new problems. That does not eliminate the need to patch; it means reliability and security have to be managed together.",
+        "Automatic updates can reduce the burden of remembering every release, while supported devices and software matter because old products may stop receiving security fixes entirely.",
+        "The useful habit is to treat maintenance as part of using technology, not as an optional feature after purchase. The strongest security plan includes current software, protected accounts and a way to recover when something fails.",
+        "Reporting note: Civora synthesized CISA security guidance and NIST cybersecurity basics. No specific vendor patch was independently tested."
+      ],
+      "sources": [
+        "CISA, Secure Our World: https://www.cisa.gov/secure-our-world",
+        "NIST, Cybersecurity Basics: https://www.nist.gov/itl/smallbusinesscyber/cybersecurity-basics"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "shipping-chokepoints-global-trade",
+      "title": "Global trade depends on a few narrow stretches of water",
+      "summary": "A disruption at a shipping chokepoint can ripple through delivery times, insurance and prices far beyond the affected route.",
+      "cat": "World",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "Trade's Narrow Routes",
+      "visual": "world",
+      "body": [
+        "Global trade sounds like a vast, flexible network. In practice, much of it passes through a handful of maritime chokepoints. When one becomes harder to use, cargo ships cannot necessarily find a quick or cheap alternative.",
+        "The United Nations trade agency UNCTAD tracks how maritime transport carries large volumes of international merchandise. Shipping depends on ports, routes, vessels, schedules and insurance. A delay in one part of that system can affect what happens several borders away.",
+        "An alternate voyage may add distance, fuel and crew time. Those costs can influence shipping rates, particularly when many ships change route together. But a higher freight rate does not automatically translate into an identical increase on every store shelf.",
+        "Companies often rely on inventories, contracts and multiple suppliers. Some can absorb a delay for a while; others have time-sensitive goods or little margin for disruption. The same shipping event can therefore be minor for one importer and serious for another.",
+        "Reports about maritime emergencies should also distinguish reduced traffic from a complete closure. Maps showing a crowded route reveal concentration, not necessarily the value or urgency of each cargo shipment.",
+        "The useful question is not just which canal or strait made the news. It is how long the disruption might last, what alternatives exist and which goods rely most heavily on that route. Those are the links between a distant shipping story and a local price.",
+        "Reporting note: Civora synthesized UNCTAD and World Trade Organization trade resources. No vessel tracking or original interviews were conducted."
+      ],
+      "sources": [
+        "UNCTAD, Review of Maritime Transport: https://unctad.org/publication/review-maritime-transport-2025",
+        "World Trade Organization, World Trade Statistical Review: https://www.wto.org/english/res_e/statis_e/wts_e.htm"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "phishing-fake-login-pages",
+      "title": "A perfect-looking login page can still be a trap",
+      "summary": "Phishing works by borrowing the appearance and urgency of trusted services. The address and authentication method matter more than design polish.",
+      "cat": "Technology",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "Trust the Address",
+      "visual": "tech",
+      "body": [
+        "A login screen can have the correct logo, colors and button labels—and still be fraudulent. Phishing does not require a badly designed website. It depends on convincing someone that an attacker-controlled page belongs to a service they trust.",
+        "The Federal Trade Commission warns that fraudulent emails and messages often demand urgent action, such as fixing an account problem or confirming a payment. The pressure to respond quickly is part of the deception.",
+        "Links can use unfamiliar domains, shortened addresses or characters that are easy to confuse. A polished page is not proof of ownership. Going directly to a saved official app or known website is a more reliable way to confirm an unexpected request.",
+        "Passwords submitted to a fraudulent form can be captured and reused. Multi-factor authentication provides another barrier, though weaker forms can still be vulnerable to some attacks. Phishing-resistant methods such as passkeys change the attacker's options.",
+        "Security guidance also distinguishes verification from panic. An authentic organization may contact customers about problems, but a message's urgency does not establish that its links or phone numbers are legitimate.",
+        "The most useful question is not whether the email 'looks real.' It is whether the requested action can be confirmed independently. Good security habits focus on evidence about the destination, not an impression created by the design.",
+        "Reporting note: Civora used FTC consumer guidance and NIST cybersecurity materials. No phishing campaign was investigated by Civora.",
+        "Image note: Illustrative photograph of a laptop displaying an ordinary Ubuntu login screen, not a phishing page. Credit: Simon Law, Wikimedia Commons (CC BY-SA 2.0); cropped to fit Civora's layout."
+      ],
+      "sources": [
+        "FTC, How to Recognize and Avoid Phishing Scams: https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams",
+        "NIST, Cybersecurity Basics: https://www.nist.gov/itl/smallbusinesscyber/cybersecurity-basics",
+        "Cover image and license record: https://commons.wikimedia.org/wiki/File:Ubuntu_laptop.jpg"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null,
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Ubuntu_laptop.jpg/1280px-Ubuntu_laptop.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+      "id": "refugees-migrants-asylum-words",
+      "title": "Refugee, migrant and asylum seeker are not interchangeable labels",
+      "summary": "The words describe different legal and practical circumstances. Using them carelessly can mislead readers about why people move and what protections apply.",
+      "cat": "World",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "Words That Matter",
+      "visual": "world",
+      "body": [
+        "One news story calls someone a migrant, another calls the same person an asylum seeker, and a third uses refugee. The words are often treated as shorthand for anyone crossing a border. They are not the same.",
+        "The UN refugee agency describes refugees as people who have fled their country because of persecution, conflict or other serious threats and meet applicable protection criteria. An asylum seeker is a person seeking international protection whose claim has not yet been finally determined.",
+        "'Migrant' is a broader term commonly used for people who move from their usual residence, including for work, family or other reasons. It does not by itself say whether the person has a refugee claim, lawful immigration status or a right to remain in a particular country.",
+        "Legal frameworks differ by country, and journalists should not infer an individual's status from an image or a border-crossing video. Words have consequences: each label can suggest rights, procedures and facts that may not be established.",
+        "The distinction also helps explain why displacement statistics can differ. Counts of refugees, asylum seekers, internally displaced people and international migrants use different populations and reporting methods.",
+        "Readers deserve more than a single dramatic label. A responsible report identifies the specific group being counted, the governing definition and what remains unknown about individual circumstances. Accuracy here is not about euphemisms; it is about describing reality.",
+        "Reporting note: Civora reviewed UNHCR and International Organization for Migration terminology resources. No individual legal cases were assessed."
+      ],
+      "sources": [
+        "UNHCR, Refugees and asylum-seekers: https://www.unhcr.org/about-unhcr/who-we-protect/refugees",
+        "International Organization for Migration, Key Migration Terms: https://www.iom.int/key-migration-terms"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "ai-cloned-voices-verification",
+      "title": "A familiar voice is no longer proof of who's calling",
+      "summary": "AI voice cloning can make an impersonation sound convincing. A trustworthy response starts with independent verification.",
+      "cat": "Technology",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "The Voice Illusion",
+      "visual": "tech",
+      "body": [
+        "Someone calls and sounds exactly like a person you know. That resemblance used to feel like strong evidence of identity. Advances in synthetic audio have made that assumption much less dependable.",
+        "The FTC has warned that scammers can imitate a person's voice using recordings available online. In an emergency scam, a familiar-sounding voice can be paired with an urgent request for money to make the story harder to question.",
+        "A convincing voice does not establish the caller's location, identity or the truth of the claimed emergency. The same problem affects viral audio clips presented as proof that a public figure said something damaging.",
+        "Audio verification requires context. The original source, date, unedited recording and independent corroboration all matter. A short clip forwarded without provenance may be genuine, altered or entirely synthetic; sound alone does not settle the question.",
+        "The problem is not limited to one AI tool. As synthetic media becomes cheaper to create, organizations and families need reliable ways to check urgent claims without trusting the same channel that delivered them.",
+        "The practical rule is to confirm consequential information independently. A caller's emotional urgency and vocal resemblance are not substitutes for evidence about who is speaking.",
+        "Reporting note: Civora reviewed FTC warnings about AI-enabled impersonation. This article does not investigate a specific viral recording."
+      ],
+      "sources": [
+        "FTC, Scammers Use AI to Enhance Family Emergency Schemes: https://consumer.ftc.gov/consumer-alerts/2023/03/scammers-use-ai-enhance-their-family-emergency-schemes",
+        "FTC, Fake Emergencies and Scams: https://consumer.ftc.gov/articles/scammers-use-fake-emergencies-steal-your-money"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "mfa-security-methods-differences",
+      "title": "Two-factor authentication is not one single level of security",
+      "summary": "An extra login step helps, but text codes, authenticator apps and phishing-resistant credentials do not work the same way.",
+      "cat": "Technology",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "The Second Factor",
+      "visual": "tech",
+      "body": [
+        "A website tells you to turn on two-factor authentication, and that is usually a sensible move. But the phrase covers different technologies with different weaknesses. Checking a second box on a login form does not make every account equally protected.",
+        "Multi-factor authentication asks for more than one kind of evidence, such as something you know and something you have. A password combined with a one-time code is one example. An authenticator that uses cryptographic credentials tied to a legitimate site can offer stronger resistance to fake login pages.",
+        "Text-message codes can be better than passwords alone, but the protection depends on the surrounding system and how the code is delivered. An attacker who persuades someone to enter a code on a fraudulent page may still exploit it before it expires.",
+        "NIST and CISA emphasize phishing-resistant authentication for sensitive accounts. Passkeys and certain hardware authenticators can meet that goal when correctly implemented, while many ordinary code-based methods do not.",
+        "Security also depends on recovery. An account with excellent login protection but weak recovery questions or an insecure fallback process may still be vulnerable. Organizations need to evaluate the complete account lifecycle.",
+        "The practical conclusion is not that older authentication is useless. It is that stronger methods should be prioritized where they are available, especially for email and other accounts that can reset access to everything else.",
+        "Reporting note: Civora compared NIST and CISA authentication guidance. We did not conduct independent tests of account providers."
+      ],
+      "sources": [
+        "NIST, Cybersecurity Basics: https://www.nist.gov/itl/smallbusinesscyber/cybersecurity-basics",
+        "CISA, Secure Our World: https://www.cisa.gov/secure-our-world"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "fake-reviews-manufactured-trust",
+      "title": "A five-star average can be real math built on fake opinions",
+      "summary": "The FTC's rule against deceptive reviews addresses a marketplace where reputation can be manufactured instead of earned.",
+      "cat": "Technology",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "Manufactured Trust",
+      "visual": "tech",
+      "body": [
+        "A business can have a polished website, a high star rating and dozens of testimonials. None of those features proves that the reviewers actually used the product. Review systems work only when the experiences being counted are genuine.",
+        "The Federal Trade Commission's consumer review rule addresses practices including selling fake reviews, paying for a particular positive or negative sentiment, and certain undisclosed insider endorsements. The aim is to make the reputation market less vulnerable to manipulation.",
+        "An average rating can be mathematically accurate and still mislead if the underlying reviews were fabricated or selectively suppressed. That is why the quality and origin of the data matter as much as the number displayed beside a product.",
+        "The FTC also advises consumers to compare sources and look for unusual patterns. A sudden burst of nearly identical reviews can be a warning sign, though it is not proof of wrongdoing by itself. Legitimate businesses sometimes receive many reviews after a real event.",
+        "Platforms, businesses and customers have different responsibilities. Some reviews can be suspicious without being fraudulent, and a genuine negative opinion is not automatically false merely because a business disputes it.",
+        "Readers should treat reviews as evidence to evaluate, not a verdict. Compare independent information, look for details of actual experience and remember that a rating system can be manipulated at the point where trust enters it.",
+        "Reporting note: Civora reviewed FTC's review rule and consumer guidance. No specific business was accused or independently investigated."
+      ],
+      "sources": [
+        "FTC, Fake Reviews and Testimonials Final Rule: https://www.ftc.gov/news-events/news/press-releases/2024/08/federal-trade-commission-announces-final-rule-banning-fake-reviews-testimonials",
+        "FTC Consumer Advice, Fake Reviews Warning: https://consumer.ftc.gov/consumer-alerts/2025/12/ftc-warns-businesses-about-fake-reviews"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "data-brokers-information-trails",
+      "title": "Your online data can travel much farther than the website where you entered it",
+      "summary": "Data brokers compile information from different sources. What a company knows about a person may be broader than one account or purchase.",
+      "cat": "Technology",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "The Data Trail",
+      "visual": "tech",
+      "body": [
+        "Most people understand that a website can remember information entered into an account. The less visible part is what happens when information is combined with records from other services, transactions or publicly available sources.",
+        "Data brokers collect, aggregate and distribute information about consumers for a range of uses. The FTC has studied how these businesses build profiles, and privacy regulators have warned that people may have limited visibility into where those profiles came from.",
+        "A profile can become more revealing when several ordinary data points are connected. A location, an interest and a purchase history may tell a different story together than any one fact would alone. The exact practices vary by company and jurisdiction.",
+        "The presence of a name in a broker's database does not prove every associated inference is correct. Errors can spread, and algorithmic classifications can be mistaken for verified facts by the people who receive them.",
+        "Privacy settings on one app may reduce some sharing but do not necessarily control information already available elsewhere. Real understanding requires looking at the sources, recipients and rules governing particular data transfers.",
+        "The important question is not simply whether a company has your information. It is where that information came from, what the business is allowed to do with it and whether a person can inspect or correct relevant records.",
+        "Reporting note: Civora reviewed FTC data-broker investigations and consumer privacy resources. No company-specific data profile was obtained or tested."
+      ],
+      "sources": [
+        "FTC, Data Brokers Report: https://www.ftc.gov/reports/data-brokers-call-transparency-accountability-report-federal-trade-commission-may-2014",
+        "FTC, Protecting Consumer Privacy: https://www.ftc.gov/news-events/topics/protecting-consumer-privacy-security"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "ai-generated-citations-need-checking",
+      "title": "A citation in an AI answer is not evidence until you open it",
+      "summary": "Generative systems can produce polished explanations and unreliable references. Verification requires checking the cited document itself.",
+      "cat": "Technology",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "Follow the Evidence",
+      "visual": "tech",
+      "body": [
+        "An AI answer can arrive with numbered citations, formal language and a confident conclusion. That presentation makes it easier to trust. It does not prove that the sources actually support the claims.",
+        "Generative AI systems predict and produce text; they do not automatically guarantee that every reference is real, current or accurately summarized. NIST's generative AI guidance highlights the importance of managing information integrity and reliability risks.",
+        "A citation can fail in several ways. A link might be nonexistent, a real source might address a different question, or a passage might support only a narrower claim than the answer implies. Merely opening a webpage is not enough if the relevant evidence is missing.",
+        "Strong research separates primary evidence from interpretation. If a report provides a number, the unit, time period and methodology belong in the explanation. If an analysis draws an inference, readers should know what is measured and what is inferred.",
+        "Human review is not a ceremonial final click. It requires checking the exact claim against the actual source, preferably a primary document, and correcting details that the generated draft exaggerated or omitted.",
+        "AI can accelerate the first stage of writing, but publication demands independent verification. A well-formatted reference list is useful only when someone has confirmed that the references say what the article claims.",
+        "Reporting note: This is a Civora editorial explainer based on NIST's AI risk-management guidance. It is not an audit of any particular AI search product."
+      ],
+      "sources": [
+        "NIST, Generative AI Risk Management Profile: https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+        "NIST, AI Risk Management Framework: https://www.nist.gov/itl/ai-risk-management-framework"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "cloud-services-outages-dependencies",
+      "title": "Putting an app in the cloud does not remove the possibility of failure",
+      "summary": "Cloud platforms can make computing flexible, but a service still depends on networks, identity systems, regions and operational decisions.",
+      "cat": "Technology",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "Behind the Cloud",
+      "visual": "tech",
+      "body": [
+        "'It's in the cloud' can sound like a guarantee that an application will always be available. The phrase describes a model of delivering computing resources, not a promise that every underlying machine, network or software component is immune to problems.",
+        "NIST defines cloud computing as on-demand access to shared configurable resources. Companies can scale servers and storage without owning every piece of physical infrastructure. That flexibility can improve operations, but it also creates dependencies on external providers.",
+        "An outage may begin in networking, storage, software configuration or authentication. Even when the application code itself is healthy, a broken dependency can prevent users from logging in or loading their data.",
+        "Redundancy helps only when it addresses the actual failure mode. A service that runs on multiple servers in one region may still struggle during a region-wide incident. Backups help recovery but are different from uninterrupted availability.",
+        "Providers and customers share responsibilities in ways that depend on the service model. Some reliability choices belong to the cloud provider; others remain with the organization building the app.",
+        "The useful question is how a system fails, not whether someone described it as cloud-native. A good service should explain what users experience during an outage and how important information is protected or restored.",
+        "Reporting note: Civora reviewed NIST cloud definitions and resilience guidance. We did not investigate a specific cloud-service outage."
+      ],
+      "sources": [
+        "NIST, Definition of Cloud Computing: https://www.nist.gov/publications/nist-definition-cloud-computing",
+        "NIST, Cloud Computing Program: https://csrc.nist.gov/projects/cloud-computing"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "ai-data-centers-electricity-pressure",
+      "title": "AI runs on electricity. The demand is becoming harder to ignore.",
+      "summary": "The IEA says data-center energy use is growing rapidly, but national totals and local grid pressure are not the same story.",
+      "cat": "Technology",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "The Power Behind AI",
+      "visual": "tech",
+      "body": [
+        "An AI service may feel weightless when it responds inside a browser. Its physical operation is not. Servers, networking equipment and cooling systems consume electricity, and more computing demand can create new pressure on grids.",
+        "The International Energy Agency estimated data centers used roughly 1.5% of global electricity in 2024. Its 2025 Energy and AI report described a sector growing faster than overall electricity demand, with AI becoming an important driver.",
+        "Global percentages can conceal local effects. A large facility concentrated in one community may require substantial new electrical capacity even if data centers account for a comparatively small fraction of worldwide consumption.",
+        "Not every data center is used exclusively for generative AI. Cloud storage, business applications, streaming and countless other services share this infrastructure. Forecasts also depend on assumptions about chip efficiency, utilization and future demand.",
+        "The IEA discusses both costs and opportunities: AI can increase electricity use while also being applied to energy forecasting, maintenance and system optimization. The net effect depends on deployment and the power supply serving the facilities.",
+        "A credible data-center headline should name the year, geography and metric. Installed power, electricity consumed and projected demand are not interchangeable. The debate becomes clearer when those measurements stop being mixed together.",
+        "Reporting note: Civora reviewed IEA's Energy and AI report and its executive summary. We did not measure electricity demand at any individual facility."
+      ],
+      "sources": [
+        "IEA, Energy and AI: https://www.iea.org/reports/energy-and-ai",
+        "IEA, Energy and AI Executive Summary: https://www.iea.org/reports/energy-and-ai/executive-summary"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "inflation-slowdown-prices-remain-high",
+      "title": "Inflation can fall while your grocery bill stays high",
+      "summary": "Slower inflation means prices are rising more slowly, not that every price is returning to an earlier level.",
+      "cat": "Business",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "The Price Difference",
+      "visual": "business",
+      "body": [
+        "The latest inflation rate declines, and people ask why shopping still feels expensive. The confusion comes from mixing up two different things: the level of prices and the speed at which those prices change.",
+        "The Bureau of Labor Statistics measures the Consumer Price Index using a representative basket of goods and services. Inflation usually describes the percentage change in that index over a chosen period. A lower positive rate means slower price growth, not necessarily a drop in the overall index.",
+        "If a product rises from $100 to $110 and then rises another 2%, the new price is $112.20. Inflation slowed compared with the earlier increase, but the product became more expensive again. That simple distinction explains much of the frustration behind inflation headlines.",
+        "Households also buy different combinations of products. Rent, food, medical costs and transportation can move differently, so someone's experience may not match the average headline measure.",
+        "Economists sometimes distinguish disinflation, a slowdown in the inflation rate, from deflation, a broad decline in the price level. One is not automatically evidence of the other, and neither reveals how wages changed.",
+        "The useful question after an inflation report is what the index measured, how fast it changed and which categories drove the result. Affordability also depends on income. A falling inflation rate alone does not settle whether families are better off.",
+        "Reporting note: Civora used BLS Consumer Price Index methods and purchasing-power explanations. This is not a forecast of upcoming prices."
+      ],
+      "sources": [
+        "BLS, Consumer Price Index Overview: https://www.bls.gov/opub/hom/cpi/",
+        "BLS, Income and the CPI: https://www.bls.gov/cpi/factsheets/income.htm"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "unemployment-rate-who-is-counted",
+      "title": "The unemployment rate does not count everyone without a job",
+      "summary": "The official figure uses a defined labor-force population. People outside the labor force and those working fewer hours than they want require other measures.",
+      "cat": "Business",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "Behind the Job Rate",
+      "visual": "business",
+      "body": [
+        "A headline says unemployment is low, while someone who cannot find work says the economy feels terrible. Those statements can coexist because the official unemployment rate answers a more specific question than 'How many people don't have jobs?'",
+        "The Bureau of Labor Statistics classifies people as unemployed when they are without a job, available for work and have actively searched during a defined recent period, with certain exceptions such as temporary layoffs. The rate is calculated as unemployed people divided by the labor force, not by the total population.",
+        "People who are retired, studying, caring for family members or not currently searching may be outside the labor force. That does not mean their circumstances are unimportant. It means the headline rate was not designed to summarize every situation.",
+        "The BLS also publishes broader measures of labor underutilization, which can include certain marginally attached workers and people employed part time for economic reasons. Those measures tell different but related stories.",
+        "Monthly survey data involve sampling uncertainty and revisions. A small move in the rate may be less meaningful than a sustained change, and it should be read alongside job openings, wages and labor-force participation.",
+        "A serious jobs story identifies the definition, reference month and comparison period. The unemployment rate is valuable precisely because it follows a consistent method—not because it captures every difficulty in the labor market.",
+        "Reporting note: Civora reviewed Bureau of Labor Statistics labor-force definitions and published measurement guidance. No independent employment survey was performed."
+      ],
+      "sources": [
+        "BLS, How the Government Measures Unemployment: https://www.bls.gov/cps/cps_htgm.htm",
+        "BLS, Employment Situation Technical Information: https://www.bls.gov/news.release/empsit.tn.htm"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "gdp-growth-not-equal-prosperity",
+      "title": "GDP can grow without everyone feeling richer",
+      "summary": "Economic output measures how much is produced, not how its benefits are shared or how much people can afford.",
+      "cat": "Business",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "What Growth Measures",
+      "visual": "business",
+      "body": [
+        "Gross domestic product is one of the most important economic numbers in the news. It is also asked to answer questions it was never built to settle, such as whether every family is doing well.",
+        "The Bureau of Economic Analysis defines GDP as the value of final goods and services produced within a country over a period. It captures a broad measure of economic activity, avoiding double counting of many intermediate purchases.",
+        "Real GDP adjusts for price changes, which helps distinguish growth in production from a simple rise in prices. But output growth does not directly show who received the income or whether rent and other necessities became more affordable.",
+        "An economy can produce more while benefits are distributed unevenly. Population growth can also affect the difference between total GDP and GDP per person. Two regions with similar output might have very different costs of living.",
+        "GDP data are revised as new information arrives. The first estimate is not a final national accounting of every business transaction, and a single quarter should not be treated as the complete story of an economy.",
+        "The better question is what GDP changed, which sectors drove it and how the result fits alongside wages, prices and household conditions. Growth matters. It just does not replace every other economic indicator.",
+        "Reporting note: Civora reviewed BEA's GDP definitions and educational materials. No independent national-accounting calculations were conducted."
+      ],
+      "sources": [
+        "BEA, What to Know About GDP: https://www.bea.gov/resources/learning-center/what-to-know-gdp",
+        "BEA, GDP Data and Releases: https://www.bea.gov/data/gdp/gross-domestic-product"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "supply-chain-costs-price-shocks",
+      "title": "A shipping delay can cost more than the price of transportation",
+      "summary": "Global supply pressure affects inventories, production schedules and uncertainty. The path from disruption to consumer price is complicated.",
+      "cat": "Business",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "Where Delays Spread",
+      "visual": "business",
+      "body": [
+        "When a shipment arrives late, the obvious cost is the delay. For a company that needs a component to finish production, the consequences can be much larger: idle equipment, missing sales or expensive last-minute alternatives.",
+        "The Federal Reserve Bank of New York's Global Supply Chain Pressure Index combines transportation prices and manufacturing indicators to gauge broad pressure in international supply networks. It is designed to capture more than one port or freight rate.",
+        "A supply chain includes suppliers, factories, logistics providers and inventories. Bottlenecks in one part can ripple outward, but the effect depends on contracts, substitutions and how much stock businesses already hold.",
+        "Prices also react to demand. A shipping problem during weak demand may have a different effect from the same problem when customers are competing for scarce goods. Blaming any one retail increase entirely on freight can be misleading.",
+        "Businesses can reduce some exposure through more flexible sourcing or inventory planning, but those choices bring their own costs. Keeping extra stock ties up money; relying on one supplier can leave a business vulnerable.",
+        "To read a supply-chain headline, ask which materials are affected, how long the disruption has lasted and whether evidence shows a broader market impact. A delayed container is a fact; its effect on inflation is an additional question.",
+        "Reporting note: Civora reviewed the New York Fed's supply-chain indicators and UNCTAD maritime-transport research. No individual shipment data were analyzed."
+      ],
+      "sources": [
+        "New York Fed, Global Supply Chain Pressure Index: https://www.newyorkfed.org/research/policy/gscpi",
+        "UNCTAD, Review of Maritime Transport 2025: https://unctad.org/publication/review-maritime-transport-2025"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "stock-index-not-entire-economy",
+      "title": "The stock market can climb while households struggle",
+      "summary": "Stock indexes reflect prices of selected securities, not wages, access to housing or the financial position of every household.",
+      "cat": "Business",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "Markets Versus Lives",
+      "visual": "business",
+      "body": [
+        "A stock index reaches a high and commentators announce that the economy must be thriving. The market can contain useful information, but it does not directly measure whether every household is better off.",
+        "An index tracks the prices or performance of a defined group of securities. Different indexes include different companies and use different weighting methods. A rally in a few large businesses can influence some indexes more than the performance of smaller firms.",
+        "Market prices reflect expectations about earnings, interest rates, risk and other future conditions. They can move before economic data show change, and they can fall even while current spending or employment remain relatively strong.",
+        "Household experience is shaped by wages, rent, debt, job security and prices. Not everyone owns the same financial assets, so gains in an index are not distributed evenly across the population.",
+        "The Securities and Exchange Commission's investor education resources explain why diversification and the underlying composition of an investment matter. The same reasoning applies when treating a headline index as evidence about the whole economy.",
+        "A better report uses stock-market results alongside GDP, employment, wages and cost-of-living measures. Markets matter, but a rising chart is not a substitute for asking how people are living.",
+        "Reporting note: Civora reviewed SEC investor education and BEA economic-indicator guidance. This article does not recommend buying or selling securities."
+      ],
+      "sources": [
+        "Investor.gov, Asset Allocation and Diversification: https://www.investor.gov/additional-resources/general-resources/publications-research/info-sheets/beginners-guide-asset",
+        "BEA, What Is GDP?: https://www.bea.gov/resources/learning-center/what-to-know-gdp"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "tariffs-import-price-mechanics",
+      "title": "A tariff is charged at the border, but its cost does not stay there",
+      "summary": "Import duties are paid by importers under customs rules. How much of the cost reaches customers depends on market decisions and competition.",
+      "cat": "Business",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "The Border Price",
+      "visual": "business",
+      "body": [
+        "Tariffs are often described as if a foreign country simply sends money to a government's treasury. The legal payment process is more specific. In the United States, import duties are assessed through customs procedures and generally paid by the importer of record.",
+        "U.S. Customs and Border Protection administers collections under applicable tariff classifications and trade rules. Rates can differ by product and origin, and additional fees or legal exceptions may apply.",
+        "Who pays the government is not necessarily who bears the full economic cost. An importer may absorb some duty, negotiate with a supplier, raise selling prices or change where goods are sourced. Those choices depend on demand, competition and margins.",
+        "The result can vary across products. A business with many replacement suppliers may have more options than one relying on a highly specialized component. Currency movements and shipping costs can also complicate a simple calculation.",
+        "Tariff policy is a legitimate subject of debate: governments may pursue revenue or trade goals, while critics emphasize costs and retaliation risks. Explaining those arguments requires distinguishing the stated policy purpose from observed outcomes.",
+        "The right question after a tariff announcement is which goods and countries it covers, when it takes effect, and what the actual duty is. A political slogan cannot replace a customs schedule or a careful economic analysis.",
+        "Reporting note: Civora reviewed CBP customs guidance and U.S. trade information. No new tariff-impact model was calculated."
+      ],
+      "sources": [
+        "U.S. Customs and Border Protection, Duties, Taxes and Fees: https://www.help.cbp.gov/s/article/Article-1225?language=en_US",
+        "U.S. International Trade Commission, Harmonized Tariff Schedule: https://hts.usitc.gov/"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "weather-climate-different-timescales",
+      "title": "A cold afternoon does not settle the climate debate",
+      "summary": "Weather describes conditions at a place and time; climate examines patterns over much longer periods. Confusing them creates misleading arguments.",
+      "cat": "Science",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "A Different Scale",
+      "visual": "science",
+      "body": [
+        "A cold day can be memorable. It cannot by itself establish whether the planet has warmed or cooled over decades. Weather and climate describe related systems, but they answer questions at different timescales.",
+        "NOAA explains that weather varies across hours, days and locations, while climate refers to long-term patterns, often measured over roughly 30 years. A place's average conditions can shift while individual days remain highly variable.",
+        "Storms, rainfall and heat waves are weather events. Their frequencies, patterns or probabilities across many years can be subjects of climate analysis. One dramatic event neither proves nor disproves a long-term trend on its own.",
+        "Climate data also come from networks of instruments and statistical analysis, not a single city's thermometer. Researchers account for baselines and uncertainty when comparing different periods.",
+        "That distinction matters both ways. A record-hot afternoon is not a complete climate argument, just as a snowstorm is not evidence that global warming vanished. The strongest claims use observations appropriate to the scale of the question.",
+        "When weather becomes a political talking point, ask what time period the evidence covers and whether the statistic is local or global. Climate is not the absence of changing weather; it is the pattern within which that weather occurs.",
+        "Reporting note: Civora reviewed NOAA climate education materials and NASA's climate indicators. We did not produce a new climate analysis."
+      ],
+      "sources": [
+        "NOAA Climate.gov, Weather Versus Climate: https://www.climate.gov/maps-data/climate-data-primer/whats-difference-between-climate-and-weather",
+        "NASA, Global Temperature Indicator: https://science.nasa.gov/earth/explore/earth-indicators/global-temperature/"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "sea-level-rise-two-main-causes",
+      "title": "Rising seas have two main engines—and neither is a mystery",
+      "summary": "Land ice adds water to the ocean, while warmer seawater expands. Local coastlines can experience additional factors.",
+      "cat": "Science",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "The Rising Baseline",
+      "visual": "science",
+      "body": [
+        "Sea level rise is sometimes discussed as though the ocean is simply receiving water from melting ice. That is an important part of the process, but not the whole explanation. Warmer seawater also occupies more volume.",
+        "NOAA identifies two main drivers of global sea level rise: the expansion of seawater as it warms and additional water from melting land-based ice. Melting floating sea ice has a different direct effect on sea level than melting glaciers on land.",
+        "NASA monitors global sea level with satellites, allowing scientists to track changes across decades. Its measurements show a rising long-term pattern even though the rate can vary from one year to another.",
+        "Local sea level is not identical to the global average. Land subsidence, regional ocean conditions and other factors can cause some shorelines to experience a faster or slower relative change.",
+        "That is why flooding risk cannot be read from a global graph alone. Infrastructure, tides, storms, land elevation and local geography influence what a particular coastal community faces.",
+        "The useful question is both global and local: how much is the ocean rising on average, and what is happening relative to the land where people live? Keeping those measures separate makes coastal planning more credible.",
+        "Reporting note: Civora used NOAA and NASA sea-level explanations and measurements. No local coastal model was produced."
+      ],
+      "sources": [
+        "NOAA, Is Sea Level Rising?: https://oceanservice.noaa.gov/facts/sealevel.html",
+        "NASA, Sea Level Indicator: https://science.nasa.gov/earth/explore/earth-indicators/sea-leve/"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "solar-storms-modern-technology",
+      "title": "A solar storm can disrupt technology without sending fire to Earth",
+      "summary": "Charged particles and magnetic disturbances can affect satellites, radio links and some power systems. The real risks are technical, not science-fiction spectacle.",
+      "cat": "Science",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "Space Weather",
+      "visual": "science",
+      "body": [
+        "The Sun is about 93 million miles away, yet activity there can affect technology on Earth. The mechanism is not a blast of ordinary heat or flame reaching the ground. It involves particles, radiation and disturbances in the space environment.",
+        "Solar flares and coronal mass ejections are different types of solar activity. When their effects interact with Earth's magnetic field and upper atmosphere, they can disturb radio communications, satellite operations and some power infrastructure.",
+        "NOAA's Space Weather Prediction Center monitors these conditions and issues alerts and forecasts. The scale, timing and orientation of an event matter; not every solar eruption is aimed toward Earth or produces the same consequences.",
+        "Space weather also contributes to auroras, which can make a serious physical process look beautiful in photographs. A visible aurora is not itself evidence that every communications network is failing.",
+        "Utilities and spacecraft operators use monitoring and engineering safeguards to reduce vulnerability. The details vary across systems, so a broad warning should not be presented as a prediction of a nationwide outage.",
+        "The most useful way to read a solar-storm headline is to identify the official forecast, expected impacts and uncertainty. Solar activity is real; exaggerating it does not improve public understanding.",
+        "Reporting note: Civora reviewed NOAA and NASA space-weather explanations. We did not produce a forecast or inspect utility operations."
+      ],
+      "sources": [
+        "NOAA, Space Weather Prediction Center: https://www.swpc.noaa.gov/",
+        "NASA, Space Weather: https://science.nasa.gov/heliophysics/space-weather/"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "small-business-cash-flow-vs-profit",
+      "title": "A profitable business can still run out of cash",
+      "summary": "Revenue, accounting profit and the money available to pay bills are related but separate measures of business health.",
+      "cat": "Business",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "Cash Is Timing",
+      "visual": "business",
+      "body": [
+        "A business can record a successful month on paper and still struggle to pay a supplier on Friday. The problem is timing. Profit measures income against expenses under accounting rules; cash flow tracks money entering and leaving the business.",
+        "Consider a company that completes a large project but waits weeks for the customer to pay. It may recognize revenue before the money arrives. Payroll, rent and equipment costs, however, can still come due during that waiting period.",
+        "The Small Business Administration emphasizes bookkeeping, financial planning and separating costs when managing a company. Cash-flow projections help owners anticipate upcoming shortages rather than waiting until a payment is missed.",
+        "Profit margins matter, but they do not tell the whole story of working capital. Inventory, payment terms and debt obligations can temporarily tie up cash even when the underlying business is viable.",
+        "A useful cash forecast needs realistic collection dates and recurring expenses. Optimistic sales figures do little good if customers pay later than expected or a major bill arrives first.",
+        "The lesson is not to ignore profitability. It is to measure profitability alongside liquidity. A company needs both a business model that creates value and enough available cash to keep operating while that value is collected.",
+        "Reporting note: Civora reviewed SBA financial-management resources and basic business accounting explanations. This is educational information, not advice about a specific business."
+      ],
+      "sources": [
+        "SBA, Manage Your Business Finances: https://www.sba.gov/counseling/manage-your-business/",
+        "SBA, Manage Your Business: https://www.sba.gov/business-guide/manage-your-business"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "free-trials-subscriptions-total-cost",
+      "title": "A free trial can become a recurring bill before you notice",
+      "summary": "Automatic renewal is part of many subscriptions. The price and cancellation process deserve attention before the first payment is taken.",
+      "cat": "Business",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "The Hidden Renewal",
+      "visual": "business",
+      "body": [
+        "The word 'free' gets attention, but a trial offer can include an agreement to start charging later. The important detail is not simply what something costs today; it is what happens when the trial ends.",
+        "The FTC explains that subscription offers may use automatic renewal arrangements where a customer is billed unless they cancel. Those terms can be legitimate when properly disclosed and authorized, but confusing or deceptive practices create problems for consumers.",
+        "Some customers discover recurring charges after overlooking the renewal date or misunderstanding the cancellation process. In other cases, regulators have alleged that companies enrolled people or made cancellation unnecessarily difficult.",
+        "The business model relies on ongoing access rather than a one-time transaction. That means a monthly price, the length of any commitment and conditions for stopping payment all belong in the buying decision.",
+        "Consumers can check the written renewal terms and keep records of cancellation requests. It also helps to review statements for charges that continue after access was supposedly ended. The actual rights and remedies depend on the circumstances and applicable law.",
+        "A subscription is not automatically a bad deal. But an offer should be evaluated by its total expected cost, not only the attractive number at the top of the sign-up page.",
+        "Reporting note: Civora reviewed FTC consumer guidance on free trials and unwanted recurring charges. No specific company was independently investigated."
+      ],
+      "sources": [
+        "FTC, Getting In and Out of Free Trials: https://consumer.ftc.gov/articles/getting-and-out-free-trials-auto-renewals-and-negative-option-subscriptions",
+        "FTC, How to Stop Subscriptions You Never Ordered: https://consumer.ftc.gov/consumer-alerts/2023/05/how-stop-subscriptions-you-never-ordered"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "credit-score-not-entire-credit-picture",
+      "title": "A credit score is a prediction, not a complete financial biography",
+      "summary": "Lenders use credit scores to estimate borrowing risk, but the same person can have multiple scores and an underlying report that needs checking.",
+      "cat": "Business",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "Beyond One Number",
+      "visual": "business",
+      "body": [
+        "A credit score can influence loan decisions, but it is easy to treat the number as a complete judgment of someone's finances. It is not. A score is a model-based estimate created from information, and different models can produce different results.",
+        "The Consumer Financial Protection Bureau explains that credit reports describe accounts, payment histories and other credit activity. Scores are calculated from information in those reports and may differ by reporting agency, model and type of loan.",
+        "A person can therefore see one number in a consumer app while a lender uses another. That does not automatically mean someone is manipulating the result. The lender may be using a model designed for a different purpose or different underlying data.",
+        "Errors in a credit report can matter because models process the information they receive. Checking reports for accuracy is different from chasing a perfect number displayed on one website.",
+        "Credit scoring is only one part of a lending decision. Income, debts, loan terms and other eligibility rules can matter, depending on the product and lender. Even a high score does not guarantee approval for every offer.",
+        "Before drawing conclusions from a score, look at the underlying report and understand which model produced the number. A single figure is useful when interpreted correctly, but it should not replace the facts behind it.",
+        "Reporting note: Civora reviewed CFPB credit-report and credit-score explanations. This is general financial information, not individual borrowing advice."
+      ],
+      "sources": [
+        "CFPB, Credit Report Versus Credit Score: https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-credit-report-and-a-credit-score-en-2069/",
+        "CFPB, Understand Your Credit Score: https://www.consumerfinance.gov/consumer-tools/credit-reports-and-scores/understand-your-credit-score/"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "earthquake-magnitude-vs-intensity",
+      "title": "Earthquake magnitude tells you the size—not what every neighborhood felt",
+      "summary": "Magnitude describes the quake at its source. Shaking intensity varies by distance, ground conditions and built environment.",
+      "cat": "Science",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "Measuring the Shake",
+      "visual": "science",
+      "body": [
+        "When an earthquake makes the news, the magnitude often leads the headline. It is a useful number, but it does not tell you exactly how strongly every building shook.",
+        "The U.S. Geological Survey distinguishes magnitude, which describes the size of the earthquake source, from intensity, which describes shaking at a particular location. One earthquake has a magnitude estimate, while different places can experience very different intensities.",
+        "Distance from the fault matters, but so can the local soil, earthquake depth and building characteristics. Two neighborhoods at similar distances may not experience identical effects.",
+        "Early magnitude estimates can be refined as more measurements are processed. A revised number does not necessarily indicate that the event itself changed or that the original report was dishonest.",
+        "Damage reports add another layer. The severity of structural damage depends on exposure and resilience as well as shaking. Using the word 'devastating' solely because of a magnitude number skips much of the real-world context.",
+        "A stronger earthquake headline includes where the quake occurred, which locations experienced intense shaking and which damage reports are verified. Magnitude begins the story; it does not finish it.",
+        "Reporting note: Civora reviewed USGS magnitude and intensity guidance. We did not analyze any new earthquake recordings."
+      ],
+      "sources": [
+        "USGS, Magnitude Versus Intensity: https://www.usgs.gov/faqs/what-difference-between-earthquake-magnitude-and-earthquake-intensity-what-modified-mercalli",
+        "USGS, How Earthquakes Are Measured: https://www.usgs.gov/faqs/how-are-earthquakes-recorded-how-are-earthquakes-measured-how-magnitude-earthquake-determined"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "renewables-grid-needs-reliability",
+      "title": "More solar and wind power still requires a dependable electricity grid",
+      "summary": "Renewable generation is growing, but reliability depends on balancing supply, demand, transmission and storage.",
+      "cat": "Science",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "Keeping Lights On",
+      "visual": "science",
+      "body": [
+        "Wind and solar power can generate electricity without burning fuel at the point of production. But electricity systems must also deliver power when customers need it, including periods when sunlight or wind output is low.",
+        "The U.S. Energy Information Administration describes wind and solar as variable resources because their output depends on environmental conditions. That creates a planning problem, not proof that the technologies cannot support an electricity system.",
+        "Grid operators balance supply and demand continuously. Transmission lines move power across regions, while storage and other generating sources can help manage changes in output. The ideal mix depends on a region's resources and infrastructure.",
+        "Installed capacity and actual generation are different measurements. A large nameplate capacity does not mean a plant produces that amount all day. Comparing energy sources fairly requires looking at how much electricity they produce over time and when that electricity is available.",
+        "Investment in stronger networks, forecasting and flexible resources can support higher shares of variable generation. Costs and trade-offs remain important, including the expense of new transmission, storage and system maintenance.",
+        "The debate is better framed around how to build a reliable, affordable and cleaner grid than around whether a single technology can do everything by itself. Energy systems are combinations of technologies, not one-component machines.",
+        "Reporting note: Civora reviewed EIA data on U.S. wind and solar generation and federal grid resources. No independent power-system modeling was performed."
+      ],
+      "sources": [
+        "EIA, Wind and Solar Generation in 2025: https://www.eia.gov/todayinenergy/detail.php?id=67367",
+        "U.S. Department of Energy, Grid Modernization: https://www.energy.gov/oe/grid-modernization-and-smart-grid"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "public-domain-does-not-mean-source-free",
+      "title": "Public domain means you can reuse a work. It does not mean you can erase its history.",
+      "summary": "Copyright protection can expire or never apply, but archives still provide provenance, context and sometimes restrictions on particular copies.",
+      "cat": "Culture",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "Rights and History",
+      "visual": "culture",
+      "body": [
+        "A work enters the public domain and someone uploads a copy with a claim that it can now be used for anything. The basic copyright point may be right, but it should not be confused with good attribution, reliable provenance or other rules that might apply.",
+        "The U.S. Copyright Office explains that protection lasts for different periods depending on the type of work and circumstances. Some older works are in the public domain because their copyright term has expired, while other materials have different legal histories.",
+        "The Library of Congress emphasizes item-level rights information. An archive can hold public-domain material alongside items that still contain protected elements, donor restrictions or uncertainty about ownership.",
+        "Public domain also does not prove that every image found online is an authentic representation of its subject. A photograph's caption may be wrong or its date incomplete. Historical accuracy requires source checking even when permission is not the problem.",
+        "Giving an archive or creator credit may be good editorial practice even when copyright does not require attribution. It helps readers locate the original record and understand how an image or document reached them.",
+        "The strongest use of public-domain material combines legal caution with transparent sourcing. 'Free to use' is not the same as 'free from a responsibility to explain where it came from.'",
+        "Reporting note: Civora reviewed U.S. Copyright Office and Library of Congress rights guidance. This is general information, not a legal determination about a particular work."
+      ],
+      "sources": [
+        "Library of Congress, Understanding Copyright for Collection Items: https://www.loc.gov/legal/security-copyright-and-privacy/understanding-copyright/",
+        "Library of Congress, Public-Domain Film FAQ: https://ask.loc.gov/film-tv-video/faq/302791"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "video-game-preservation-more-than-cartridge",
+      "title": "Keeping an old video game alive takes more than saving the cartridge",
+      "summary": "Games depend on software, hardware, documentation and sometimes network services. Cultural preservation must address the whole system.",
+      "cat": "Culture",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "Saving Playable History",
+      "visual": "culture",
+      "body": [
+        "A book can often be read decades after it was printed. A video game may need a compatible machine, controller, operating system and sometimes a server that no longer exists. Preserving the object and preserving the experience are not always the same task.",
+        "The Library of Congress has described the challenges of collecting and preserving video games, including old media formats, documentation and technical requirements needed to access software. An archive cannot assume every future computer will run an old program.",
+        "Some titles rely on proprietary hardware or online services. Even when a copy of the code survives, changes to platforms or services can make gameplay difficult or impossible to reproduce as originally experienced.",
+        "Source code, packaging, manuals, promotional material and development records can help researchers understand a game's historical context. They reveal design decisions and the culture around the finished product.",
+        "Copyright and technical access also matter. Preservation efforts may face legal limits on copying or making interactive works available to the public, even when archivists can retain certain materials.",
+        "Games are part of cultural history, not just disposable entertainment. If institutions preserve only the physical cartridge, future generations may learn that a game existed without understanding how people actually played it.",
+        "Reporting note: Civora used Library of Congress preservation guidance and archived presentations. No original archival work was conducted."
+      ],
+      "sources": [
+        "Library of Congress, Would You Like to Save Your Game?: https://www.loc.gov/preservation/outreach/tops/pres_week2020/index_game.html",
+        "Library of Congress, Recommended Formats: Software and Video Games: https://wwws.loc.gov/preservation/resources/rfs/software-videogames.html"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "museum-context-beyond-objects",
+      "title": "A museum's job is not simply to keep old objects in a room",
+      "summary": "Preservation includes documentation, conservation and responsible access. A collection without context can lose much of its meaning.",
+      "cat": "Culture",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "The Story of Objects",
+      "visual": "culture",
+      "body": [
+        "A preserved object can be impressive on its own. But without information about its origin, use, creator and journey into a collection, much of its historical meaning is lost.",
+        "Museums collect and care for objects, but documentation gives researchers a way to interpret them. An artifact's material, date and provenance can shape what conclusions scholars are justified in drawing.",
+        "The Smithsonian's open-access program makes millions of digitized collection items available for broader public use. Digital access can help people discover material they may never be able to see in person, though a photograph cannot capture every aspect of the physical object.",
+        "Conservation also involves decisions about how objects are stored, displayed or handled. Some materials are fragile, while others require specific environmental conditions or specialized knowledge. Preservation is an ongoing commitment, not a one-time storage decision.",
+        "Context can involve difficult questions, including ownership, provenance and whose perspective the collection record represents. Responsible interpretation acknowledges uncertainty instead of inventing a tidy history for every artifact.",
+        "The difference between an interesting picture and a reliable museum record is documentation. The more clearly readers can trace an item's source and limitations, the more useful the collection becomes for education and research.",
+        "Reporting note: Civora reviewed Smithsonian collections and open-access resources. No museum staff were interviewed for this report."
+      ],
+      "sources": [
+        "Smithsonian, Open Access: https://www.si.edu/openaccess",
+        "Smithsonian, Open Access Highlights: https://www.si.edu/spotlight/open-access"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "music-streaming-royalties-different-rights",
+      "title": "A music stream can generate different royalties for different people",
+      "summary": "Songwriters, performers and recording owners may receive different payments under different licensing systems. One 'per-stream rate' rarely tells the whole story.",
+      "cat": "Culture",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "Behind the Stream",
+      "visual": "culture",
+      "body": [
+        "A song plays on a streaming service, and someone asks how much the artist earned from that one play. The question sounds simple until the rights behind the recording are separated. A musical work and a sound recording can have different owners and different royalty arrangements.",
+        "The U.S. Copyright Office explains that the Music Modernization Act established an important licensing system for certain interactive digital uses of musical compositions. The Mechanical Licensing Collective administers specific mechanical royalties under that framework.",
+        "SoundExchange handles a different category: statutory digital performance royalties for certain non-interactive uses of sound recordings. It distributes payments to eligible performers and recording-rights holders under the applicable system.",
+        "Those arrangements do not mean every platform pays the same amount or that every person associated with a song receives money from the same organization. Contracts, territories, services and rights can alter the result.",
+        "Publishing statements about a universal payment per stream without specifying the service and right being measured can mislead independent musicians. A dollar figure divorced from those details tells a partial story at best.",
+        "The practical starting point for creators is to identify the songwriters, publishers, performers and recording owners, then understand which licenses and collection systems apply to the uses of their work. Clear metadata and agreements matter.",
+        "Reporting note: Civora reviewed the Copyright Office's Music Modernization Act materials and SoundExchange explanations. This is general information, not individual royalty advice."
+      ],
+      "sources": [
+        "U.S. Copyright Office, Music Modernization Act FAQ: https://www.copyright.gov/music-modernization/faq.html",
+        "SoundExchange, What Does SoundExchange Do?: https://www.soundexchange.com/faq/what-does-soundexchange-do/"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "local-news-deserts-public-record",
+      "title": "When a local newspaper disappears, a community loses more than headlines",
+      "summary": "Medill's 2026 research documents growing local-news deserts. Closures can also weaken the everyday record of decisions and community life.",
+      "cat": "Culture",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "The Missing Local Record",
+      "visual": "culture",
+      "body": [
+        "A local newspaper rarely trends nationally because it attended a town council meeting. That is part of its value. Much of the work of local journalism is documenting ordinary decisions before anyone knows which ones will later matter.",
+        "Northwestern University's Medill Local News Initiative reported in October 2026 that the number of U.S. counties without a locally based professional news source had risen to 238. Its analysis describes accelerating newspaper closures alongside emerging digital outlets.",
+        "A local-news desert is not the same as a place where people receive no information. Residents may hear about events through social media, community groups or regional outlets. The question is whether those channels consistently produce independently checked reporting on local institutions.",
+        "School board decisions, budgets, development plans and public services all affect daily life. Without sustained coverage, it may be harder for residents to follow choices over time or later reconstruct why a decision was made.",
+        "The Library of Congress's historical newspaper collections demonstrate another role of local reporting: preservation. Newspaper pages become records of community voices, advertisements, public controversies and ordinary life.",
+        "The answer is not necessarily to recreate every print-era business model. Digital, nonprofit and community-based newsrooms can play meaningful roles. But a replacement needs original reporting and durable records, not just reposted announcements.",
+        "Reporting note: Civora analyzed Medill's 2026 State of Local News report and Library of Congress newspaper-archive resources. We did not survey any local newsroom."
+      ],
+      "sources": [
+        "Medill, State of Local News 2026: https://localnewsinitiative.northwestern.edu/projects/state-of-local-news/2026/report/",
+        "Library of Congress, Chronicling America Rights and Access: https://www.loc.gov/collections/chronicling-america/about-this-collection/rights-and-access/"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "satellite-image-not-live-earth",
+      "title": "A satellite image is a measurement, not a live window into Earth",
+      "summary": "Satellite views depend on sensors, passes, processing and time. Knowing what an image actually represents is essential to interpreting it.",
+      "cat": "Science",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "Above the Planet",
+      "visual": "science",
+      "body": [
+        "A satellite picture can make the planet look instantly visible. But not every satellite looks at the same place continuously, and the image shown on a website may combine measurements collected across different times.",
+        "Earth-observing instruments detect energy in particular wavelengths. Some measure visible light, while others record infrared or microwave signals. The colors seen in a published image may be natural-color approximations or intentionally processed to reveal information invisible to human eyes.",
+        "Satellites also operate in different orbits. Some observe large regions frequently; others pass over a location periodically. Cloud cover, sensor resolution and timing can all influence what is captured.",
+        "Processing is not automatically manipulation. Scientists often correct instrument effects, combine bands and map measurements onto geographic coordinates. Problems arise when a visualization is shared without explaining those choices.",
+        "A real satellite image can therefore still be misleading if it is mislabeled as live, given the wrong date or presented as evidence of something the sensor was not designed to measure.",
+        "The strongest image caption names the instrument, observation time, what the colors mean and how the data were processed. A beautiful view is useful. A view readers can accurately interpret is better.",
+        "Reporting note: Civora reviewed NASA Earth observation and remote-sensing resources. No original satellite data were processed."
+      ],
+      "sources": [
+        "NASA Earthdata, Remote Sensing: https://www.earthdata.nasa.gov/learn/earth-observation-data-basics/remote-sensing",
+        "NASA Earth Observatory: https://earthobservatory.nasa.gov/"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "wildfire-smoke-travels-beyond-flames",
+      "title": "Wildfire smoke can reach communities nowhere near the flames",
+      "summary": "Fine particles can travel with the wind and affect air quality far from a fire. Distance alone is not a dependable measure of smoke exposure.",
+      "cat": "Science",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "Smoke Beyond Fire",
+      "visual": "science",
+      "body": [
+        "A wildfire can be hundreds of miles away while the sky nearby turns hazy. The smoke does not stop at the fire perimeter. Winds and atmospheric conditions can transport tiny particles across large distances.",
+        "The Environmental Protection Agency explains that wildfire smoke contains fine particulate matter and other pollutants. The mixture and concentration can change with the type of fire, weather and distance from the source.",
+        "Visible haze is not a precise air-quality measurement. Some pollution can be present without a dramatic-looking sky, while sunlight and moisture can change how hazy conditions appear.",
+        "Air-quality monitoring provides a better indication of local conditions than assuming that a nearby area is safe merely because there is no active fire. EPA and AirNow resources help explain monitoring and public-health messaging.",
+        "Smoke also changes over time. Shifting winds and atmospheric layers can raise or lower exposure even if the fire itself stays in roughly the same place. A forecast about smoke is not identical to a forecast about fire spread.",
+        "The useful question is what the air quality is where people actually live, not just how close they are to the flames. Keeping that distinction clear helps turn a dramatic wildfire image into accurate public information.",
+        "Reporting note: Civora reviewed EPA's 2026 wildfire-smoke guidance and related air-quality resources. No local air sampling was performed."
+      ],
+      "sources": [
+        "EPA, Wildfire Smoke Guide for Public Health Officials: https://www.epa.gov/wildfires/wildfire-smoke-guide-public-health-officials",
+        "EPA, Wildfire Smoke and Health Factsheets: https://www.epa.gov/wildfires/wildfire-smoke-and-health-factsheets"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "ocean-heat-beyond-surface-temperature",
+      "title": "The ocean stores most of Earth's excess heat. Surface weather only shows a fraction.",
+      "summary": "Ocean heat content measures warming through depth, helping scientists track an energy imbalance that cannot be understood from air temperature alone.",
+      "cat": "Science",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "Heat Below Surface",
+      "visual": "science",
+      "body": [
+        "People experience climate change through the air around them, but a major part of Earth's heat story is underwater. The ocean absorbs most of the excess heat accumulating in the climate system.",
+        "NOAA's ocean heat content research examines how much thermal energy is stored across different depths. That measure is not the same as the temperature of the water at the beach on a particular afternoon.",
+        "Heat can move between the ocean surface and deeper layers through currents and mixing. Researchers use observations from instruments and other systems to estimate changes through time rather than relying only on what happens at the surface.",
+        "Ocean warming matters for sea level because water expands as it heats. It also influences marine conditions and the exchange of heat with the atmosphere, though specific local consequences require more detailed study.",
+        "Short-term changes in surface temperature can be influenced by weather and ocean circulation. A temporary cool patch does not mean the global ocean stopped accumulating energy.",
+        "An ocean heat headline should specify the region, depth, time period and units. Those details help distinguish a meaningful long-term measurement from a snapshot of changing surface conditions.",
+        "Reporting note: Civora used NOAA ocean heat research and NASA climate indicators. No original ocean temperature measurements were collected."
+      ],
+      "sources": [
+        "NOAA Climate.gov, Ocean Heat Content: https://www.climate.gov/news-features/understanding-climate/climate-change-ocean-heat-content",
+        "NASA, Earth Climate Indicators: https://science.nasa.gov/earth/explore/earth-indicators/"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
+    },
+    {
+      "id": "exoplanet-transit-method-light-dips",
+      "title": "Astronomers can discover a planet by watching a star get slightly dimmer",
+      "summary": "The transit method finds possible exoplanets in repeating changes in starlight. Confirmation requires ruling out other causes.",
+      "cat": "Science",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "A Dip in Starlight",
+      "visual": "science",
+      "body": [
+        "Many exoplanets are too distant and faint to photograph directly. Astronomers instead look for indirect evidence, including tiny reductions in a star's brightness that occur when a planet crosses between the star and the observer.",
+        "This is called the transit method. NASA explains that researchers measure a star's light over time and look for patterns that could indicate an orbiting planet. A repeatable dip can reveal an orbital period.",
+        "The size of the brightness change can help estimate the planet's size relative to its star. But a light curve is not a photograph of the planet, and it does not automatically reveal whether the surface has oceans or life.",
+        "Other effects can imitate a transit. Stellar activity, background objects or observational errors may create confusing signals. Scientists therefore test alternatives and often gather more data before confirming a planet.",
+        "Additional methods, including radial-velocity measurements, can help constrain a planet's properties. Combining different types of evidence can turn a promising candidate into a much stronger conclusion.",
+        "The extraordinary part of this method is not a single dramatic image. It is the precision required to identify a repeating signal in distant light and then establish that the most likely explanation is a real world orbiting another star.",
+        "Reporting note: Civora reviewed NASA's explanations of transit detection and confirmation. This article does not claim a newly discovered planet."
+      ],
+      "sources": [
+        "NASA, What's a Transit?: https://science.nasa.gov/exoplanets/whats-a-transit/",
+        "NASA, How We Find and Characterize Exoplanets: https://science.nasa.gov/exoplanets/how-we-find-and-characterize/"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-10",
+      "updatedAt": null
     }
   ]
 }
