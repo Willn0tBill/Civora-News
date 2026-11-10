@@ -28,7 +28,7 @@ jobs:
       - name: Verify generated pages and article links
         run: |
           node scripts/build.mjs --check
-          node tests/site.test.mjs
+          node tests/site.test.mjs\n          node tests/editorial-voice.test.mjs
       - name: Commit publication changes
         run: |
           if git diff --quiet && test -z "$(git ls-files --others --exclude-standard)"; then

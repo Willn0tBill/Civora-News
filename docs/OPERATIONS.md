@@ -1,12 +1,12 @@
 # Civora News — Production operations
 
-This checklist applies to **https://civoranews.org/**. The live site is a static GitHub Pages publication, so article pages should remain readable even if the editorial publisher (Cloudflare/Firebase) is offline.
+This checklist applies to **https://civoranews.org/**. For future news copy, follow [Civora's Editorial Voice](CIVORA-VOICE.md). Current publication path: authenticated Civora Studio → Supabase → scheduled GitHub Actions sync → static GitHub Pages. The live site is a static GitHub Pages publication, so article pages should remain readable even if the editorial publisher (Cloudflare/Firebase) is offline.
 
 ## Launch gates
 
 - [ ] **HTTPS certificate valid on both `civoranews.org` and `www.civoranews.org`.** Check GitHub repo → Settings → Pages → Custom domain. Wait for successful verification; enable **Enforce HTTPS** after certificate issuance. Never enter editorial credentials over plain HTTP.
 - [ ] **Live pages checked** on iPhone-sized widths and desktop: homepage, card previews, navigation, section pages, article, search, and 404.
-- [x] **Source-backed editorial edition published.** Nine original, attributed articles with primary-source links went live November 9, 2026. These are documentary syntheses, not firsthand or interview-based reports.
+- [x] **Source-backed editorial edition published.** The 14-article source-backed edition was updated November 10, 2026. Eleven original reports or explainers were rewritten for the unified Civora voice; three new reports were published. These are documentary syntheses, not firsthand or interview-based reports.
 - [ ] **Official newsroom contact channel configured.** Until a mailbox/contact route is ready, the site does not solicit confidential tips or present an invented address.
 - [ ] **Publishing backend configured and end-to-end tested** before migrating the staff login. The Firebase Web configuration is intentionally blank until authorized setup is complete.
 - [ ] **GitHub Actions green**: static-build validation, generated-page consistency, link checks, secure Studio tests.
