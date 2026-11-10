@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  pages: write
 
 concurrency:
   group: civora-newsroom-publication
@@ -30,18 +31,31 @@ jobs:
           node scripts/build.mjs --check
           node tests/site.test.mjs
           node tests/editorial-voice.test.mjs
-      - name: Commit publication changes
+          node tests/archive.test.mjs
+      - name: Commit publication and archive updates
+        id: publication
         run: |
           if git diff --quiet && test -z "$(git ls-files --others --exclude-standard)"; then
-            echo "No new published changes"
+            echo "No publication or archive changes"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git config user.name "civora-publisher[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           if git diff --cached --quiet; then
-            echo "Nothing to commit"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          git commit -m "publish: sync Civora newsroom articles"
+          git commit -m "publish: sync Civora articles and date-based archives"
           git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+      - name: Request a GitHub Pages rebuild for scheduled updates
+        # Bot commits made with GITHUB_TOKEN do not automatically trigger
+        # branch-based Pages builds. Request the Pages build explicitly.
+        if: steps.publication.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/builds" > /dev/null
+          echo "GitHub Pages rebuild requested."

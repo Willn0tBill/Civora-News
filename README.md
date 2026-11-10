@@ -8,6 +8,18 @@ A **fully static, multi-page publication** designed for GitHub Pages. The entire
 
 Home, Latest, U.S., World, Technology, Business, Science, Culture, Explainers, Fact Checks, Opinion, Reviews, Newsletter, Search, About, Editorial Standards, Corrections, Privacy, Advertise, Contact, and one dedicated article page per non-draft story.
 
+## Automatic chronological archives
+
+Civora classifies articles **using their original publication date, in UTC**, not their last edit. No published story is deleted or assigned a new article URL.
+
+- **Latest / homepage:** less than one calendar month old.
+- **[Archive](archive/):** at least one calendar month old, but younger than one calendar year.
+- **[Deep Archive](deep-archive/):** at least one calendar year old; grouped by publication year.
+
+Calendar arithmetic clamps short months (for example, January 31 moves to Archive on February 28, or February 29 in a leap year). Stories remain in [Search](search/) and the [Reading Room](discover/) at every age. Each archived article displays a notice with its original date, and has a return link to its appropriate archive tier. Section desks and the Latest feed show current stories only. When no current articles remain, the homepage links readers directly to the archives instead of showing old reporting as new.
+
+**Automation:** the existing `publish-newsroom.yml` workflow synchronizes Supabase and rebuilds every five minutes. When a date boundary changes the output, it commits the new classification and explicitly requests a GitHub Pages build. This extra Pages request matters because a commit made by `GITHUB_TOKEN` does not, by itself, trigger a branch-based Pages build. The workflow requires `contents: write` and `pages: write`; failures are visible in GitHub Actions. Run `node tests/archive.test.mjs` to verify calendar-month/year thresholds, leap years, search continuity, and URL preservation.
+
 ## Live hosting
 
 Configure **Settings → Pages → Deploy from a branch → main → /(root)**. The custom-domain URL is https://civoranews.org/ (valid HTTPS requires GitHub Pages certificate provisioning). Once the deployment succeeds, all category and article URLs are directly accessible, even without JavaScript. If the site remains inaccessible, inspect **Actions → pages build and deployment** in GitHub; a committed file does not itself prove a successful Pages deployment.

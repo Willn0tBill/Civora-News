@@ -21,7 +21,7 @@ console.log("PASS "+pages.length+" HTML pages, "+verified+" internal links/asset
 
 const home=fs.readFileSync("index.html","utf8");
 assert(home.includes('class="flip-grid"'),"Cover-card homepage missing");
-assert((home.match(/data-flip-card/g)||[]).length>=8,"Expected eight cover cards");
+assert((home.match(/data-flip-card/g)||[]).length>0||home.includes("archive-empty-link"),"Homepage must show current covers or archival navigation");
 assert(home.includes("data-flip-close")&&home.includes("Read full article"),"Missing mobile preview controls");
 
 const notFound=fs.readFileSync("404.html","utf8");

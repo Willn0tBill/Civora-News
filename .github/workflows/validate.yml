@@ -38,6 +38,8 @@ jobs:
           node tests/frontpage.test.mjs
       - name: Check Civora voice essentials
         run: node tests/editorial-voice.test.mjs
+      - name: Verify date-based archive lifecycle and historical URLs
+        run: node tests/archive.test.mjs
       - name: Verify published journalism and source transparency
         run: node tests/editorial.test.mjs
       - name: Verify Studio builds exact published HTML

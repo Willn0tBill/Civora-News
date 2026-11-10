@@ -15,7 +15,7 @@ assert(app.includes('db.from("civora_editors")'),"Editor authorization missing")
 assert(!/service_role|sb_secret_|GITHUB_TOKEN/.test(html+app),"Private token leaked to browser");
 assert(!read("index.html").includes('studio/">Civora Studio'),"Public site must not advertise admin");
 const maxDate=Math.max(...doc.articles.map(a=>Date.parse(a.publishedAt+"T00:00:00Z")));
-const newer=new Date(maxDate+86400000).toISOString().slice(0,10);
+const newer=new Date(Math.max(maxDate,Date.now())+86400000).toISOString().slice(0,10);
 for(const [kind,route] of [["news","latest"],["explainer","explainers"],["opinion","opinion"],["review","reviews"],["fact-check","fact-checks"]]){
 const a={...doc.articles[0],id:"new-type-"+kind,kind,status:"published",publishedAt:newer,title:"New "+kind+" report"};
 const next=generateSite([...doc.articles,a]);assert(next[route+"/index.html"].includes(a.title),"New "+kind+" story missing");

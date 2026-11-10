@@ -327,3 +327,34 @@ input,textarea,select,button{max-width:100%}
 
 /* Author-uploaded cover photography, with legible editorial type. */
 .editorial-art.has-photo{position:relative;isolation:isolate;overflow:hidden;background:#182b3d}.editorial-art.has-photo .art-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.55);z-index:-1}.editorial-art.has-photo .art-no,.editorial-art.has-photo .art-word,.editorial-art.has-photo .art-mark{color:#fff;text-shadow:0 2px 15px #0009}.editorial-art.has-photo .art-orbit{opacity:.23}@media(prefers-reduced-motion:reduce){.editorial-art.has-photo .art-photo{transition:none}}
+
+/* Civora's time-based archive shelves keep the same editorial visual language. */
+.archive-shelf{padding-bottom:55px}
+.archive-shelf-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:10px 0 32px}
+.archive-shelf-tabs a{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:16px 19px;border:1px solid var(--line);border-radius:14px;background:var(--surface);font:700 12px/1.4 var(--sans);letter-spacing:.04em;transition:border-color .2s,background .2s}
+.archive-shelf-tabs a:hover{border-color:var(--gold);color:var(--gold)}
+.archive-shelf-tabs a[aria-current=page]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.archive-shelf-tabs a span{font:700 12px/1 var(--sans);opacity:.73;letter-spacing:0}
+.archive-shelf-count{margin:0 0 24px;color:var(--muted);font:700 11px/1.6 var(--sans);letter-spacing:.08em;text-transform:uppercase}
+.archive-year-group{margin:0 0 42px}
+.archive-year-group>h2{display:flex;justify-content:space-between;gap:16px;align-items:baseline;margin:0 0 8px;padding-bottom:14px;border-bottom:1px solid var(--line);font:400 clamp(24px,3vw,35px)/1.3 var(--serif);letter-spacing:-.045em}
+.archive-year-group>h2 span{color:var(--muted);font:700 10px/1.5 var(--sans);letter-spacing:.12em}
+.archive-story-item{border-bottom:1px solid var(--line);padding:16px 0}
+.archive-story-date{display:block;color:var(--muted);font:700 10px/1.5 var(--sans);letter-spacing:.1em;margin:0 0 6px}
+.archive-story-item .feed-item{border:0;padding:0}
+.archive-shelf-empty{border:1px solid var(--line);border-radius:20px;background:var(--surface);padding:clamp(28px,5vw,58px);text-align:center}
+.archive-shelf-empty h2{font:400 clamp(22px,2.7vw,34px)/1.3 var(--serif);letter-spacing:-.04em}
+.archive-shelf-empty p{color:var(--muted);max-width:580px;margin:0 auto 21px}
+.archive-shelf-empty a,.archive-shelf-footer a,.archive-empty-link a{color:var(--gold);font:700 12px/1.5 var(--sans)}
+.archive-shelf-footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;border-top:1px solid var(--line);padding:22px 0;margin-top:26px}
+.article-archive-note{border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:12px;background:var(--surface);padding:17px 22px;margin:0 0 26px;font-family:var(--sans)}
+.article-archive-note strong{color:var(--gold);font-size:10px;letter-spacing:.11em}
+.article-archive-note p{font-size:13px;color:var(--muted);margin:7px 0 8px}
+.article-archive-note a{color:var(--gold);font-size:12px;font-weight:700}
+.archive-empty-link{margin:19px 0;padding:22px;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+.archive-empty-link p{color:var(--muted);margin:0 0 9px}
+.archive-empty-link a{margin-right:20px}
+.front-empty a{color:var(--gold);font-weight:700}
+@media(max-width:580px){.archive-shelf-tabs{grid-template-columns:1fr;gap:9px}.archive-shelf-tabs a{min-height:50px}.archive-year-group>h2{font-size:26px}.archive-story-item{padding-block:18px}}
+@media(prefers-reduced-motion:reduce){.archive-shelf-tabs a{transition:none}}
+

@@ -36,8 +36,17 @@ jobs:
           get "/" /tmp/civora-health/home.html
           grep -q 'CIVORA' /tmp/civora-health/home.html
           grep -q 'class="flip-grid"' /tmp/civora-health/home.html
-          grep -q 'class="front-grid"' /tmp/civora-health/home.html
-          grep -q 'data-reading-path' /tmp/civora-health/home.html
+          if grep -q 'class="front-grid"' /tmp/civora-health/home.html; then
+            grep -q 'data-reading-path' /tmp/civora-health/home.html
+          else
+            grep -q 'class="front-empty"' /tmp/civora-health/home.html
+            grep -q 'Browse the Archive' /tmp/civora-health/home.html
+          fi
+
+          get "/archive/" /tmp/civora-health/archive.html
+          grep -q 'Deep Archive' /tmp/civora-health/archive.html
+          get "/deep-archive/" /tmp/civora-health/deep-archive.html
+          grep -q 'Archive' /tmp/civora-health/deep-archive.html
 
           get "/search/" /tmp/civora-health/search.html
           grep -q 'id="site-search"' /tmp/civora-health/search.html
