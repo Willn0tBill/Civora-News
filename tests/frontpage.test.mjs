@@ -40,4 +40,35 @@ assert(h.includes("SELECTED FROM THE LATEST REPORTING"),"A published lead should
 assert(generated["article/"+fresh.id+"/index.html"],"New article page missing");
 assert(generated["discover/index.html"].includes(fresh.title),"Reading Room should remain synchronized");
 assert(!read("privacy/index.html").includes("upload your reading history to Civora." ) || read("privacy/index.html").includes("do not upload your reading history"),"Privacy statements must remain consistent");
+
+const collection=home.slice(home.indexOf('<section class="flip-collection"'),home.indexOf("</section>",home.indexOf('<section class="flip-collection"'))+10);
+assert(collection.includes('data-collection-grid data-initial-cards="8" data-reveal-step="9"'),"Homepage should reveal eight covers initially, then nine at a time");
+assert(collection.includes('data-collection-more')&&collection.includes('aria-controls="civora-cover-grid"'),"Missing accessible Load more control");
+assert(collection.includes('role="status" aria-live="polite"'),"Missing screen-reader-friendly story count");
+assert.equal((collection.match(/data-flip-card/g)||[]).length,doc.articles.filter(a=>a.status==="published").length,"All published cards should remain in source HTML");
+assert(css.includes(".flip-collection .flip-card[hidden]"),"The hidden state must override card styling");
+assert(js.includes("cards.slice(initial)")&&js.includes('button.addEventListener("click"'),"Load-more handler not wired");
+const {runInNewContext}=await import("node:vm");
+const coverCards=Array.from({length:20},()=>({hidden:false,querySelector(){return{focus:()=>{}}},scrollIntoView(){}}));
+const controlsMock={
+ hidden:true,
+ querySelector(sel){return {"[data-collection-more]":buttonMock,"[data-collection-more-label]":labelMock,"[data-collection-status]":statusMock}[sel]}
+};
+let clickHandler;
+const buttonMock={hidden:false,addEventListener(event,handler){if(event==="click")clickHandler=handler}};
+const labelMock={textContent:""},statusMock={textContent:""};
+const gridMock={dataset:{initialCards:"8",revealStep:"9"},querySelectorAll(){return coverCards}};
+const documentMock={querySelector(sel){return {"[data-collection-grid]":gridMock,"[data-collection-controls]":controlsMock}[sel]},querySelectorAll(){return[]}};
+runInNewContext(js,{document:documentMock,window:{},Number});
+assert.equal(coverCards.filter(c=>!c.hidden).length,8,"Initially only 8 cards should be visible");
+assert.equal(statusMock.textContent,"Showing 8 of 20 stories");
+assert.equal(controlsMock.hidden,false,"Show-more controls should appear when JavaScript starts");
+assert.equal(typeof clickHandler,"function","Load-more click event must be functional");
+clickHandler();
+assert.equal(coverCards.filter(c=>!c.hidden).length,17,"Click should reveal 9 additional cards");
+assert.equal(labelMock.textContent,"Show 3 more stories","Final button should reflect remaining card count");
+clickHandler();
+assert.equal(coverCards.filter(c=>!c.hidden).length,20,"Final click should reveal the rest");
+assert.equal(buttonMock.hidden,true,"Exhausted collection should hide the button");
+
 console.log("PASS frontpage: visible lead, headlines, guided reading progress, mobile motion, privacy and future articles.");

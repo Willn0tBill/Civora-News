@@ -79,12 +79,15 @@ const readingPaths=readingRouteHTML?'<section class="front-paths" aria-label="Gu
  '<p class="front-paths-intro">Not sure where to begin? Follow three short editorial trails. Articles you have opened are marked automatically on this device.</p>'+
  '<div class="front-path-grid">'+readingRouteHTML+'</div><p class="front-path-note">Your progress is saved only in this browser. <a href="./privacy/">How local reading history works ↗</a></p></section>':"";
 
+const coverPreviewCount=8,coverRevealStep=9;
 const homeContent=topLine+'<div class="container">'+
  intro("THE CIVORA COLLECTION","Stories worth turning over.","A card-first look at our journalism. Hover to reveal a headline and description, or tap to preview on your phone.",hasPublished?(hasSamples?"Published reporting and editorial samples are labeled separately.":"Original source-based reporting and explainers with primary documents linked in every article."):"Articles are being prepared for publication.")+
  frontStory+readingPaths+adContainer("display","civora-ad-display")+
  '<section class="flip-collection" aria-label="Article cover cards"><div class="section-heading"><div><span class="section-index">03 / THE STORY COLLECTION</span><h2>Explore the edition</h2></div><a href="./latest/" class="text-link">All stories ↗</a></div>'+
  '<div class="flip-guide"><span class="flip-guide-desktop">Move your cursor over a cover to discover its headline.</span><span class="flip-guide-touch">Tap a cover to preview, then select Read full article.</span><span>Every article has its own page.</span></div>'+
- '<div class="flip-grid">'+visible.map((a,i)=>flipCard(a,root,i)).join("")+'</div></section>'+adContainer("displayLower","civora-ad-display civora-ad-display-lower")+
+ '<div class="flip-grid" id="civora-cover-grid" data-collection-grid data-initial-cards="'+coverPreviewCount+'" data-reveal-step="'+coverRevealStep+'">'+visible.map((a,i)=>flipCard(a,root,i)).join("")+'</div>'+
+ (visible.length>coverPreviewCount?'<div class="flip-load-more" data-collection-controls hidden><p class="flip-load-more-status" role="status" aria-live="polite" data-collection-status></p><button class="flip-load-more-button" type="button" aria-controls="civora-cover-grid" data-collection-more><span data-collection-more-label>Show more stories</span><span aria-hidden="true">↓</span></button></div>':'')+
+ '</section>'+adContainer("displayLower","civora-ad-display civora-ad-display-lower")+
  '<section class="reading-room-teaser" aria-label="Explore the Reading Room"><div><span class="section-index">A NEW WAY TO READ CIVORA</span><h2>Follow a little curiosity.</h2><p>Not sure what to read next? Shuffle the stories, build a reading list, or try a quick challenge that sharpens your news instincts.</p></div><div class="reading-room-actions"><a href="./discover/" class="teaser-primary">Enter the Reading Room ↗</a><a href="./discover/" data-surprise>Surprise me ↗</a></div></section>'+
  '<section class="section-block"><div class="section-heading"><div><span class="section-index">04 / YOUR INTERESTS</span><h2>Explore by desk</h2></div><a href="./search/" class="text-link">Search Civora ↗</a></div>'+
  '<div class="home-deck-grid">'+sections.map((s,i)=>homeDesk(s,i)).join("")+'</div></section>'+

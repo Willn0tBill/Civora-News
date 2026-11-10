@@ -102,3 +102,14 @@
 /* Without JavaScript, trail numbers remain useful and progress meters stay hidden. */
 .front-path-progress{display:none}
 .has-js .front-path-progress{display:block}
+
+/* Progressive story collection: 8 cover cards fill three rows with the double-width feature. */
+.flip-collection .flip-card[hidden],.flip-collection .flip-load-more[hidden],.flip-collection .flip-load-more-button[hidden]{display:none!important}
+.flip-load-more{display:flex;flex-direction:column;align-items:center;gap:13px;margin:32px 0 4px;text-align:center}
+.flip-load-more-status{margin:0;font:700 11px/1.5 var(--sans);letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.flip-load-more-button{display:inline-flex;align-items:center;justify-content:center;gap:18px;min-width:244px;min-height:52px;padding:12px 25px;border-radius:999px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);font:700 12px/1.35 var(--sans);letter-spacing:.03em;box-shadow:0 11px 24px #10213718;transition:background-color .2s,border-color .2s,box-shadow .2s,transform .2s}
+.flip-load-more-button:hover{background:var(--gold);border-color:var(--gold);color:var(--paper);box-shadow:0 14px 29px #10213724;transform:translateY(-2px)}
+.flip-load-more-button:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+.flip-load-more-button [aria-hidden="true"]{font-size:19px;line-height:1}
+@media(max-width:580px){.flip-load-more{margin-top:26px}.flip-load-more-button{width:min(100%,340px);min-height:54px}}
+@media(prefers-reduced-motion:reduce){.flip-load-more-button{transition:none!important}.flip-load-more-button:hover{transform:none}}
