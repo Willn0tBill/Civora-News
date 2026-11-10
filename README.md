@@ -1,6 +1,6 @@
 # Civora News — Rebuilt
 
-**Current edition (November 10, 2026):** 14 published source-based articles, including 11 rewritten in the [Civora editorial voice](docs/CIVORA-VOICE.md) and three new reports with credited images. **Supabase `public.civora_articles` is the production source of truth**; the scheduled `scripts/sync-supabase.mjs` workflow rebuilds this repository's article library and static pages. Do not edit generated HTML alone. The editorial essentials check runs on publishing and validation.
+**Current edition (November 10, 2026):** 64 published, source-backed articles with 64 credited cover images. The most recent image pass added 54 verified, non-AI photographic or official scientific covers while retaining ten previously assigned covers. Original photographer or agency credits, reuse licenses and source pages appear in each article's image note and references. **Supabase `public.civora_articles` is the production source of truth**; `scripts/sync-supabase.mjs` regenerates articles and static pages. Do not edit generated HTML alone.
 
 A **fully static, multi-page publication** designed for GitHub Pages. The entire newspaper renders as real HTML, rather than loading the page contents through a JavaScript fetch. No framework, paid account, package install or API key is required.
 

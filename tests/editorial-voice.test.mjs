@@ -9,9 +9,7 @@ for(const a of published){
   assert(Array.isArray(a.sources)&&a.sources.length>=2,a.id+": at least two credited sources");
   assert(a.sources.every(s=>/^.+:\s*https:\/\//.test(s)),a.id+": source references must include a label and HTTPS URL");
   assert(a.body.some(p=>/reporting note:/i.test(p)),a.id+": method disclosure missing");
-  if(a.image_url){
-    assert(/^https:\/\//.test(a.image_url),a.id+": cover image needs HTTPS URL");
-    assert(a.body.some(p=>/image note:/i.test(p)),a.id+": cover image requires credit and context");
-  }
+  assert(a.image_url&&/^https:\/\//.test(a.image_url),a.id+": published articles require a sourced HTTPS cover image");
+  assert(a.body.some(p=>/^image note:/i.test(p)),a.id+": cover image requires creator credit and context");
 }
 console.log("PASS editorial essentials for "+published.length+" published articles.");
