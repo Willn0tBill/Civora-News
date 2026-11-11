@@ -4015,6 +4015,34 @@
       "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Amazon_Kindle_3.JPG/1280px-Amazon_Kindle_3.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
     },
     {
+      "id": "mail-in-ballots-how-verification-works",
+      "title": "A ballot sent through the mail still has to pass a verification process.",
+      "summary": "Voting by mail involves deadlines, identification rules and ballot tracking that vary across states; receiving an envelope is not the end of the process.",
+      "cat": "U.S.",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "A ballot sent through the mail still has to pass a verificat",
+      "visual": "us",
+      "body": [
+        "A ballot mailed from a kitchen table may look like a simpler version of voting in person. Behind that envelope, however, is an election process with rules about who can vote, when a ballot counts and how officials verify returns.",
+        "The U.S. Election Assistance Commission explains that mail voting procedures differ by state. Some jurisdictions automatically send ballots to eligible voters; others require an application. Return deadlines may depend on receipt dates or eligible postmarks, depending on local law.",
+        "Election offices may check required signatures or other identifying information against records. Some states offer a chance to correct certain problems, a process often called ballot curing. Those procedures and deadlines also differ by jurisdiction.",
+        "Tracking systems can tell a voter whether an envelope was sent or received, but a tracking message should not be confused with a certified election result. Election workers still process, verify and tabulate eligible ballots according to local rules.",
+        "The practical lesson is not that one method is automatically safer or more convenient. It is that voters should consult their own election office rather than applying the rules of one state to another. A national headline cannot replace local instructions.",
+        "Reporting note: Civora examined the named public reference material and prepared an explanatory article. We did not conduct interviews, original surveys or field reporting for this story.",
+        "Image note: Sourced Wikimedia Commons photograph reused as a general illustration, not documentary proof of a specific claim or event. The original credit and license are linked in the sources."
+      ],
+      "sources": [
+        "U.S. Election Assistance Commission, how to vote by mail: https://www.eac.gov/how-do-i-vote-by-mail",
+        "USA.gov, absentee and early voting: https://www.usa.gov/absentee-voting",
+        "Cover image and license record: https://commons.wikimedia.org/wiki/File:United_States_Capitol_-_west_front.jpg"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-11",
+      "updatedAt": null,
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/United_States_Capitol_-_west_front.jpg/1280px-United_States_Capitol_-_west_front.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
       "id": "government-shutdown-essential-operations",
       "title": "A government shutdown does not turn every federal service off.",
       "summary": "A funding lapse changes which operations may continue and which employees may work; essential services, benefits and agency functions can be treated differently.",
@@ -4293,34 +4321,6 @@
       "publishedAt": "2026-11-11",
       "updatedAt": null,
       "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Courtroom%2C_Hannibal_Federal_Building_and_U.S._Courthouse_%282013%29.jpg/1280px-Courtroom%2C_Hannibal_Federal_Building_and_U.S._Courthouse_%282013%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
-    },
-    {
-      "id": "mail-in-ballots-how-verification-works",
-      "title": "A ballot sent through the mail still has to pass a verification process.",
-      "summary": "Voting by mail involves deadlines, identification rules and ballot tracking that vary across states; receiving an envelope is not the end of the process.",
-      "cat": "U.S.",
-      "kind": "explainer",
-      "author": "Civora Research Desk",
-      "art": "A ballot sent through the mail still has to pass a verificat",
-      "visual": "us",
-      "body": [
-        "A ballot mailed from a kitchen table may look like a simpler version of voting in person. Behind that envelope, however, is an election process with rules about who can vote, when a ballot counts and how officials verify returns.",
-        "The U.S. Election Assistance Commission explains that mail voting procedures differ by state. Some jurisdictions automatically send ballots to eligible voters; others require an application. Return deadlines may depend on receipt dates or eligible postmarks, depending on local law.",
-        "Election offices may check required signatures or other identifying information against records. Some states offer a chance to correct certain problems, a process often called ballot curing. Those procedures and deadlines also differ by jurisdiction.",
-        "Tracking systems can tell a voter whether an envelope was sent or received, but a tracking message should not be confused with a certified election result. Election workers still process, verify and tabulate eligible ballots according to local rules.",
-        "The practical lesson is not that one method is automatically safer or more convenient. It is that voters should consult their own election office rather than applying the rules of one state to another. A national headline cannot replace local instructions.",
-        "Reporting note: Civora examined the named public reference material and prepared an explanatory article. We did not conduct interviews, original surveys or field reporting for this story.",
-        "Image note: Sourced Wikimedia Commons photograph reused as a general illustration, not documentary proof of a specific claim or event. The original credit and license are linked in the sources."
-      ],
-      "sources": [
-        "U.S. Election Assistance Commission, voting by mail: https://www.eac.gov/voters/voting-by-mail",
-        "USA.gov, absentee and early voting: https://www.usa.gov/absentee-voting",
-        "Cover image and license record: https://commons.wikimedia.org/wiki/File:United_States_Capitol_-_west_front.jpg"
-      ],
-      "status": "published",
-      "publishedAt": "2026-11-11",
-      "updatedAt": null,
-      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/United_States_Capitol_-_west_front.jpg/1280px-United_States_Capitol_-_west_front.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
     },
     {
       "id": "development-finance-grants-vs-loans",
@@ -5471,6 +5471,34 @@
       "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Flood_under_the_Old_Route_49_bridge_crossing_over_the_South_Yuba_River_in_Nevada_City%2C_California.jpg/1280px-Flood_under_the_Old_Route_49_bridge_crossing_over_the_South_Yuba_River_in_Nevada_City%2C_California.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
     },
     {
+      "id": "digital-albums-missing-credits",
+      "title": "A digital album can preserve the songs while losing the story of who made them.",
+      "summary": "Digital distribution does not always present personnel, recording locations and production credits as fully as physical liner notes.",
+      "cat": "Culture",
+      "kind": "explainer",
+      "author": "Civora Research Desk",
+      "art": "A digital album can preserve the songs while losing the stor",
+      "visual": "culture",
+      "body": [
+        "On an old record sleeve, listeners might discover the arranger, engineer, session players and recording studio. In a music app, some of those contributions may be harder to find.",
+        "Liner notes historically documented people and circumstances behind a recording. Digital releases can carry metadata and credits, but presentation varies by service, distributor and the information supplied.",
+        "Missing credits affect more than nostalgia. Artists, producers and researchers rely on accurate attribution to trace creative work and professional contributions.",
+        "Metadata errors can spread across platforms, and a name missing from an interface does not automatically mean the contributor was uncredited in every underlying database.",
+        "The useful question is whether the release identifies its creators and preserves that information in accessible form. Delivering the audio file and documenting the recording are two different tasks.",
+        "Reporting note: Civora examined the named public reference material and prepared an explanatory article. We did not conduct interviews, original surveys or field reporting for this story.",
+        "Image note: Sourced Wikimedia Commons photograph reused as a general illustration, not documentary proof of a specific claim or event. The original credit and license are linked in the sources."
+      ],
+      "sources": [
+        "DDEX, music metadata standards: https://ddex.net/",
+        "Library of Congress, Recorded Sound Research Center: https://www.loc.gov/research-centers/recorded-sound/",
+        "Image credit and licensing (CC BY 2.0): https://commons.wikimedia.org/wiki/File:Microphone_and_stand_at_Audio_Mix_House%2C_Studio_B_(13430490054).jpg"
+      ],
+      "status": "published",
+      "publishedAt": "2026-11-11",
+      "updatedAt": null,
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Microphone_and_stand_at_Audio_Mix_House%2C_Studio_B_%2813430490054%29.jpg/1280px-Microphone_and_stand_at_Audio_Mix_House%2C_Studio_B_%2813430490054%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
       "id": "oral-history-testimony-and-memory",
       "title": "An oral history interview preserves a perspective, not an automatic final verdict.",
       "summary": "First-person recollections are vital historical sources, but memory, context and corroboration still matter.",
@@ -5721,34 +5749,6 @@
       "publishedAt": "2026-11-11",
       "updatedAt": null,
       "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Amaze_Gallery_Exhibition%2C_State_Library_of_New_South_Wales%2C_December_2021.jpg/1280px-Amaze_Gallery_Exhibition%2C_State_Library_of_New_South_Wales%2C_December_2021.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
-    },
-    {
-      "id": "digital-albums-missing-credits",
-      "title": "A digital album can preserve the songs while losing the story of who made them.",
-      "summary": "Digital distribution does not always present personnel, recording locations and production credits as fully as physical liner notes.",
-      "cat": "Culture",
-      "kind": "explainer",
-      "author": "Civora Research Desk",
-      "art": "A digital album can preserve the songs while losing the stor",
-      "visual": "culture",
-      "body": [
-        "On an old record sleeve, listeners might discover the arranger, engineer, session players and recording studio. In a music app, some of those contributions may be harder to find.",
-        "Liner notes historically documented people and circumstances behind a recording. Digital releases can carry metadata and credits, but presentation varies by service, distributor and the information supplied.",
-        "Missing credits affect more than nostalgia. Artists, producers and researchers rely on accurate attribution to trace creative work and professional contributions.",
-        "Metadata errors can spread across platforms, and a name missing from an interface does not automatically mean the contributor was uncredited in every underlying database.",
-        "The useful question is whether the release identifies its creators and preserves that information in accessible form. Delivering the audio file and documenting the recording are two different tasks.",
-        "Reporting note: Civora examined the named public reference material and prepared an explanatory article. We did not conduct interviews, original surveys or field reporting for this story.",
-        "Image note: Sourced Wikimedia Commons photograph reused as a general illustration, not documentary proof of a specific claim or event. The original credit and license are linked in the sources."
-      ],
-      "sources": [
-        "DDEX, music metadata standards: https://ddex.net/",
-        "Library of Congress, recorded sound research: https://www.loc.gov/rr/record/",
-        "Image credit and licensing (CC BY 2.0): https://commons.wikimedia.org/wiki/File:Microphone_and_stand_at_Audio_Mix_House%2C_Studio_B_(13430490054).jpg"
-      ],
-      "status": "published",
-      "publishedAt": "2026-11-11",
-      "updatedAt": null,
-      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Microphone_and_stand_at_Audio_Mix_House%2C_Studio_B_%2813430490054%29.jpg/1280px-Microphone_and_stand_at_Audio_Mix_House%2C_Studio_B_%2813430490054%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
     },
     {
       "id": "music-remaster-versus-remix",
