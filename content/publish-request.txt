@@ -1,3 +1,4 @@
 Civora newsroom publication request
 2026-11-10: Synchronize 60 newly published explainers across six desks (137 total articles).
+2026-11-10: Synchronize the current 200 published articles after adding 63 new explainers across all six desks.
 Change this file to request an immediate GitHub Actions publication sync when needed.
