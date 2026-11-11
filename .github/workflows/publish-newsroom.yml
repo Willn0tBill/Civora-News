@@ -1,6 +1,10 @@
 name: Publish Civora newsroom articles
 
 on:
+  push:
+    paths:
+      - ".github/workflows/publish-newsroom.yml"
+      - "content/publish-request.txt"
   workflow_dispatch:
   schedule:
     - cron: "*/5 * * * *"
