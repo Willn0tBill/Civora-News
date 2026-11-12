@@ -2,7 +2,7 @@ import fs from "node:fs";
 import assert from "node:assert/strict";
 const read=p=>fs.readFileSync(p,"utf8");
 const html=read("studio/index.html"),js=read("studio/newsroom.js"),css=read("studio/newsroom.css"),sync=read("scripts/sync-supabase.mjs");
-for(const id of ["loginEmail","loginPassword","articleForm","saveDraft","publishArticle","deleteArticle","coverFile","articleList","verified"]){assert(html.includes('id="'+id+'"'),"Missing admin control "+id)}
+for(const id of ["loginEmail","loginPassword","articleForm","saveDraft","publishArticle","deleteArticle","coverFile","articleList","verified","topic"]){assert(html.includes('id="'+id+'"'),"Missing admin control "+id)}
 assert(js.includes("signInWithPassword")&&js.includes("getSession"),"Authentication absent");
 assert(js.includes('db.from("civora_editors")'),"Role verification absent");
 assert(js.includes('db.from("civora_articles")'),"Database publishing absent");

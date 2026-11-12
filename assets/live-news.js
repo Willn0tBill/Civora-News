@@ -12,7 +12,7 @@ const kindMap={explainers:"explainer",opinion:"opinion",reviews:"review","fact-c
 const liveOnly=new Set([...document.querySelectorAll('a[href*="/article/"]')].map(a=>{
  try{const match=new URL(a.href).pathname.match(/\/article\/([a-z0-9-]+)\/?$/);return match?.[1]}catch{return null}
 }).filter(Boolean));
-const url=base+"/rest/v1/civora_articles?select=slug,title,summary,category,kind,author,published_at,status&status=eq.published&order=published_at.desc&limit=80";
+const url=base+"/rest/v1/civora_articles?select=slug,title,summary,category,topic,kind,author,published_at,status&status=eq.published&order=published_at.desc&limit=80";
 fetch(url,{headers:{apikey:key,Accept:"application/json"},cache:"no-store",signal:AbortSignal.timeout(8000)})
 .then(async response=>{if(!response.ok)throw Error("Newsroom feed unavailable");return response.json()})
 .then(rows=>{
@@ -37,7 +37,7 @@ fetch(url,{headers:{apikey:key,Accept:"application/json"},cache:"no-store",signa
  for(const [index,story] of news.entries()){
   const card=document.createElement("a");card.className="live-feed-card";
   card.href="/story/?slug="+encodeURIComponent(story.slug);
-  const category=document.createElement("small");category.textContent=story.category+" / "+(story.kind||"news").replaceAll("-"," ");
+  const category=document.createElement("small");category.textContent=(story.topic||story.category)+" / "+(story.kind||"news").replaceAll("-"," ");
   const title=document.createElement("strong");title.textContent=story.title;
   const description=document.createElement("span");description.textContent=story.summary;
   const bottom=document.createElement("em");bottom.textContent="Read this story ↗";

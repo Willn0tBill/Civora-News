@@ -2,7 +2,7 @@
 const root=document.querySelector("#story-root");
 const slug=new URLSearchParams(location.search).get("slug");
 const key="sb_publishable_S73dZKZ9ro03lWDbHFzZhw_5t5pDtGt";
-const url="https://qyipadinsphoyxotrceo.supabase.co/rest/v1/civora_articles?select=slug,title,summary,category,kind,author,cover_url,body,sources,published_at,status&status=eq.published&slug=eq."+encodeURIComponent(slug||"")+"&limit=1";
+const url="https://qyipadinsphoyxotrceo.supabase.co/rest/v1/civora_articles?select=slug,title,summary,category,topic,kind,author,cover_url,body,sources,published_at,status&status=eq.published&slug=eq."+encodeURIComponent(slug||"")+"&limit=1";
 function error(message){root.replaceChildren();const p=document.createElement("p");p.className="live-story-unavailable";p.textContent=message;root.append(p)}
 if(!slug||!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)){error("This article address is invalid.");return}
 fetch(url,{headers:{apikey:key,Accept:"application/json"},cache:"no-store",signal:AbortSignal.timeout(12000)})
@@ -11,7 +11,7 @@ fetch(url,{headers:{apikey:key,Accept:"application/json"},cache:"no-store",signa
  const story=rows?.[0];if(!story||!Array.isArray(story.body))return error("This article isn't published or couldn't be found.");
  document.title=story.title+" | Civora News";
  const heading=document.createElement("h1");heading.className="live-story-title";heading.textContent=story.title;
- const eyebrow=document.createElement("div");eyebrow.className="live-story-eyebrow";eyebrow.textContent=story.category+" / "+(story.kind||"news").toUpperCase().replaceAll("-"," ");
+ const eyebrow=document.createElement("div");eyebrow.className="live-story-eyebrow";eyebrow.textContent=(story.topic||story.category)+" / "+(story.kind||"news").toUpperCase().replaceAll("-"," ");
  const summary=document.createElement("p");summary.className="live-story-dek";summary.textContent=story.summary;
  const byline=document.createElement("p");byline.className="live-story-meta";byline.textContent="BY "+story.author+" · "+new Date(story.published_at).toLocaleDateString([],{month:"long",day:"numeric",year:"numeric"});
  const body=document.createElement("div");body.className="live-story-body";

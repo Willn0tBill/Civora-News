@@ -9,7 +9,7 @@ assert.equal(browser.slice(browser.indexOf("const sections="),browser.indexOf("e
 const hidden=generateSite([...doc.articles,{...doc.articles[0],id:"hidden-draft-test",status:"draft"}]);
 assert(!Object.keys(hidden).some(x=>x.includes("hidden-draft-test")),"Draft leaked into public pages");
 const html=read("studio/index.html"),app=read("studio/newsroom.js");
-for(const id of ["loginEmail","loginPassword","articleForm","saveDraft","publishArticle","deleteArticle","verified","coverFile"]){assert(html.includes('id="'+id+'"'),"Admin missing "+id)}
+for(const id of ["loginEmail","loginPassword","articleForm","saveDraft","publishArticle","deleteArticle","verified","coverFile","topic"]){assert(html.includes('id="'+id+'"'),"Admin missing "+id)}
 assert(app.includes("signInWithPassword")&&app.includes('db.from("civora_articles")'),"Database publisher missing");
 assert(app.includes('db.from("civora_editors")'),"Editor authorization missing");
 assert(!/service_role|sb_secret_|GITHUB_TOKEN/.test(html+app),"Private token leaked to browser");
