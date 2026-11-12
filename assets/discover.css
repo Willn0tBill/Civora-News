@@ -95,3 +95,6 @@
 .discover-shelf-list li>div a{display:block;line-height:1.45;overflow-wrap:anywhere}
 .discover-feature-actions .discover-ghost{white-space:nowrap}
 @media(max-width:420px){.discover-feature-actions .discover-ghost{white-space:normal}}
+
+/* Specific subject filter */
+.topic-picker-label{display:inline-flex;align-items:center;gap:9px;font-size:12px;font-weight:700;color:var(--ink);flex-wrap:wrap}.topic-picker{max-width:310px;min-height:40px;background:var(--white);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:8px 12px}.topic-picker:focus-visible{outline:3px solid var(--gold);outline-offset:2px}@media(max-width:550px){.topic-picker-label,.topic-picker{width:100%;max-width:none}}

@@ -12,7 +12,7 @@ const pickSave=document.querySelector("#pick-save");
 let currentId=current.dataset.storyId;
 function selectStory(el){
  currentId=el.dataset.storyId;
- pickCategory.textContent=el.dataset.category;
+ pickCategory.textContent=el.dataset.topic||el.dataset.category;
  pickTitle.textContent=el.dataset.title;
  pickSummary.textContent=el.dataset.summary;
  pickLink.href=el.querySelector(".discover-item-actions a").href;
@@ -30,16 +30,18 @@ shuffle?.addEventListener("click",event=>{
 });
 const filterButtons=[...document.querySelectorAll("[data-topic-filter]")];
 const count=document.querySelector("#discover-count");
+const topicSelect=document.querySelector("#discover-topic-select");
 function setFilter(filter){
  let shown=0;
  for(const card of cards){
-  const show=filter==="all"||card.dataset.category===filter;
+  const show=(filter==="all"||card.dataset.category===filter)&&(!topicSelect||topicSelect.value==="all"||card.dataset.topic===topicSelect.value);
   card.hidden=!show;if(show)shown++;
  }
  for(const btn of filterButtons)btn.setAttribute("aria-pressed",String(btn.dataset.topicFilter===filter));
  count.textContent=shown+" "+(shown===1?"story":"stories")+" to explore";
 }
-for(const btn of filterButtons)btn.addEventListener("click",()=>setFilter(btn.dataset.topicFilter));
+for(const btn of filterButtons)btn.addEventListener("click",()=>{if(topicSelect)topicSelect.value="all";setFilter(btn.dataset.topicFilter)});
+topicSelect?.addEventListener("change",()=>setFilter("all"));
 setFilter("all");
 
 const savedList=document.querySelector("#saved-stories");
@@ -56,7 +58,7 @@ function fillShelf(element,ids,empty,countElement,includeRemove){
  for(const item of available){
   const row=document.createElement("li");
   const left=document.createElement("div");
-  const cat=document.createElement("small");cat.textContent=item.dataset.category;
+  const cat=document.createElement("small");cat.textContent=item.dataset.topic||item.dataset.category;
   const link=document.createElement("a");link.href=item.querySelector(".discover-item-actions a").href;link.textContent=item.dataset.title;
   left.append(cat,link);row.append(left);
   if(includeRemove){
