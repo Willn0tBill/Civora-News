@@ -358,3 +358,6 @@ input,textarea,select,button{max-width:100%}
 @media(max-width:580px){.archive-shelf-tabs{grid-template-columns:1fr;gap:9px}.archive-shelf-tabs a{min-height:50px}.archive-year-group>h2{font-size:26px}.archive-story-item{padding-block:18px}}
 @media(prefers-reduced-motion:reduce){.archive-shelf-tabs a{transition:none}}
 
+
+/* Civora focused-topic directories */
+.topic-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:18px 0 34px}.topic-tile{display:flex;flex-direction:column;gap:10px;background:var(--white);border:1px solid var(--line);border-radius:12px;padding:23px;min-height:164px;transition:transform .18s,border-color .18s}.topic-tile:hover{border-color:var(--gold);transform:translateY(-2px)}.topic-tile small{font-size:10px;letter-spacing:.1em;color:var(--gold);font-weight:700;text-transform:uppercase}.topic-tile strong{font:400 20px/1.25 var(--serif)}.topic-tile span{font-size:12px;line-height:1.6;color:var(--muted)}.topic-tile b{font-size:11px;color:var(--gold);margin-top:auto}.topic-back{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;margin:22px 0}.topic-landing{margin:12px 0 36px}@media(max-width:850px){.topic-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:540px){.topic-grid{grid-template-columns:1fr}.topic-tile{min-height:auto}}

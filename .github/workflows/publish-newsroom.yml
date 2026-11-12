@@ -36,6 +36,7 @@ jobs:
           node tests/site.test.mjs
           node tests/editorial-voice.test.mjs
           node tests/archive.test.mjs
+          node tests/topics.test.mjs
       - name: Commit publication and archive updates
         id: publication
         run: |
