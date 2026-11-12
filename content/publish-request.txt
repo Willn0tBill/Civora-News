@@ -3,3 +3,4 @@ Civora newsroom publication request
 2026-11-10: Synchronize the current 200 published articles after adding 63 new explainers across all six desks.
 2026-11-10: Re-synchronize two corrected reference links in the published article sources.
 Change this file to request an immediate GitHub Actions publication sync when needed.
+2026-11-11: Synchronize updated topic-filter UI and static Reading Room pages for 21 editorial topics.
